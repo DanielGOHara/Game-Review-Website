@@ -28,7 +28,103 @@ body {
 
   /* applies to screens wider than 999px */
 
+  html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    background-color: white;
+  }
+
   body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
     background: #ccf;
-  } 
+  }
+
+  .header {
+    padding: 40px 10px;
+    width: 100%;
+    height: 35px;
+    display: inline-flex;
+
+    background-color: black;
+  }
+
+  .header #headerTitle {
+    position: relative;
+    height: 30px;
+    margin: 0;
+    color: white;
+  }
+
+  .header #searchBar {
+    position: relative;
+    height: 21px;
+    min-width: 100px;
+    margin: 0 10px;
+
+    border: medium solid white;
+    border-radius: 5px;
+  }
+
+  .header #searchBar:focus {
+    outline: none;
+  }
+
+  .header #searchButton {
+    position: relative;
+    padding: 1px;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+
+    border-radius: 5px;
+  }
+
+  .header.header #searchButton:focus {
+    outline: none;
+  }
+
+  .reviewContainer {
+    position: relative;
+    display: inline-flex;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    background-color: white;
+  }
+
+  .reviewContainer #reviewContent {
+    position: relative;
+    padding: 10px;
+    height: 750px;
+    width: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+
+    background-color: white;
+    border: medium solid black;
+  }
+
+  .reviewContainer #reviewSidebar {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    height: 95%;
+    width: 300px;
+    right: 0;
+
+    background-color: white;
+    border: medium solid black;
+    border-radius: 5px;
+  }
 }
