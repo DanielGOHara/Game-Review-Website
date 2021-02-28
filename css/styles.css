@@ -3,23 +3,128 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
+html {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  background-color: white;
+}
+
 body {
-  background: #fcc;
-} 
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 
-
+  background: white;
+}
 
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
-  body {
-    background: #cfc;
-  } 
-}
+  html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 
+    background-color: white;
+  }
+
+  body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    background: white;
+  }
+
+  /* Header Section ------------------ */
+  .header {
+    padding: 40px 10px;
+    width: 100%;
+    height: 35px;
+    display: inline-flex;
+
+    background-color: black;
+  }
+
+  .header #headerTitle {
+    position: relative;
+    height: 30px;
+    margin: 0 10px 10px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .header div {
+    color: white;
+    margin: 4px 10px;
+  }
+
+  .header #searchBar {
+    position: relative;
+    height: 21px;
+    min-width: 100px;
+    width: 30%;
+    margin: 0 10px;
+
+    border: medium solid white;
+    border-radius: 5px;
+  }
+
+  .header #searchBar:focus {
+    outline: none;
+  }
+
+  .header #searchButton {
+    position: relative;
+    padding: 1px;
+    height: 29px;
+    width: 29px;
+    margin: 0 10px;
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 5px;
+  }
+
+  .header.header #searchButton:focus {
+    outline: none;
+  }
+
+  .header #gamesButton {
+    padding: 5px;
+    color: darkgray;
+
+  }
+
+  .header #gamesButton:hover {
+    color: white;
+    border-bottom: 1px solid white;
+    transition: all 0.3s linear 0s;
+  }
+
+  .header #favouritesButton {
+    padding: 5px;
+    color: darkgray;
+  }
+
+  .header #favouritesButton:hover {
+    color: white;
+    border-bottom: 1px solid white;
+    transition: all 0.3s linear 0s;
+  }
+}
 
 
 /* DESKTOP STYLES */
@@ -44,8 +149,10 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background: #ccf;
+    background: white;
   }
+
+  /* Header Section ------------------ */
 
   .header {
     padding: 40px 10px;
@@ -59,14 +166,20 @@ body {
   .header #headerTitle {
     position: relative;
     height: 30px;
-    margin: 0;
+    margin: 0 10px 10px;
     color: white;
+  }
+
+  .header div {
+    color: white;
+    margin: 4px 10px;
   }
 
   .header #searchBar {
     position: relative;
     height: 21px;
     min-width: 100px;
+    width: 30%;
     margin: 0 10px;
 
     border: medium solid white;
@@ -80,16 +193,42 @@ body {
   .header #searchButton {
     position: relative;
     padding: 1px;
-    height: 30px;
-    width: 30px;
+    height: 29px;
+    width: 29px;
     margin: 0 10px;
 
+    border: none;
     border-radius: 5px;
   }
 
   .header.header #searchButton:focus {
     outline: none;
   }
+
+  .header #gamesButton {
+    padding: 5px;
+    color: darkgray;
+
+  }
+
+  .header #gamesButton:hover {
+    color: white;
+    border-bottom: 1px solid white;
+    transition: all 0.3s linear 0s;
+  }
+
+  .header #favouritesButton {
+    padding: 5px;
+    color: darkgray;
+  }
+
+  .header #favouritesButton:hover {
+    color: white;
+    border-bottom: 1px solid white;
+    transition: all 0.3s linear 0s;
+  }
+
+  /* Content Section ------------------ */
 
   .reviewContainer {
     position: relative;
@@ -98,33 +237,73 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    justify-content: center;
 
     background-color: white;
+  }
+
+  .reviewContainer #reviewContent tr {
+    height: 170px;
+  }
+
+  .reviewContainer #reviewContent th {
+    height: 50px;
+    width: 50px;
+  }
+
+  .reviewContainer #reviewContent td {
+    height: auto;
+    width: 200px;
+
+
+    white-space: pre;
+    font-family: Arial;
+
+    border-bottom: 1px solid darkgray;
+  }
+
+  .reviewContainer span {
+    font-weight: bold;
+  }
+
+  .reviewContainer label {
+    font-size: xx-small;
   }
 
   .reviewContainer #reviewContent {
     position: relative;
     padding: 10px;
-    height: 750px;
-    width: 500px;
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 99%;
+    width: 650px;
     margin-top: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
 
     background-color: white;
-    border: medium solid black;
+    border: thin solid lightgray;
+    border-radius: 5px;
   }
 
   .reviewContainer #reviewSidebar {
-    position: absolute;
-    display: inline-block;
+    position: relative;
     padding: 10px;
-    height: 95%;
-    width: 300px;
-    right: 0;
+    height: 97%;
+    width: 200px;
+    margin: 10px;
 
     background-color: white;
-    border: medium solid black;
+    border: thin solid lightgray;
     border-radius: 5px;
+  }
+
+  /* Footer Section ------------------ */
+
+  .footer {
+    padding: 40px 10px;
+    width: 100%;
+    height: 35px;
+    display: inline-flex;
+
+    background-color: black;
   }
 }
