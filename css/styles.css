@@ -110,6 +110,7 @@ body {
 
   .header #gamesButton:hover {
     color: white;
+    cursor: pointer;
     border-bottom: 1px solid white;
     transition: all 0.3s linear 0s;
   }
@@ -121,6 +122,7 @@ body {
 
   .header #favouritesButton:hover {
     color: white;
+    cursor: pointer;
     border-bottom: 1px solid white;
     transition: all 0.3s linear 0s;
   }
@@ -141,7 +143,6 @@ body {
     padding: 0;
     overflow-x: hidden;
 
-    background-color: white;
   }
 
   body {
@@ -149,7 +150,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background: white;
+
   }
 
   /* Header Section ------------------ */
@@ -160,13 +161,15 @@ body {
     height: 35px;
     display: inline-flex;
 
+    font-family: Arial, serif;
+
     background-color: black;
   }
 
   .header #headerTitle {
     position: relative;
     height: 30px;
-    margin: 0 10px 10px;
+    margin: 0 10px;
     color: white;
   }
 
@@ -242,35 +245,7 @@ body {
     background-color: white;
   }
 
-  .reviewContainer #reviewContent tr {
-    height: 170px;
-  }
-
-  .reviewContainer #reviewContent th {
-    height: 50px;
-    width: 50px;
-  }
-
-  .reviewContainer #reviewContent td {
-    height: auto;
-    width: 200px;
-
-
-    white-space: pre;
-    font-family: Arial;
-
-    border-bottom: 1px solid darkgray;
-  }
-
-  .reviewContainer span {
-    font-weight: bold;
-  }
-
-  .reviewContainer label {
-    font-size: xx-small;
-  }
-
-  .reviewContainer #reviewContent {
+  .reviewContent {
     position: relative;
     padding: 10px;
     height: 99%;
@@ -282,6 +257,87 @@ body {
     background-color: white;
     border: thin solid lightgray;
     border-radius: 5px;
+  }
+
+  /* Article Content ------------------ */
+
+  .articleContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    height: 210px;
+    width: 97%;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .articleCover {
+    padding: 35px 5px;
+    height: 140px;
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  .articleNumber {
+    margin: 30px 10px;
+  }
+
+  .articleInfo {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 375px;
+  }
+
+  .gameTitle {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .gameTitle:hover {
+    color: dimgray;
+  }
+
+  .gameReleaseDate {
+    margin: 5px;
+  }
+
+  .articleInfo {
+    padding: 30px 0;
+  }
+
+  .articleScore {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    height: 150px;
+    width: 75px;
+    text-align: center;
+  }
+
+  .gameScore {
+    padding: 10px 10px;
+    height: 50px;
+    width: 50px;
+
+    background-color: limegreen;
+    border: thin solid black;
+    border-radius: 10px;
+  }
+
+  .articleExpand {
+    height:25px;
+    width: 75px;
+    margin-top: 100px;
+    cursor: pointer;
+  }
+
+  .articleExpand:hover {
+    border-bottom: 1px solid black;
+    transition: all 0.3s linear 0s;
   }
 
   .reviewContainer #reviewSidebar {
