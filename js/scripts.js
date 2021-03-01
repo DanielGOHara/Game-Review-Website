@@ -26,3 +26,19 @@
             window.location.href = 'favourites.html'
         }
     }
+
+    let gameIndex = 0;
+    showGames();
+
+    function showGames() {
+        let i;
+        const games = document.getElementsByClassName("gameArticle");
+
+        for(i = 0; i < games.length; i++) {
+            games[i].style.display = "none";
+        }
+        gameIndex++;
+        if(gameIndex > games.length) { gameIndex = 1 }
+        games[gameIndex - 1].style.display = "flex";
+        setTimeout(showGames, 20000);
+    }

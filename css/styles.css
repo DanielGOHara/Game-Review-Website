@@ -372,4 +372,78 @@ body {
 
     background-color: black;
   }
+
+  /* Game HTML Page ------------------ */
+
+  .gameContainer {
+    padding: 10px;
+    height: 500px;
+    width: 650px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+
+    border: thin solid lightgray;
+  }
+
+  .gameScroll {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: 210px;
+    width: 685px;
+    margin: 10px 22%;
+    align-items: center;
+    justify-content: center;
+
+    border: thin solid lightgray;
+  }
+
+  .gameArticle {
+    display: none;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .prev, .next {
+    padding: 10px;
+    height:25px;
+    width: auto;
+    margin-top: 115px;
+    margin-bottom: 125px;
+    cursor: pointer;
+    user-select: none;
+
+    font-weight: bold;
+    font-size: 18px;
+
+    border-radius: 2px;
+    opacity: 1;
+    transition: 0.6s ease;
+  }
+
+
+  .prev:hover, .next:hover {
+    background-color: lightgray;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+  }
+
+  @keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+  }
 }
