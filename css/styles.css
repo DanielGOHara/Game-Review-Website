@@ -205,36 +205,36 @@ body {
     outline: none;
   }
 
-  .header #homeButton {
+  .homeButton {
     padding: 5px;
     color: darkgray;
   }
 
-  .header #homeButton:hover {
+  .homeButton:hover {
     color: white;
     cursor: pointer;
     border-bottom: 1px solid white;
     transition: all 0.3s linear 0s;
   }
 
-  .header #gamesButton {
+  .gamesButton {
     padding: 5px;
     color: darkgray;
   }
 
-  .header #gamesButton:hover {
+  .gamesButton:hover {
     color: white;
     cursor: pointer;
     border-bottom: 1px solid white;
     transition: all 0.3s linear 0s;
   }
 
-  .header #favouritesButton {
+  .favouritesButton {
     padding: 5px;
     color: darkgray;
   }
 
-  .header #favouritesButton:hover {
+  .favouritesButton:hover {
     color: white;
     cursor: pointer;
     border-bottom: 1px solid white;
