@@ -27,7 +27,7 @@
         }
     }
 
-    let gameIndex = Math.floor((Math.random() * 3));
+    let gameIndex = Math.floor((Math.random() * 3) + 1);
     let timer = setTimeout(showGames, 20000);
     showGames();
 
