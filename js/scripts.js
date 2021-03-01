@@ -55,9 +55,11 @@
         for(let i = 0; i < games.length; i++) {
             games[i].style.display = "none";
         }
-        gameIndex++;
         clearTimeout(timer);
         if(gameIndex > games.length) { gameIndex = 1 }
         games[gameIndex - 1].style.display = "flex";
-        timer = setTimeout(showGames, 20000);
+        timer = setTimeout(() => {
+            gameIndex++;
+            showGames();
+        }, 20000);
     }
