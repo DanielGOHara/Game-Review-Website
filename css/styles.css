@@ -25,9 +25,10 @@ body {
 
 /* TABLET STYLES */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) and (max-width: 999px) {
 
-  /* applies to screens wider than 499px */
+  /* applies to screens wider than 999px */
+
   html {
     position: relative;
     height: 100%;
@@ -36,7 +37,6 @@ body {
     padding: 0;
     overflow-x: hidden;
 
-    background-color: white;
   }
 
   body {
@@ -44,39 +44,42 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-
-    background: white;
   }
 
   /* Header Section ------------------ */
+
   .header {
     padding: 40px 10px;
     width: 100%;
-    height: 35px;
+    height: 90px;
     display: inline-flex;
+    text-align: center;
+
+    font-family: Arial, serif;
 
     background-color: black;
   }
 
   .header #headerTitle {
     position: relative;
-    height: 30px;
-    margin: 0 10px 10px;
+    height: 100px;
+    width: 100px;
+    margin: 0 10px;
     color: white;
-    flex-shrink: 0;
   }
 
   .header div {
     color: white;
+    padding: 30px 0;
     margin: 4px 10px;
   }
 
   .header #searchBar {
     position: relative;
     height: 21px;
-    min-width: 100px;
+    min-width: 125px;
     width: 30%;
-    margin: 0 10px;
+    margin: 28px 10px;
 
     border: medium solid white;
     border-radius: 5px;
@@ -91,8 +94,9 @@ body {
     padding: 1px;
     height: 29px;
     width: 29px;
-    margin: 0 10px;
-    flex-shrink: 0;
+    min-height: 29px;
+    min-width: 29px;
+    margin: 28px 0;
 
     border: none;
     border-radius: 5px;
@@ -102,27 +106,299 @@ body {
     outline: none;
   }
 
-  .header #gamesButton {
-    padding: 5px;
+  .homeButton {
+    padding: 35px 5px;
     color: darkgray;
-
   }
 
-  .header #gamesButton:hover {
+  .homeButton:hover {
     color: white;
+    cursor: pointer;
     border-bottom: 1px solid white;
     transition: all 0.3s linear 0s;
   }
 
-  .header #favouritesButton {
-    padding: 5px;
+  .gamesButton {
+    padding: 35px 5px;
     color: darkgray;
   }
 
-  .header #favouritesButton:hover {
+  .gamesButton:hover {
     color: white;
+    cursor: pointer;
     border-bottom: 1px solid white;
     transition: all 0.3s linear 0s;
+  }
+
+  .favouritesButton {
+    padding: 35px 5px;
+    color: darkgray;
+  }
+
+  .favouritesButton:hover {
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    transition: all 0.3s linear 0s;
+  }
+
+  /* Content Section ------------------ */
+
+  .reviewContainer {
+    position: relative;
+    display: inline-flex;
+    padding: 20px;
+    min-height: 1050px;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+
+    background-color: white;
+  }
+
+  .reviewContent {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-height: 1050px;
+    width: 425px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+
+    background-color: white;
+    border: thin solid lightgray;
+    border-radius: 5px;
+  }
+
+
+  /* Article Content ------------------ */
+
+  .articleContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    max-height: 400px;
+    width: 97%;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .expanded {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    min-height: 630px;
+    width: 97%;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .gameReview {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    display: none;
+  }
+
+  .hidden {
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .articleWrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    min-height: 380px;
+    width: 97%;
+  }
+
+  .articleCover {
+    padding: 120px 5px;
+    height: 140px;
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  .articleNumber {
+    margin: 30px 10px;
+  }
+
+  .articleInfo {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 375px;
+  }
+
+  .gameTitle {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .gameTitle:hover {
+    color: dimgray;
+  }
+
+  .gameReleaseDate {
+    margin: 5px;
+  }
+
+  .articleInfo {
+    padding: 30px 0;
+  }
+
+  .articleScore {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    height: 150px;
+    width: 75px;
+    text-align: center;
+  }
+
+  .gameScore {
+    padding: 10px 10px;
+    max-height: 50px;
+    width: 50px;
+
+    background-color: limegreen;
+    border: thin solid black;
+    border-radius: 10px;
+  }
+
+  .articleExpand {
+    height:25px;
+    width: 75px;
+    margin-top: 280px;
+    cursor: pointer;
+  }
+
+  .articleExpand:hover {
+    border-bottom: 1px solid black;
+    transition: all 0.3s linear 0s;
+  }
+
+  .reviewContainer #reviewSidebar {
+    position: relative;
+    padding: 10px;
+    min-height: 1050px;
+    width: 200px;
+    margin: 10px;
+
+    background-color: white;
+    border: thin solid lightgray;
+    border-radius: 5px;
+  }
+
+  /* Footer Section ------------------ */
+
+  .footer {
+    display: block;
+    padding: 40px 10px;
+    width: 100%;
+    height: 35px;
+    margin-top: 30px;
+    bottom: 0;
+
+    background-color: black;
+  }
+
+  /* Game HTML Page ------------------ */
+
+  .gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gameWrapper {
+    padding: 10px;
+    height: 500px;
+    width: 650px;
+    margin: 50px;
+
+    border: thin solid lightgray;
+  }
+
+  .gameScroll {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: 210px;
+    width: 685px;
+    margin: 50px 22%;
+    align-items: center;
+    justify-content: center;
+
+    border: thin solid lightgray;
+  }
+
+  .gameArticle {
+    display: none;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-top: thin solid lightgray;
+    border-bottom: thin solid lightgray;
+  }
+
+  .articleSpacer {
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    margin-top: 100px;
+  }
+
+  .prev, .next {
+    padding: 10px;
+    height:25px;
+    width: auto;
+    margin-top: 115px;
+    margin-bottom: 125px;
+    cursor: pointer;
+    user-select: none;
+
+    font-weight: bold;
+    font-size: 18px;
+
+    border-radius: 2px;
+    opacity: 1;
+    transition: 0.6s ease;
+  }
+
+
+  .prev:hover, .next:hover {
+    background-color: lightgray;
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+  }
+
+  @keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
   }
 }
 
@@ -178,7 +454,7 @@ body {
   .header #searchBar {
     position: relative;
     height: 21px;
-    min-width: 100px;
+    min-width: 125px;
     width: 30%;
     margin: 0 10px;
 
@@ -247,7 +523,7 @@ body {
     position: relative;
     display: inline-flex;
     padding: 20px;
-    height: 100%;
+    min-height: 1100px;
     width: 100%;
     margin: 0;
     justify-content: center;
@@ -256,9 +532,10 @@ body {
   }
 
   .reviewContent {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 10px;
-    height: 99%;
+    min-height: 1050px;
     width: 650px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -269,19 +546,56 @@ body {
     border-radius: 5px;
   }
 
+
   /* Article Content ------------------ */
 
   .articleContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 0 10px;
-    height: 210px;
+    min-height: 210px;
     width: 97%;
 
     font-family: Arial, serif;
     font-weight: bold;
 
     border-bottom: thin solid lightgray;
+  }
+
+  .expanded {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    min-height: 400px;
+    width: 97%;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .gameReview {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    display: none;
+  }
+
+  .hidden {
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .articleWrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    max-height: 210px;
+    width: 97%;
   }
 
   .articleCover {
@@ -330,7 +644,7 @@ body {
 
   .gameScore {
     padding: 10px 10px;
-    height: 50px;
+    max-height: 50px;
     width: 50px;
 
     background-color: limegreen;
@@ -353,7 +667,7 @@ body {
   .reviewContainer #reviewSidebar {
     position: relative;
     padding: 10px;
-    height: 97%;
+    min-height: 1050px;
     width: 200px;
     margin: 10px;
 
