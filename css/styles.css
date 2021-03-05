@@ -709,11 +709,48 @@ body {
     position: relative;
     padding: 10px;
     min-height: 1050px;
-    width: 200px;
+    width: 250px;
     margin: 10px;
+
+    font-family: Arial;
+    font-weight: bold;
 
     background-color: white;
     border: thin solid lightgray;
+    border-radius: 5px;
+  }
+
+  .topGamesContainer {
+    padding: 10px;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .reviewContainer #topGamesTitle {
+    display:inline-flex;
+    padding: 5px;
+    height: 25px;
+    width: 95px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .reviewContainer #topGames {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topGame {
+    margin: 3px 0;
+  }
+
+  .topGameScore {
+    margin-left: 15px;
+
+    background-color: limegreen;
+    border: thin solid black;
     border-radius: 5px;
   }
 

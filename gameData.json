@@ -1,0 +1,19 @@
+data = '[
+    {
+        "name": "Titanfall 2",
+        "platform": ["PS4", "XBOX ONE", "PC"],
+        "description": "Titanfall 2 is a first-person shooter video game,
+                        developed by Respawn Entertainment and published
+                        by Electronic Arts. A sequel to 2014's Titanfall,
+                        the game was released worldwide on October 28,
+                        2016 for Windows, PlayStation 4, and Xbox One.",
+        "score": "94"
+
+
+
+
+
+    }
+
+
+]';
