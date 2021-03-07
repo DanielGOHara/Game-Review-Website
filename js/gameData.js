@@ -1,6 +1,6 @@
 
-export const data = {
-    "Titanfall 2" : {
+export const data = [{
+        "title" : "Titanfall 2",
         "description" : "Titanfall 2 is a first-person shooter video game, " +
             "            developed by Respawn Entertainment and published " +
             "            by Electronic Arts. A sequel to 2014's Titanfall, " +
@@ -17,8 +17,8 @@ export const data = {
             "       terms of graphics the game is massively ahead of its " +
             "       time with the game looking phenomenal, with optimisation " +
             "       being on point even with weaker computer hardware. Defiantly " +
-            "       a game I see myself sinking hours into."},
-    "Spider-man" : {
+            "       a game I see myself sinking hours into." }, {
+        "title" : "Spider-man",
         "description" : "Marvel's Spider-Man is a 2018 action-adventure " +
             "            game developed by Insomniac Games and published " +
             "            by Sony Interactive Entertainment. Based on the " +
@@ -37,5 +37,4 @@ export const data = {
             "       right with every encounter being enjoyable. As for the length " +
             "       of the game it felt perfect with plenty of plot points to keep " +
             "       you invested in the story and characters."
-    }
-}
+}];
