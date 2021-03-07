@@ -181,7 +181,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    min-height: 425px;
+    height: 425px;
     width: 97%;
 
     font-family: Arial, serif;
@@ -194,7 +194,20 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    min-height: 630px;
+    height: 620px;
+    width: 97%;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-bottom: thin solid lightgray;
+  }
+
+  .articleReviewContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    height: 210px;
     width: 97%;
 
     font-family: Arial, serif;
@@ -214,6 +227,25 @@ body {
     display: block;
   }
 
+  .focusedGameReview {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 270px;
+    width: 630px;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+  }
+
+  .focusedGameReview #focusedReviewContainer {
+    margin: 10px 0;
+  }
+
+  .focusedGameReview #gamePlatform {
+    right: 0;
+  }
+
   .reviewTitle {
     padding: 10px 0;
     margin: 0;
@@ -228,7 +260,7 @@ body {
   }
 
   .articleCover {
-    padding: 120px 5px;
+    padding: 35px 5px;
     height: 140px;
     width: 100px;
     margin-right: 10px;
@@ -260,6 +292,7 @@ body {
 
   .articleInfo {
     padding: 30px 0;
+    height: 350px;
   }
 
   .articleScore {
@@ -300,7 +333,7 @@ body {
     width: 250px;
     margin: 10px;
 
-    font-family: Arial;
+    font-family: Arial, serif;
     font-weight: bold;
 
     background-color: white;
@@ -349,7 +382,6 @@ body {
     padding: 40px 10px;
     width: 100%;
     height: 35px;
-    margin-top: 30px;
     bottom: 0;
 
     background-color: black;
@@ -426,6 +458,7 @@ body {
   }
 
   .fade {
+    height: 200px;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
@@ -485,6 +518,7 @@ body {
     height: 30px;
     margin: 0 10px;
     color: white;
+    flex-shrink: 0;
   }
 
   .header div {
@@ -561,7 +595,6 @@ body {
   /* Content Section ------------------ */
 
   .reviewContainer {
-    position: relative;
     display: inline-flex;
     padding: 20px;
     min-height: 1100px;
@@ -570,6 +603,8 @@ body {
     justify-content: center;
 
     background-color: white;
+
+    overflow-y: auto;
   }
 
   .reviewContent {
@@ -616,6 +651,19 @@ body {
     border-bottom: thin solid lightgray;
   }
 
+  .articleReviewContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
+    height: 210px;
+    width: 97%;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+
+    border-bottom: thin solid lightgray;
+  }
+
   .gameReview {
     padding: 10px;
     height: 100%;
@@ -628,6 +676,25 @@ body {
     height: 97%;
     width: 97%;
     display: block;
+  }
+
+  .focusedGameReview {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 270px;
+    width: 630px;
+
+    font-family: Arial, serif;
+    font-weight: bold;
+  }
+
+  .focusedGameReview #focusedReviewContainer {
+    margin: 10px 0;
+  }
+
+  .focusedGameReview #gamePlatform {
+    right: 0;
   }
 
   .articleWrapper {
@@ -705,6 +772,8 @@ body {
     transition: all 0.3s linear 0s;
   }
 
+  /* Sidebar Elements */
+
   .reviewContainer #reviewSidebar {
     position: relative;
     padding: 10px;
@@ -712,7 +781,7 @@ body {
     width: 250px;
     margin: 10px;
 
-    font-family: Arial;
+    font-family: Arial, serif;
     font-weight: bold;
 
     background-color: white;
@@ -757,12 +826,10 @@ body {
   /* Footer Section ------------------ */
 
   .footer {
-    display: block;
+    position: relative;
     padding: 40px 10px;
     width: 100%;
     height: 35px;
-    margin-top: 30px;
-    bottom: 0;
 
     background-color: black;
   }
@@ -778,7 +845,7 @@ body {
 
   .gameWrapper {
     padding: 10px;
-    height: 500px;
+    height: 400px;
     width: 650px;
     margin: 50px;
 
@@ -838,6 +905,7 @@ body {
   }
 
   .fade {
+    height: 200px;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;

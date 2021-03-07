@@ -1,31 +1,5 @@
 
-    document.querySelectorAll('.gamesButton').forEach(item => {
-        item.addEventListener('click', event => {
-            assignHtmlPage("games");
-        });
-    });
-
-    document.querySelectorAll('.homeButton').forEach(item => {
-        item.addEventListener('click', event => {
-            assignHtmlPage("home");
-        });
-    });
-
-    document.querySelectorAll('.favouritesButton').forEach(item => {
-        item.addEventListener('click', event => {
-            assignHtmlPage("favourite");
-        });
-    });
-
-    function assignHtmlPage(page) {
-        if (page === "home") {
-            window.location.href = 'index.html'
-        } else if (page === "games") {
-            window.location.href = 'games.html'
-        } else if (page === "favourite") {
-            window.location.href = 'favourites.html'
-        }
-    }
+import { data } from './gameData.js';
 
     /* Expand Button Listeners */
 
@@ -36,8 +10,8 @@
     const butFive = document.getElementById('gameFiveExpand');
 
     butOne.addEventListener('click', event => {
-       document.getElementById('gameOne').classList.toggle("expanded");
-       document.getElementById('gameReviewOne').classList.toggle('hidden');
+        document.getElementById('gameOne').classList.toggle("expanded");
+        document.getElementById('gameReviewOne').classList.toggle('hidden');
     });
 
     butTwo.addEventListener('click', event => {
@@ -59,3 +33,5 @@
         document.getElementById('gameFive').classList.toggle('expanded');
         document.getElementById('gameReviewFive').classList.toggle('hidden');
     });
+
+    console.log(data.score);

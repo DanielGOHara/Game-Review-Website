@@ -13,7 +13,7 @@
     <h2 id = "headerTitle">Daniel's Game Reviews</h2>
     <div>|</div>
     <input id = "searchBar" placeholder = "Search For Games...">
-    <button id = "searchButton"><img src = css/media/search.png></button>
+    <button id = "searchButton"><img src = css/media/search.png alt = "searchbutton"></button>
     <div>|</div>
     <span class = "homeButton">Home</span>
     <div>|</div>
@@ -22,7 +22,7 @@
   </header>
   <section class = "gameContainer">
     <section class = "gameWrapper">
-        <article class = "articleContainer">
+        <article class = "articleReviewContainer">
             <div class = "articleCover">
                 <img src = "css/media/game_covers/titanfall_cover.png" alt = "titanfall2cover">
             </div>
@@ -40,6 +40,13 @@
                 <label class = "gameScore">95</label>
             </section>
         </article>
+      <section class = "focusedGameReview">
+        <label id = "focusedReviewContainer">Review: <label id = "gameReview">Titanfall 2 </label><label id = "gamePlatform">(PS4, Xbox One, PC)</label></label>
+        <span>A brilliant shooter which mix's up gameplay with the involvement of titans. The change of gameplay
+          from these makes the gameplay interesting and fun with the tide of the game being able to change at anytime. In terms of
+          graphics the game is massively ahead of its time with the game looking phenomenal, with optimisation
+          being on point even with weaker computer hardware. Defiantly a game I see myself sinking hours into.</span>
+      </section>
     </section>
     <section class = "gameScroll">
       <a class = "prev">&#10094</a>
@@ -121,7 +128,7 @@
   <footer class = "footer">
 
   </footer>
-  <script src = "js/scripts.js"></script>
-  <script src = "js/gameScripts.js"></script>
+  <script src = "js/genericScripts.js"></script>
+  <script src = "js/gamesScripts.js"></script>
 </body>
 </html>
