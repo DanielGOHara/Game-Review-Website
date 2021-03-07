@@ -1,4 +1,6 @@
 
+  /* Variable containing game information and scoring */
+
 export const data = [{
   "title" : "Titanfall 2",
   "description" : "Titanfall 2 is a first-person shooter video game, " +

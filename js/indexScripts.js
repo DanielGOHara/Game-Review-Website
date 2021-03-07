@@ -34,4 +34,4 @@ import { data } from './gameData.js';
         document.getElementById('gameReviewFive').classList.toggle('hidden');
     });
 
-    console.log(data[1].review);
+    console.log(data[6].review);

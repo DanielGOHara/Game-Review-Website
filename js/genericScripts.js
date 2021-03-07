@@ -1,4 +1,6 @@
 
+    /* Adds a listener to each button on each page */
+
     document.querySelectorAll('.gamesButton').forEach(item => {
         item.addEventListener('click', event => {
             assignHtmlPage("games");
@@ -16,6 +18,8 @@
             assignHtmlPage("favourite");
         });
     });
+
+    /* Redirects to desired page */
 
     function assignHtmlPage(page) {
         if (page === "home") {
