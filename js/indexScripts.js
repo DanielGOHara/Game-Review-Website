@@ -45,6 +45,7 @@ import { sortGames } from "./gameData.js";
     setGameScore(index);
     setGameCovers(index);
     setGameReview(index);
+    setTopGames(index);
 
     /* Functions to populate the index page */
 
@@ -99,5 +100,31 @@ import { sortGames } from "./gameData.js";
             item.innerHTML = sortedGames[index].review;
             index--;
         });
+    }
+
+    /* Creates the required "span" and "label" tags to create and populate the game leaderboard */
+
+    function setTopGames() {
+        let gamePosition = 1;
+        let topGames = document.getElementById('topGames');
+        for(let i = sortedGames.length - 1; i >= 0; i--) {
+            let score = document.createElement('span');
+            score.className = "topGameScore";
+            score.appendChild(document.createTextNode(sortedGames[i].score));
+                if(sortedGames[i].score >= 75) {
+                    score.style.backgroundColor = 'green';
+                } else if(75 > sortedGames[i].score && sortedGames[i].score >= 50) {
+                    score.style.backgroundColor = 'yellow'
+                } else {
+                    score.style.backgroundColor = 'red';
+                }
+            let item = document.createElement('label');
+            item.className = "topGame";
+            item.appendChild(document.createTextNode(gamePosition + ". " + sortedGames[i].title));
+            gamePosition++;
+            item.innerHTML += score.outerHTML;
+            topGames.appendChild(item);
+        }
+        return topGames;
     }
 

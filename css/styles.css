@@ -102,7 +102,7 @@ body {
     border-radius: 5px;
   }
 
-  .header.header #searchButton:focus {
+  .header #searchButton:focus {
     outline: none;
   }
 
@@ -538,6 +538,8 @@ body {
     padding: 1px;
     height: 29px;
     width: 29px;
+    min-height: 29px;
+    min-width: 29px;
     margin: 0 10px;
 
     border: none;
@@ -631,7 +633,7 @@ body {
   }
 
   .expanded {
-    min-height: 400px;
+    min-height: 350px;
 
     border-bottom: thin solid lightgray;
   }
@@ -707,7 +709,8 @@ body {
   }
 
   .gameTitle {
-    margin: 0;
+    max-width: 300px;
+    margin: 0 100px 0 0;
     cursor: pointer;
   }
 
