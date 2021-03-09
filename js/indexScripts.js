@@ -12,26 +12,31 @@ import { sortGames } from "./gameData.js";
     butOne.addEventListener('click', event => {
         document.getElementById('gameOne').classList.toggle("expanded");
         document.getElementById('gameReviewOne').classList.toggle('hidden');
+        document.getElementById('gameOneArrow').classList.toggle('down');
     });
 
     butTwo.addEventListener('click', event => {
         document.getElementById('gameTwo').classList.toggle('expanded');
         document.getElementById('gameReviewTwo').classList.toggle('hidden');
+        document.getElementById('gameTwoArrow').classList.toggle('down');
     });
 
     butThree.addEventListener('click', event => {
         document.getElementById('gameThree').classList.toggle('expanded');
         document.getElementById('gameReviewThree').classList.toggle('hidden');
+        document.getElementById('gameThreeArrow').classList.toggle('down');
     });
 
     butFour.addEventListener('click', event => {
         document.getElementById('gameFour').classList.toggle('expanded');
         document.getElementById('gameReviewFour').classList.toggle('hidden');
+        document.getElementById('gameFourArrow').classList.toggle('down');
     });
 
     butFive.addEventListener('click', event => {
         document.getElementById('gameFive').classList.toggle('expanded');
         document.getElementById('gameReviewFive').classList.toggle('hidden');
+        document.getElementById('gameFiveArrow').classList.toggle('down');
     });
 
     const sortedGames = sortGames();

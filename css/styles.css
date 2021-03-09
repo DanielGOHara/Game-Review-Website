@@ -313,6 +313,24 @@ body {
     cursor: pointer;
   }
 
+  .arrow {
+    display: inline-block;
+    padding: 3px;
+
+    border: solid black;
+    border-width: 0 3px 3px 0;
+  }
+
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotatE(-135deg);
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotatE(45deg);
+  }
+
   .articleExpand:hover {
     border-bottom: 1px solid black;
     transition: all 0.3s linear 0s;
@@ -751,6 +769,24 @@ body {
     width: 75px;
     margin-top: 100px;
     cursor: pointer;
+  }
+
+  .arrow {
+    display: inline-block;
+    padding: 3px;
+
+    border: solid black;
+    border-width: 0 3px 3px 0;
+  }
+
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotatE(-135deg);
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotatE(45deg);
   }
 
   .articleExpand:hover {
