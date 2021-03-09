@@ -122,5 +122,39 @@ export const data = [{
     "keeping me interested for hours, the structure of the gameplay allows players to explore " +
     "moving the story forward at their own rate. After finishing the game I can truly say " +
     "that it is a must play for horror game lovers and with the optimisation requires little " +
-    "in terms of hardware to run exceptionally well."
+    "in terms of hardware to run exceptionally well."}, {
+
+  "title" : "Cyberpunk 2077",
+  "description" : "Cyberpunk 2077 is a 2020 action role-playing video game developed and " +
+    "published by CD Projekt. The story takes place in Night City, an open world set in the " +
+    "Cyberpunk universe",
+  "release" : "10th December 2020",
+  "score" : "78",
+  "cover" : "css/media/game_covers/cyberpunk2077_cover.png",
+  "coveralt" : "cyberpunk2077cover",
+  "review" : "A brilliant title with a vast world to explore that has a variety of culture " +
+    "and people to interact with, the sheer size of the city was astonishing at first allowing " +
+    "me to look past the issues the game faced on launch and truly get immersed into the story. " +
+    "The guns, vehicles and abilities all felt equally unique to one another making you want to " +
+    "explore each of them, the graphics were truly out of this world for a game of this size. Whilst " +
+    "it has many great features its not without its bugs which were many, something I hope will be resolved " +
+    "in future patches. However, if you can look past these it is well worth the experience to try out."
   }];
+
+  /* Sort the games based on score */
+
+  export function sortGames() {
+    let gameArray = [], sortedArray = [];
+    for(let i = 0; i < data.length; i++) {
+      gameArray[i] = data[i].score
+      gameArray = gameArray.sort();
+    }
+    for(let i = data.length - 1; i >= 0; i--) {
+      for(let j = 0; j < data.length; j++) {
+        if(data[j].score === gameArray[i]) {
+          sortedArray[i] = data[j];
+        }
+      }
+    }
+    return sortedArray;
+  }

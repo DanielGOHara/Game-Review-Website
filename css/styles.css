@@ -190,14 +190,7 @@ body {
   }
 
   .expanded {
-    display: flex;
-    flex-direction: column;
-    padding: 0 10px;
     height: 620px;
-    width: 97%;
-
-    font-family: Arial, serif;
-    font-weight: bold;
 
     border-bottom: thin solid lightgray;
   }
@@ -638,14 +631,7 @@ body {
   }
 
   .expanded {
-    display: flex;
-    flex-direction: column;
-    padding: 0 10px;
     min-height: 400px;
-    width: 97%;
-
-    font-family: Arial, serif;
-    font-weight: bold;
 
     border-bottom: thin solid lightgray;
   }
@@ -665,15 +651,13 @@ body {
 
   .gameReview {
     padding: 10px;
-    height: 100%;
-    width: 100%;
+    height: 97%;
+    width: 97%;
     display: none;
   }
 
   .hidden {
     padding: 0 5px;
-    height: 97%;
-    width: 97%;
     display: block;
   }
 
