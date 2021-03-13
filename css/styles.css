@@ -213,7 +213,7 @@ body {
   }
 
   .hidden {
-    padding: 0 10px;
+    padding: 10px 0 10px;
     height: 97%;
     width: 97%;
     display: block;
@@ -252,7 +252,7 @@ body {
   }
 
   .articleCover {
-    padding: 135px 5px;
+    padding: 35px 5px;
     height: 140px;
     width: 100px;
     margin-right: 10px;
@@ -415,11 +415,11 @@ body {
     border: thin solid lightgray;
   }
 
-  .gameScroll {
+  .gameContainer #gameScroll {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    height: 210px;
+    height: 220px;
     width: 685px;
     margin: 50px 22%;
     align-items: center;
@@ -468,7 +468,7 @@ body {
   }
 
   .fade {
-    height: 200px;
+    height: 210px;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
@@ -874,7 +874,7 @@ body {
     border: thin solid lightgray;
   }
 
-  .gameScroll {
+  .gameContainer #gameScroll {
     display: flex;
     flex-direction: row;
     padding: 10px;
