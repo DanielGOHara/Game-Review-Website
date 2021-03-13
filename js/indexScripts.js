@@ -1,6 +1,9 @@
 
 import { sortGames } from "./gameData.js";
 
+const sortedGames = sortGames();
+const index = sortedGames.length - 1;
+
 /* Expand Button Listeners */
 
 const butOne = document.getElementById('gameOneExpand');
@@ -39,9 +42,6 @@ butFive.addEventListener('click', () => {
   document.getElementById('gameFiveArrow').classList.toggle('down');
 });
 
-const sortedGames = sortGames();
-const index = sortedGames.length - 1;
-
 /* Call all of the functions */
 
 setGameTitles(index);
@@ -51,6 +51,7 @@ setGameScore(index);
 setGameCovers(index);
 setGameReview(index);
 setTopGames();
+listeners();
 
 /* Functions to populate the index page */
 
@@ -133,16 +134,15 @@ function setTopGames() {
   return topGames;
 }
 
-document.querySelectorAll('.gameTitle').forEach(item => {
-  item.addEventListener('click', event => {
-    for(let i = 0; i < sortedGames.length; i++) {
-      if(item.innerHTML === sortedGames[i].title) {
-        const game = sortedGames[i];
-        //setFocusedGameReview(game.title, game.release, game.description, game.score, game.review);
-      }
-    }
+function listeners() {
+  const searchBar = document.getElementById('searchBarIndex');
+  const searchButton = document.getElementById('searchButtonIndex');
+
+  searchButton.addEventListener('click', () => {
+    console.log(searchBar.value);
   });
-});
+
+}
 
 
 

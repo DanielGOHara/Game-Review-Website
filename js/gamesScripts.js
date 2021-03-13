@@ -3,6 +3,7 @@ import { sortGames } from "./gameData.js";
 
 const sortedGames = sortGames();
 setShowGames();
+listeners();
 
 function setShowGames() {
   let gameScroll = document.getElementById('gameScroll');
@@ -38,10 +39,11 @@ function setShowGames() {
     score.className = "gameScore";
     spacer.className = "articleSpacer";
 
+    title.style.pointerEvents = "none";
 
     image.src = sortedGames[i].cover;
     image.alt = sortedGames[i].coveralt;
-    title.innerHTML = sortedGames[i].title + "\n";
+    title.innerHTML = sortedGames[i].title + " | " + sortedGames[i].platform + " |";
     release.innerHTML = "Release: " + sortedGames[i].release + "\n";
     description.innerHTML = sortedGames[i].description;
     score.innerHTML = sortedGames[i].score;
@@ -109,4 +111,17 @@ function showGames(n) {
     gameIndex++;
     showGames();
   }, 20000);
+}
+
+function listeners() {
+  const searchBar = document.getElementById('searchBarGames');
+  const searchButton = document.getElementById('searchButtonGames');
+
+  searchButton.addEventListener('click', () => {
+    console.log(searchBar.value);
+  })
+}
+
+export function setFocusedGame(title) {
+
 }

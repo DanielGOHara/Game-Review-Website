@@ -19,7 +19,9 @@ export const data = [{
     "terms of graphics the game is massively ahead of its " +
     "time with the game looking phenomenal, with optimisation " +
     "being on point even with weaker computer hardware. Defiantly " +
-    "a game I see myself sinking hours into." }, {
+    "a game I see myself sinking hours into.",
+  "favourite" : "Yes",
+  "platform" : "PS4, Xbox One, PC"}, {
 
   "title" : "Spider-man",
   "description" : "Marvel's Spider-Man is a 2018 action-adventure " +
@@ -29,7 +31,7 @@ export const data = [{
     "by the long-running comic book mythology and adaptations " +
     "in other media.",
   "release" : "7th September 2016",
-  "score" : "92",
+  "score" : "97",
   "cover" : "css/media/game_covers/spiderman_cover.png",
   "coveralt" : "spidermancover",
   "review" : "An amazing spiderman game that allows you to truly connect " +
@@ -39,7 +41,9 @@ export const data = [{
     "very natural and fluid. The combat is outstanding and is just " +
     "right with every encounter being enjoyable. As for the length " +
     "of the game it felt perfect with plenty of plot points to keep " +
-    "you invested in the story and characters."}, {
+    "you invested in the story and characters.",
+  "favourite" : "No",
+  "platform" : "PS4, PS5"}, {
 
   "title" : "Fallout 4",
   "description" : "Fallout 4 is an action role-playing game developed by Bethesda " +
@@ -55,7 +59,9 @@ export const data = [{
     "title and a must play. The combination of traveling and building makes for a " +
     "rewarding experience where you can witness your settlements slowly grow into" +
     "sprawling towns. The added DLC further improves on the main game with out of this" +
-    "world stories in far away lands with new weapons, enemies and settlements."}, {
+    "world stories in far away lands with new weapons, enemies and settlements.",
+  "favourite" : "Yes",
+  "platform" : "PS4, Xbox One, PC"}, {
 
   "title" : "Detroit Become Human",
   "description" : "Detroit: Become Human is a 2018 adventure game developed by Quantic " +
@@ -72,7 +78,9 @@ export const data = [{
     "The story is so complex you could find yourself conflicted on what to do with some " +
     "characters chasing others and your decision could be the end for some characters. Finishing " +
     "the game I am very much looking forward to the next title in the series and look forward " +
-    "to exploring the world much more."}, {
+    "to exploring the world much more.",
+  "favourite" : "Yes",
+  "platform" : "PS4, PS5, PC"}, {
 
   "title" : "Call of Duty Cold War",
   "description" : "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video " +
@@ -90,7 +98,9 @@ export const data = [{
     "the player a brilliant experience, with the guns being much more realistic and the gun play " +
     "feeling more satisfying. Whilst many mechanics are new the franchise is beginning to feel " +
     "bland and even with many of the new features if you are tired of the franchise this might be " +
-    "a pass."}, {
+    "a pass.",
+  "favourite" : "No",
+  "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC"}, {
 
   "title": "Spider-man Miles Morales",
   "description" : "Marvel's Spider-Man: Miles Morales is a 2020 action-adventure " +
@@ -105,7 +115,9 @@ export const data = [{
     "fighting, movement and ability mechanics bringing it all together and whilst it is similar " +
     "it feels massively different to Spider-man. Miles's performance gives off the impression " +
     "of a movie and from start to finish I was completely entrenched in the story and the worst " +
-    "part was the length of the game as I was thirsty for more once finished."}, {
+    "part was the length of the game as I was thirsty for more once finished.",
+  "favourite" : "Yes",
+  "platform" : "PS4, PS5"}, {
 
   "title" : "Resident Evil 2",
   "description" : "Resident Evil 2 is a 2019 survival horror game " +
@@ -122,7 +134,9 @@ export const data = [{
     "keeping me interested for hours, the structure of the gameplay allows players to explore " +
     "moving the story forward at their own rate. After finishing the game I can truly say " +
     "that it is a must play for horror game lovers and with the optimisation requires little " +
-    "in terms of hardware to run exceptionally well."}, {
+    "in terms of hardware to run exceptionally well.",
+  "favourite" : "No",
+  "platform" : "PS4, Xbox One, PC"}, {
 
   "title" : "Cyberpunk 2077",
   "description" : "Cyberpunk 2077 is a 2020 action role-playing video game developed and " +
@@ -138,8 +152,9 @@ export const data = [{
     "The guns, vehicles and abilities all felt equally unique to one another making you want to " +
     "explore each of them, the graphics were truly out of this world for a game of this size. Whilst " +
     "it has many great features its not without its bugs which were many, something I hope will be resolved " +
-    "in future patches. However, if you can look past these it is well worth the experience to try out."
-  }];
+    "in future patches. However, if you can look past these it is well worth the experience to try out.",
+  "favourite" : "Yes",
+  "platform" : "PS4, Xbox One, PC" }];
 
   /* Sort the games based on score */
 

@@ -74,7 +74,7 @@ body {
     margin: 4px 10px;
   }
 
-  .header #searchBar {
+  .header #searchBarIndex, .header #searchBarGames, .header #searchBarFavourites {
     position: relative;
     height: 21px;
     min-width: 125px;
@@ -85,11 +85,11 @@ body {
     border-radius: 5px;
   }
 
-  .header #searchBar:focus {
+  .header #searchBarIndex:focus, .header #searchBarGames:focus, .header #searchBarFavourites:focus {
     outline: none;
   }
 
-  .header #searchButton {
+  .header #searchButtonIndex, .header #searchButtonGames, .header #searchButtonFavourites {
     position: relative;
     padding: 1px;
     height: 29px;
@@ -102,7 +102,7 @@ body {
     border-radius: 5px;
   }
 
-  .header #searchButton:focus {
+  .header #searchButtonIndex:focus, .header #searchButtonGames:focus, .header #searchButtonFavourites:focus {
     outline: none;
   }
 
@@ -536,7 +536,7 @@ body {
     margin: 4px 10px;
   }
 
-  .header #searchBar {
+  .header #searchBarIndex, .header #searchBarGames, .header #searchBarFavourites {
     position: relative;
     height: 21px;
     width: 48%;
@@ -547,11 +547,11 @@ body {
     border-radius: 5px;
   }
 
-  .header #searchBar:focus {
+  .header #searchBarIndex:focus, .header #searchBarGames:focus, .header #searchBarFavourites:focus {
     outline: none;
   }
 
-  .header #searchButton {
+  .header #searchButtonIndex, .header #searchButtonGames, .header #searchButtonFavourites {
     position: relative;
     padding: 1px;
     height: 29px;
@@ -564,7 +564,7 @@ body {
     border-radius: 5px;
   }
 
-  .header.header #searchButton:focus {
+  .header #searchButtonIndex:focus, .header #searchButtonGames:focus, .header #searchButtonFavourites:focus {
     outline: none;
   }
 
@@ -624,7 +624,7 @@ body {
     flex-direction: column;
     padding: 10px;
     min-height: 1050px;
-    width: 650px;
+    width: 625px;
     margin-top: 10px;
     margin-bottom: 10px;
     flex-shrink: 0;
@@ -634,6 +634,10 @@ body {
     border-radius: 5px;
   }
 
+  .reviewContainer #favouriteReviewContent {
+
+  }
+
 
   /* Article Content ------------------ */
 
@@ -641,7 +645,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    min-height: 210px;
+    min-height: 230px;
     width: 97%;
 
     font-family: Arial, serif;
@@ -651,7 +655,7 @@ body {
   }
 
   .expanded {
-    min-height: 350px;
+    min-height: 390px;
 
     border-bottom: thin solid lightgray;
   }
@@ -677,7 +681,7 @@ body {
   }
 
   .hidden {
-    padding: 0 5px;
+    padding: 25px 0 5px;
     display: block;
   }
 
@@ -723,7 +727,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 150px;
-    width: 375px;
+    width: 420px;
   }
 
   .gameTitle {
@@ -747,8 +751,8 @@ body {
   .articleScore {
     display: flex;
     flex-direction: column;
-    padding: 30px 10px;
-    height: 150px;
+    padding:10px 10px 0 10px;
+    height: 210px;
     width: 75px;
     text-align: center;
 
@@ -767,7 +771,7 @@ body {
   .articleExpand {
     height:25px;
     width: 75px;
-    margin-top: 100px;
+    margin-top: 150px;
     cursor: pointer;
   }
 
@@ -927,7 +931,7 @@ body {
   }
 
   .fade {
-    height: 200px;
+    height: 210px;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
