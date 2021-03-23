@@ -31,7 +31,7 @@ export const data = [{
     "by the long-running comic book mythology and adaptations " +
     "in other media.",
   "release" : "7th September 2016",
-  "score" : "97",
+  "score" : "68",
   "cover" : "css/media/game_covers/spiderman_cover.png",
   "coveralt" : "spidermancover",
   "review" : "An amazing spiderman game that allows you to truly connect " +

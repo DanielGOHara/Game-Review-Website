@@ -3,16 +3,6 @@ import { sortGames } from "./gameData.js";
 
 const sortedGames = sortGames();
 setFavouriteGames()
-listeners();
-
-function listeners() {
-  const searchBar = document.getElementById('searchBarFavourites');
-  const searchButton = document.getElementById('searchButtonFavourites');
-
-  searchButton.addEventListener('click', () => {
-    console.log(searchBar.value);
-  });
-}
 
 function setFavouriteGames() {
   let favouriteGames = document.getElementById('favouriteReviewContent');
@@ -25,6 +15,7 @@ function setFavouriteGames() {
       let number = document.createElement('h3');
       let info = document.createElement('section');
       let title = document.createElement('h3');
+      let platform = document.createElement('h6');
       let release = document.createElement('h6');
       let description = document.createElement('span');
       let scoreContainer = document.createElement('span');
@@ -36,6 +27,7 @@ function setFavouriteGames() {
       number.className = "articleNumber";
       info.className = "articleInfo";
       title.className = "gameTitle";
+      platform.className = "gamePlatform";
       release.className = "gameReleaseDate";
       description.className = "gameDescription";
       scoreContainer.className = "articleScore";
@@ -46,10 +38,13 @@ function setFavouriteGames() {
 
       image.src = sortedGames[i].cover;
       image.alt = sortedGames[i].coveralt;
-      title.innerHTML = sortedGames[i].title + " | " + sortedGames[i].platform + " |";
+      title.innerHTML = sortedGames[i].title;
+      platform.innerHTML = "Platform(s): " + sortedGames[i].platform;
       release.innerHTML = "Release: " + sortedGames[i].release + "\n";
       description.innerHTML = sortedGames[i].description;
       score.innerHTML = sortedGames[i].score;
+
+      title.appendChild(platform);
 
       if (sortedGames[i].score >= 75) {
         score.style.backgroundColor = 'green';

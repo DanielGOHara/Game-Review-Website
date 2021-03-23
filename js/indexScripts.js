@@ -45,65 +45,72 @@ butFive.addEventListener('click', () => {
 /* Call all of the functions */
 
 setGameTitles(index);
+setPlatforms(index);
 setReleaseDates(index);
 setGameDescriptions(index);
 setGameScore(index);
 setGameCovers(index);
 setGameReview(index);
 setTopGames();
-listeners();
 
 /* Functions to populate the index page */
 
 function setGameTitles(index) {
-  document.querySelectorAll('.gameTitle').forEach(item => {
-    item.innerHTML = sortedGames[index].title;
+  document.querySelectorAll('.gameTitle').forEach(title => {
+    title.innerHTML = sortedGames[index].title;
     index--;
   });
 }
 
+function setPlatforms(index) {
+  document.querySelectorAll('.gamePlatform').forEach(platform => {
+    platform.innerHTML = sortedGames[index].platform;
+    index--;
+  })
+}
+
 function setReleaseDates(index) {
-  document.querySelectorAll('.gameReleaseDate').forEach(item => {
-    item.innerHTML = "Release Date: " + sortedGames[index].release;
+  document.querySelectorAll('.gameReleaseDate').forEach(release => {
+    release.innerHTML = "Release Date: " + sortedGames[index].release;
     index--;
   });
 }
 
 function setGameDescriptions(index) {
-  document.querySelectorAll('.gameDescription').forEach(item => {
-    item.innerHTML = sortedGames[index].description;
+  document.querySelectorAll('.gameDescription').forEach(description => {
+    description.innerHTML = sortedGames[index].description;
     index--;
   });
 }
 
 function setGameScore(index) {
-  document.querySelectorAll('.gameScore').forEach(item => {
-    item.innerHTML = sortedGames[index].score;
+  document.querySelectorAll('.gameScore').forEach(score => {
+    score.innerHTML = sortedGames[index].score;
 
     /* Depending on the score the background color for the score will change */
 
     if(sortedGames[index].score >= 75) {
-      item.style.backgroundColor = 'green';
+      score.style.backgroundColor = 'green';
     } else if(75 > sortedGames[index].score && sortedGames[index].score >= 50) {
-      item.style.backgroundColor = 'yellow'
+      score.style.backgroundColor = 'yellow'
     } else {
-      item.style.backgroundColor = 'red';
+      score.style.backgroundColor = 'red';
     }
     index--;
   });
 }
 
 function setGameCovers(index) {
-  document.querySelectorAll('.gameCover').forEach(item => {
-    item.src = sortedGames[index].cover;
-    item.alt = sortedGames[index].coveralt;
+  document.querySelectorAll('.gameCover').forEach(cover => {
+    cover.src = sortedGames[index].cover;
+    cover.alt = sortedGames[index].coveralt;
     index--;
   });
 }
 
 function setGameReview(index) {
-  document.querySelectorAll('.gameReview').forEach(item => {
-    item.innerHTML = sortedGames[index].review;
+  document.querySelectorAll('.gameReview').forEach(review => {
+    review.innerHTML = sortedGames[index].review;
     index--;
   });
 }
@@ -132,16 +139,6 @@ function setTopGames() {
     topGames.appendChild(item);
   }
   return topGames;
-}
-
-function listeners() {
-  const searchBar = document.getElementById('searchBarIndex');
-  const searchButton = document.getElementById('searchButtonIndex');
-
-  searchButton.addEventListener('click', () => {
-    console.log(searchBar.value);
-  });
-
 }
 
 

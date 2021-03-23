@@ -536,7 +536,7 @@ body {
     margin: 4px 10px;
   }
 
-  .header #searchBarIndex, .header #searchBarGames, .header #searchBarFavourites {
+  .searchBar {
     position: relative;
     height: 21px;
     width: 48%;
@@ -547,11 +547,11 @@ body {
     border-radius: 5px;
   }
 
-  .header #searchBarIndex:focus, .header #searchBarGames:focus, .header #searchBarFavourites:focus {
+  .searchBar:focus {
     outline: none;
   }
 
-  .header #searchButtonIndex, .header #searchButtonGames, .header #searchButtonFavourites {
+  .searchButton {
     position: relative;
     padding: 1px;
     height: 29px;
@@ -564,7 +564,7 @@ body {
     border-radius: 5px;
   }
 
-  .header #searchButtonIndex:focus, .header #searchButtonGames:focus, .header #searchButtonFavourites:focus {
+  .searchButton:focus {
     outline: none;
   }
 
@@ -736,12 +736,16 @@ body {
     cursor: pointer;
   }
 
+  .gamePlatform {
+    margin: 2px 0 2px 2px;
+  }
+
   .gameTitle:hover {
     color: dimgray;
   }
 
   .gameReleaseDate {
-    margin: 5px;
+    margin: 2px 0 5px 2px;
   }
 
   .articleInfo {
