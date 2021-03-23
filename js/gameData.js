@@ -88,7 +88,7 @@ export const data = [{
     "upon the previous entries in the series, takes us to the cold war bringing outstanding " +
     "graphics and raytracing.",
   "release" : "13th November 2020",
-  "score" : "82",
+  "score" : "99",
   "cover" : "css/media/game_covers/coldwar_cover.png",
   "coveralt" : "coldwarcover",
   "review" : "Call of Duty Cold War is a beautiful addition to the franchise with the story " +

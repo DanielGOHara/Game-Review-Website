@@ -64,9 +64,38 @@ function setGameTitles(index) {
 
 function setPlatforms(index) {
   document.querySelectorAll('.gamePlatform').forEach(platform => {
-    platform.innerHTML = sortedGames[index].platform;
+    let platformContainer = document.createElement('span');
+    const platformArray = sortedGames[index].platform.split(", ")
+    for(let i = 0; i < platformArray.length; i++) {
+      let platformLogo = document.createElement('span');
+      if(platformArray[i] === "PS4" || platformArray[i] === "PS5") {
+        const logo = document.createElement('img');
+        logo.src = "css/media/platform_logo/ps_logo.png"
+        logo.alt = "ps_logo";
+        logo.className = "platformLogo";
+        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+        platformContainer.appendChild(platformLogo);
+      }
+      if(platformArray[i] === "Xbox One" || platformArray[i] === "Xbox Series X") {
+        const logo = document.createElement('img');
+        logo.src = "css/media/platform_logo/xbox_logo.png";
+        logo.alt = "xbox_logo";
+        logo.className = "platformLogo";
+        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+        platformContainer.appendChild(platformLogo);
+      }
+      if(platformArray[i] === "PC") {
+        const logo = document.createElement('img');
+        logo.src = "css/media/platform_logo/pc_logo.png";
+        logo.alt = "pc_logo";
+        logo.className = "platformLogo";
+        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+        platformContainer.appendChild(platformLogo);
+      }
+    }
+    platform.innerHTML = platformContainer.outerHTML;
     index--;
-  })
+  });
 }
 
 function setReleaseDates(index) {
@@ -131,12 +160,12 @@ function setTopGames() {
     } else {
       score.style.backgroundColor = 'red';
     }
-    let item = document.createElement('label');
-    item.className = "topGame";
-    item.appendChild(document.createTextNode(gamePosition + ". " + sortedGames[i].title));
+    let title = document.createElement('label');
+    title.className = "topGame";
+    title.appendChild(document.createTextNode(gamePosition + ". " + sortedGames[i].title));
     gamePosition++;
-    item.innerHTML += score.outerHTML;
-    topGames.appendChild(item);
+    title.innerHTML += score.outerHTML;
+    topGames.appendChild(title);
   }
   return topGames;
 }

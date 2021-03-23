@@ -740,6 +740,10 @@ body {
     margin: 2px 0 2px 2px;
   }
 
+  .platformLogo {
+    margin: 0 3px;
+  }
+
   .gameTitle:hover {
     color: dimgray;
   }
