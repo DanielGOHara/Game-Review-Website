@@ -40,7 +40,7 @@ function setFavouriteGames() {
       image.alt = sortedGames[i].coveralt;
       title.innerHTML = sortedGames[i].title;
       platform.innerHTML = "Platform(s): " + sortedGames[i].platform;
-      release.innerHTML = "Release: " + sortedGames[i].release + "\n";
+      release.innerHTML = sortedGames[i].release + "\n";
       description.innerHTML = sortedGames[i].description;
       score.innerHTML = sortedGames[i].score;
 

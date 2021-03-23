@@ -14,7 +14,7 @@ function load() {
       document.getElementById('gameCover').src = sortedGames[i].cover;
       document.getElementById('gameCover').alt = sortedGames[i].coveralt;
       document.getElementById('gameReviewTitle').innerHTML = sortedGames[i].title;
-      document.getElementById('focusedPlatform').innerHTML = sortedGames[i].platform;
+      document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
       document.getElementById('gameReviewRelease').innerHTML = sortedGames[i].release;
       document.getElementById('gameReviewDescription').innerHTML = sortedGames[i].description;
       document.getElementById('gameReviewScore').innerHTML = sortedGames[i].score;
@@ -27,7 +27,7 @@ function load() {
     document.getElementById('gameCover').src = sortedGames[j].cover;
     document.getElementById('gameCover').alt = sortedGames[j].coveralt;
     document.getElementById('gameReviewTitle').innerHTML = sortedGames[j].title;
-    document.getElementById('focusedPlatform').innerHTML = sortedGames[j].platform;
+    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
     document.getElementById('gameReviewRelease').innerHTML = sortedGames[j].release;
     document.getElementById('gameReviewDescription').innerHTML = sortedGames[j].description;
     document.getElementById('gameReviewScore').innerHTML = sortedGames[j].score;
@@ -76,11 +76,11 @@ function load() {
         image.src = sortedGames[i].cover;
         image.alt = sortedGames[i].coveralt;
         title.innerHTML = sortedGames[i].title;
-        platform.innerHTML = "Platform(s): " + sortedGames[i].platform;
         release.innerHTML = "Release: " + sortedGames[i].release + "\n";
         description.innerHTML = sortedGames[i].description;
         score.innerHTML = sortedGames[i].score;
 
+        platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
         title.appendChild(platform);
 
         if (sortedGames[i].score >= 75) {
@@ -100,6 +100,39 @@ function load() {
       }
     }
     return gameScroll;
+  }
+
+  function setPlatformLogo(platformString) {
+    let platformContainer = document.createElement('span');
+    const platformArray = platformString.split(", ");
+    for(let i = 0; i < platformArray.length; i++) {
+      let platformLogo = document.createElement('span');
+      if(platformArray[i] === "PS4" || platformArray[i] === "PS5") {
+        const logo = document.createElement('img');
+        logo.src = "css/media/platform_logo/ps_logo.png"
+        logo.alt = "ps_logo";
+        logo.className = "platformLogo";
+        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+        platformContainer.appendChild(platformLogo);
+      }
+      if(platformArray[i] === "Xbox One" || platformArray[i] === "Xbox Series X") {
+        const logo = document.createElement('img');
+        logo.src = "css/media/platform_logo/xbox_logo.png";
+        logo.alt = "xbox_logo";
+        logo.className = "platformLogo";
+        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+        platformContainer.appendChild(platformLogo);
+      }
+      if(platformArray[i] === "PC") {
+        const logo = document.createElement('img');
+        logo.src = "css/media/platform_logo/pc_logo.png";
+        logo.alt = "pc_logo";
+        logo.className = "platformLogo";
+        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+        platformContainer.appendChild(platformLogo);
+      }
+    }
+    return platformContainer;
   }
 
   /* Creates a random number and a 20 second timer */
