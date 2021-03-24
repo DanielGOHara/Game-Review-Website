@@ -45,7 +45,6 @@ butFive.addEventListener('click', () => {
 });
 
 document.querySelectorAll('.gameTitle').forEach(title => {
-  console.log("title")
   title.addEventListener('click', () => {
     setFocusedGame(title.innerHTML);
     assignHtmlPage("games");

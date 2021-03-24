@@ -9,31 +9,15 @@ window.onload = load;
 function load() {
   setShowGames();
 
-  for(let i = 0; i < sortedGames.length; i++) {
-    if(focusedGameTitle === sortedGames[i].title) {
-      document.getElementById('gameCover').src = sortedGames[i].cover;
-      document.getElementById('gameCover').alt = sortedGames[i].coveralt;
-      document.getElementById('gameReviewTitle').innerHTML = sortedGames[i].title;
-      document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
-      document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[i].release;
-      document.getElementById('gameReviewDescription').innerHTML = sortedGames[i].description;
-      document.getElementById('gameReviewScore').innerHTML = sortedGames[i].score;
-      document.getElementById('focusedGameReview').innerHTML = sortedGames[i].review;
-      document.getElementById('youtubeVid').src = sortedGames[i].trailer;
-    }
-  }
-
   if(focusedGameTitle === null) {
-    let j = Math.floor((Math.random() * sortedGames.length));
-    document.getElementById('gameCover').src = sortedGames[j].cover;
-    document.getElementById('gameCover').alt = sortedGames[j].coveralt;
-    document.getElementById('gameReviewTitle').innerHTML = sortedGames[j].title;
-    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[j].platform).outerHTML;
-    document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[j].release;
-    document.getElementById('gameReviewDescription').innerHTML = sortedGames[j].description;
-    document.getElementById('gameReviewScore').innerHTML = sortedGames[j].score;
-    document.getElementById('focusedGameReview').innerHTML = sortedGames[j].review;
-    document.getElementById('youtubeVid').src = sortedGames[j].trailer;
+    let rand = Math.floor((Math.random() * sortedGames.length));
+    updateFocusedGame(rand)
+  } else {
+    for(let i = 0; i < sortedGames.length; i++) {
+      if(focusedGameTitle === sortedGames[i].title) {
+        updateFocusedGame(i)
+      }
+    }
   }
 
   function setShowGames() {
@@ -187,6 +171,30 @@ function load() {
       showGames();
     }, 20000);
   }
+
+  function updateFocusedGame(index) {
+    document.getElementById('gameCover').src = sortedGames[index].cover;
+    document.getElementById('gameCover').alt = sortedGames[index].coveralt;
+    document.getElementById('gameReviewTitle').innerHTML = sortedGames[index].title;
+    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[index].platform).outerHTML;
+    document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[index].release;
+    document.getElementById('gameReviewDescription').innerHTML = sortedGames[index].description;
+    document.getElementById('gameReviewScore').innerHTML = sortedGames[index].score;
+    document.getElementById('focusedGameReview').innerHTML = sortedGames[index].review;
+    document.getElementById('youtubeVid').src = sortedGames[index].trailer;
+  }
+
+  document.querySelectorAll('.gameTitle').forEach(title => {
+    title.addEventListener('click', () => {
+      for(let i = 0; i < sortedGames.length; i++) {
+        if(title.innerHTML === sortedGames[i].title) {
+          localStorage.setItem("GameTitle", sortedGames[i].title);
+          location.reload();
+        }
+      }
+    });
+  });
+
   document.getElementById('gameReviewTitle').style.pointerEvents = 'none';
 }
 
