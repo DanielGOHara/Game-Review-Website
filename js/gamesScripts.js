@@ -15,10 +15,11 @@ function load() {
       document.getElementById('gameCover').alt = sortedGames[i].coveralt;
       document.getElementById('gameReviewTitle').innerHTML = sortedGames[i].title;
       document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
-      document.getElementById('gameReviewRelease').innerHTML = sortedGames[i].release;
+      document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[i].release;
       document.getElementById('gameReviewDescription').innerHTML = sortedGames[i].description;
       document.getElementById('gameReviewScore').innerHTML = sortedGames[i].score;
       document.getElementById('focusedGameReview').innerHTML = sortedGames[i].review;
+      document.getElementById('youtubeVid').src = sortedGames[i].trailer;
     }
   }
 
@@ -27,11 +28,12 @@ function load() {
     document.getElementById('gameCover').src = sortedGames[j].cover;
     document.getElementById('gameCover').alt = sortedGames[j].coveralt;
     document.getElementById('gameReviewTitle').innerHTML = sortedGames[j].title;
-    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
-    document.getElementById('gameReviewRelease').innerHTML = sortedGames[j].release;
+    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[j].platform).outerHTML;
+    document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[j].release;
     document.getElementById('gameReviewDescription').innerHTML = sortedGames[j].description;
     document.getElementById('gameReviewScore').innerHTML = sortedGames[j].score;
     document.getElementById('focusedGameReview').innerHTML = sortedGames[j].review;
+    document.getElementById('youtubeVid').src = sortedGames[i].trailer;
   }
 
   function setShowGames() {

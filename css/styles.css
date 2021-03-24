@@ -689,7 +689,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    height: 270px;
+    height: 180px;
     width: 630px;
 
     font-family: Arial, serif;
@@ -879,11 +879,16 @@ body {
 
   .gameWrapper {
     padding: 10px;
-    height: 400px;
+    height: 815px;
     width: 650px;
     margin: 50px;
 
     border: thin solid lightgray;
+  }
+
+  .gameContainer #youtubeVid {
+    height: 400px;
+    width: 650px;
   }
 
   .gameContainer #gameScroll {
@@ -932,7 +937,6 @@ body {
     opacity: 1;
     transition: 0.6s ease;
   }
-
 
   .prev:hover, .next:hover {
     background-color: lightgray;

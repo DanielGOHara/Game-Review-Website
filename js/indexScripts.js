@@ -151,8 +151,18 @@ function setTopGames() {
   let topGames = document.getElementById('topGames');
   for(let i = sortedGames.length - 1; i >= 0; i--) {
     let score = document.createElement('span');
+    let dot = document.createElement('label')
+    let title = document.createElement('label');
+    let titleContainer = document.createElement('span');
     score.className = "topGameScore";
-    score.appendChild(document.createTextNode(sortedGames[i].score));
+    score.innerHTML = sortedGames[i].score;
+    dot.innerHTML = gamePosition + ". ";
+    title.className = "topGame";
+    title.innerHTML = sortedGames[i].title;
+    titleContainer.appendChild(dot);
+    titleContainer.appendChild(title);
+    titleContainer.appendChild(score);
+
     if(sortedGames[i].score >= 75) {
       score.style.backgroundColor = 'green';
     } else if(75 > sortedGames[i].score && sortedGames[i].score >= 50) {
@@ -160,12 +170,10 @@ function setTopGames() {
     } else {
       score.style.backgroundColor = 'red';
     }
-    let title = document.createElement('label');
-    title.className = "topGame";
-    title.appendChild(document.createTextNode(gamePosition + ". " + sortedGames[i].title));
+
+    topGames.appendChild(titleContainer);
+
     gamePosition++;
-    title.innerHTML += score.outerHTML;
-    topGames.appendChild(title);
   }
   return topGames;
 }

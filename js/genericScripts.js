@@ -3,11 +3,15 @@
 
 import { setFocusedGame } from "./gamesScripts.js";
 
+/* Creates listeners for the games button on each page */
+
 document.querySelectorAll('.gamesButton').forEach(item => {
   item.addEventListener('click', () => {
     assignHtmlPage("games");
   });
 });
+
+/* Creates listeners for the home button on each page */
 
 document.querySelectorAll('.homeButton').forEach(item => {
   item.addEventListener('click', () => {
@@ -15,29 +19,33 @@ document.querySelectorAll('.homeButton').forEach(item => {
   });
 });
 
+/* Creates listeners for the favourites button on each page */
+
 document.querySelectorAll('.favouritesButton').forEach(item => {
   item.addEventListener('click', () => {
     assignHtmlPage("favourite");
   });
 });
 
-document.querySelectorAll('.gameTitle').forEach(item => {
-  item.addEventListener('click', () => {
-    setFocusedGame(item.innerHTML);
+document.querySelectorAll('.gameTitle').forEach(title => {
+  title.addEventListener('click', () => {
+    setFocusedGame(title.innerHTML);
     assignHtmlPage("games");
   });
 });
 
-document.querySelectorAll('.searchBar').forEach(item => {
-  document.querySelectorAll('.searchButton').forEach( item2 => {
-    item.addEventListener('keyup', event => {
+/* Creates listeners for the search bar and button on each page */
+
+document.querySelectorAll('.searchBar').forEach(searchBar => {
+  document.querySelectorAll('.searchButton').forEach( searchButton => {
+    searchBar.addEventListener('keyup', event => {
       if(event.keyCode === 13) {
-        setFocusedGame(item.value);
+        setFocusedGame(searchBar.value);
         assignHtmlPage("games");
       }
     });
-    item2.addEventListener('click', () => {
-      setFocusedGame(item.value);
+    searchButton.addEventListener('click', () => {
+      setFocusedGame(searchBar.value);
       assignHtmlPage("games");
     });
   });

@@ -21,7 +21,8 @@ export const data = [{
     "being on point even with weaker computer hardware. Defiantly " +
     "a game I see myself sinking hours into.",
   "favourite" : "Yes",
-  "platform" : "PS4, Xbox One, PC"}, {
+  "platform" : "PS4, Xbox One, PC",
+  "trailer" : "https://www.youtube.com/embed/ktw2k3m7Qko"}, {
 
   "title" : "Spider-man",
   "description" : "Marvel's Spider-Man is a 2018 action-adventure " +
@@ -31,7 +32,7 @@ export const data = [{
     "by the long-running comic book mythology and adaptations " +
     "in other media.",
   "release" : "7th September 2016",
-  "score" : "68",
+  "score" : "92",
   "cover" : "css/media/game_covers/spiderman_cover.png",
   "coveralt" : "spidermancover",
   "review" : "An amazing spiderman game that allows you to truly connect " +
@@ -43,7 +44,8 @@ export const data = [{
     "of the game it felt perfect with plenty of plot points to keep " +
     "you invested in the story and characters.",
   "favourite" : "No",
-  "platform" : "PS4, PS5"}, {
+  "platform" : "PS4, PS5",
+  "trailer" : "https://www.youtube.com/embed/3R2uvJqWeVg"}, {
 
   "title" : "Fallout 4",
   "description" : "Fallout 4 is an action role-playing game developed by Bethesda " +
@@ -61,7 +63,8 @@ export const data = [{
     "sprawling towns. The added DLC further improves on the main game with out of this" +
     "world stories in far away lands with new weapons, enemies and settlements.",
   "favourite" : "Yes",
-  "platform" : "PS4, Xbox One, PC"}, {
+  "platform" : "PS4, Xbox One, PC",
+  "trailer" : "https://www.youtube.com/embed/X5aJfebzkrM"}, {
 
   "title" : "Detroit Become Human",
   "description" : "Detroit: Become Human is a 2018 adventure game developed by Quantic " +
@@ -80,7 +83,8 @@ export const data = [{
     "the game I am very much looking forward to the next title in the series and look forward " +
     "to exploring the world much more.",
   "favourite" : "Yes",
-  "platform" : "PS4, PS5, PC"}, {
+  "platform" : "PS4, PS5, PC",
+  "trailer" : "https://www.youtube.com/embed/8a-EObAhYrg"}, {
 
   "title" : "Call of Duty Cold War",
   "description" : "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video " +
@@ -88,7 +92,7 @@ export const data = [{
     "upon the previous entries in the series, takes us to the cold war bringing outstanding " +
     "graphics and raytracing.",
   "release" : "13th November 2020",
-  "score" : "99",
+  "score" : "74",
   "cover" : "css/media/game_covers/coldwar_cover.png",
   "coveralt" : "coldwarcover",
   "review" : "Call of Duty Cold War is a beautiful addition to the franchise with the story " +
@@ -100,7 +104,8 @@ export const data = [{
     "bland and even with many of the new features if you are tired of the franchise this might be " +
     "a pass.",
   "favourite" : "No",
-  "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC"}, {
+  "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
+  "trailer" : "https://www.youtube.com/embed/aTS9n_m7TW0"}, {
 
   "title": "Spider-man Miles Morales",
   "description" : "Marvel's Spider-Man: Miles Morales is a 2020 action-adventure " +
@@ -117,7 +122,8 @@ export const data = [{
     "of a movie and from start to finish I was completely entrenched in the story and the worst " +
     "part was the length of the game as I was thirsty for more once finished.",
   "favourite" : "Yes",
-  "platform" : "PS4, PS5"}, {
+  "platform" : "PS4, PS5",
+  "trailer" : "https://www.youtube.com/embed/NTunTURbyUU"}, {
 
   "title" : "Resident Evil 2",
   "description" : "Resident Evil 2 is a 2019 survival horror game " +
@@ -136,14 +142,15 @@ export const data = [{
     "that it is a must play for horror game lovers and with the optimisation requires little " +
     "in terms of hardware to run exceptionally well.",
   "favourite" : "No",
-  "platform" : "PS4, Xbox One, PC"}, {
+  "platform" : "PS4, Xbox One, PC",
+  "trailer" : "https://www.youtube.com/embed/u3wS-Q2KBpk"}, {
 
   "title" : "Cyberpunk 2077",
   "description" : "Cyberpunk 2077 is a 2020 action role-playing video game developed and " +
     "published by CD Projekt. The story takes place in Night City, an open world set in the " +
     "Cyberpunk universe",
   "release" : "10th December 2020",
-  "score" : "78",
+  "score" : "96",
   "cover" : "css/media/game_covers/cyberpunk2077_cover.png",
   "coveralt" : "cyberpunk2077cover",
   "review" : "A brilliant title with a vast world to explore that has a variety of culture " +
@@ -154,7 +161,8 @@ export const data = [{
     "it has many great features its not without its bugs which were many, something I hope will be resolved " +
     "in future patches. However, if you can look past these it is well worth the experience to try out.",
   "favourite" : "Yes",
-  "platform" : "PS4, Xbox One, PC" }];
+  "platform" : "PS4, Xbox One, PC",
+  "trailer" : "https://www.youtube.com/embed/qIcTM8WXFjk"}];
 
   /* Sort the games based on score */
 
