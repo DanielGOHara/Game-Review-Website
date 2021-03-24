@@ -5,32 +5,25 @@ import { setFocusedGame } from "./gamesScripts.js";
 
 /* Creates listeners for the games button on each page */
 
-document.querySelectorAll('.gamesButton').forEach(item => {
-  item.addEventListener('click', () => {
+document.querySelectorAll('.gamesButton').forEach(gameButton => {
+  gameButton.addEventListener('click', () => {
     assignHtmlPage("games");
   });
 });
 
 /* Creates listeners for the home button on each page */
 
-document.querySelectorAll('.homeButton').forEach(item => {
-  item.addEventListener('click', () => {
+document.querySelectorAll('.homeButton').forEach(homeButton => {
+  homeButton.addEventListener('click', () => {
     assignHtmlPage("home");
   });
 });
 
 /* Creates listeners for the favourites button on each page */
 
-document.querySelectorAll('.favouritesButton').forEach(item => {
-  item.addEventListener('click', () => {
+document.querySelectorAll('.favouritesButton').forEach(favouritesButton => {
+  favouritesButton.addEventListener('click', () => {
     assignHtmlPage("favourite");
-  });
-});
-
-document.querySelectorAll('.gameTitle').forEach(title => {
-  title.addEventListener('click', () => {
-    setFocusedGame(title.innerHTML);
-    assignHtmlPage("games");
   });
 });
 
@@ -53,7 +46,7 @@ document.querySelectorAll('.searchBar').forEach(searchBar => {
 
 /* Redirects to desired page */
 
-function assignHtmlPage(page) {
+export function assignHtmlPage(page) {
   if (page === "home") {
     window.location.href = 'index.html'
   } else if (page === "games") {

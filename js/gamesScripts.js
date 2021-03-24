@@ -73,8 +73,6 @@ function load() {
         score.className = "gameScore";
         spacer.className = "articleSpacer";
 
-        title.style.pointerEvents = "none";
-
         image.src = sortedGames[i].cover;
         image.alt = sortedGames[i].coveralt;
         title.innerHTML = sortedGames[i].title;
@@ -150,11 +148,11 @@ function load() {
 
   /* Adds listeners to the size arrows */
 
-  prev[0].addEventListener('click', event => {
+  prev[0].addEventListener('click', () => {
     nextGame(-1);
   });
 
-  next[0].addEventListener('click', event => {
+  next[0].addEventListener('click', () => {
     nextGame(1);
   });
 

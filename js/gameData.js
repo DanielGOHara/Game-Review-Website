@@ -22,7 +22,7 @@ export const data = [{
     "a game I see myself sinking hours into.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/ktw2k3m7Qko"}, {
+  "trailer" : "https://www.youtube.com/embed/VqeMjHmL9eg"}, {
 
   "title" : "Spider-man",
   "description" : "Marvel's Spider-Man is a 2018 action-adventure " +
@@ -148,7 +148,8 @@ export const data = [{
   "title" : "Cyberpunk 2077",
   "description" : "Cyberpunk 2077 is a 2020 action role-playing video game developed and " +
     "published by CD Projekt. The story takes place in Night City, an open world set in the " +
-    "Cyberpunk universe",
+    "Cyberpunk universe. The game has heavy RPG elements, with the player able to decide the " +
+    "fate of the city.",
   "release" : "10th December 2020",
   "score" : "96",
   "cover" : "css/media/game_covers/cyberpunk2077_cover.png",
@@ -162,7 +163,7 @@ export const data = [{
     "in future patches. However, if you can look past these it is well worth the experience to try out.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/qIcTM8WXFjk"}];
+  "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8"}];
 
   /* Sort the games based on score */
 

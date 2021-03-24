@@ -1,5 +1,7 @@
 
 import { sortGames } from "./gameData.js";
+import { setFocusedGame } from "./gamesScripts.js";
+import { assignHtmlPage } from "./genericScripts.js";
 
 const sortedGames = sortGames();
 setFavouriteGames()
@@ -104,3 +106,11 @@ function setPlatformLogo(platformString) {
   }
   return platformContainer;
 }
+
+document.querySelectorAll('.gameTitle').forEach(title => {
+  console.log("title")
+  title.addEventListener('click', () => {
+    setFocusedGame(title.innerHTML);
+    assignHtmlPage("games");
+  });
+});

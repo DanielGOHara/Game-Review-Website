@@ -74,7 +74,7 @@ body {
     margin: 4px 10px;
   }
 
-  .header #searchBarIndex, .header #searchBarGames, .header #searchBarFavourites {
+  .searchBar {
     position: relative;
     height: 21px;
     min-width: 125px;
@@ -85,11 +85,11 @@ body {
     border-radius: 5px;
   }
 
-  .header #searchBarIndex:focus, .header #searchBarGames:focus, .header #searchBarFavourites:focus {
+  .searchBar {
     outline: none;
   }
 
-  .header #searchButtonIndex, .header #searchButtonGames, .header #searchButtonFavourites {
+  .searchButton {
     position: relative;
     padding: 1px;
     height: 29px;
@@ -102,7 +102,7 @@ body {
     border-radius: 5px;
   }
 
-  .header #searchButtonIndex:focus, .header #searchButtonGames:focus, .header #searchButtonFavourites:focus {
+  .searchButton {
     outline: none;
   }
 
@@ -190,7 +190,7 @@ body {
   }
 
   .expanded {
-    height: 620px;
+    height: 665px;
 
     border-bottom: thin solid lightgray;
   }
@@ -223,7 +223,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    height: 270px;
+    height: 180px;
     width: 630px;
 
     font-family: Arial, serif;
@@ -274,12 +274,16 @@ body {
     cursor: pointer;
   }
 
-  .gameTitle:hover {
-    color: dimgray;
+  .gamePlatform, .gameReleaseDate {
+    margin: 2px 0 2px 2px;
   }
 
-  .gameReleaseDate {
-    margin: 5px;
+  .platformLogo {
+    margin: 0 3px;
+  }
+
+  .gameTitle:hover {
+    color: dimgray;
   }
 
   .articleInfo {
@@ -408,11 +412,16 @@ body {
 
   .gameWrapper {
     padding: 10px;
-    height: 500px;
+    height: 815px;
     width: 650px;
     margin: 50px;
 
     border: thin solid lightgray;
+  }
+
+  .gameContainer #youtubeVid {
+    height: 400px;
+    width: 650px;
   }
 
   .gameContainer #gameScroll {
@@ -468,7 +477,7 @@ body {
   }
 
   .fade {
-    height: 210px;
+    height: 220px;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
@@ -736,7 +745,7 @@ body {
     cursor: pointer;
   }
 
-  .gamePlatform {
+  .gamePlatform, .gameReleaseDate {
     margin: 2px 0 2px 2px;
   }
 
@@ -746,10 +755,6 @@ body {
 
   .gameTitle:hover {
     color: dimgray;
-  }
-
-  .gameReleaseDate {
-    margin: 2px 0 5px 2px;
   }
 
   .articleInfo {

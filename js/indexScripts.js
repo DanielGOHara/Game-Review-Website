@@ -1,5 +1,7 @@
 
 import { sortGames } from "./gameData.js";
+import { setFocusedGame } from "./gamesScripts.js";
+import { assignHtmlPage } from "./genericScripts.js";
 
 const sortedGames = sortGames();
 const index = sortedGames.length - 1;
@@ -40,6 +42,14 @@ butFive.addEventListener('click', () => {
   document.getElementById('gameFive').classList.toggle('expanded');
   document.getElementById('gameReviewFive').classList.toggle('hidden');
   document.getElementById('gameFiveArrow').classList.toggle('down');
+});
+
+document.querySelectorAll('.gameTitle').forEach(title => {
+  console.log("title")
+  title.addEventListener('click', () => {
+    setFocusedGame(title.innerHTML);
+    assignHtmlPage("games");
+  });
 });
 
 /* Call all of the functions */
@@ -171,7 +181,8 @@ function setTopGames() {
       score.style.backgroundColor = 'red';
     }
 
-    titleContainer.style.marginTop = "5px"
+    titleContainer.style.marginTop = "5px";
+    titleContainer.style.flexShrink = "0";
     topGames.appendChild(titleContainer);
 
     gamePosition++;
