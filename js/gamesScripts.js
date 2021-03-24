@@ -33,7 +33,7 @@ function load() {
     document.getElementById('gameReviewDescription').innerHTML = sortedGames[j].description;
     document.getElementById('gameReviewScore').innerHTML = sortedGames[j].score;
     document.getElementById('focusedGameReview').innerHTML = sortedGames[j].review;
-    document.getElementById('youtubeVid').src = sortedGames[i].trailer;
+    document.getElementById('youtubeVid').src = sortedGames[j].trailer;
   }
 
   function setShowGames() {

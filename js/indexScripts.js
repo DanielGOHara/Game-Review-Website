@@ -171,6 +171,7 @@ function setTopGames() {
       score.style.backgroundColor = 'red';
     }
 
+    titleContainer.style.marginTop = "5px"
     topGames.appendChild(titleContainer);
 
     gamePosition++;
