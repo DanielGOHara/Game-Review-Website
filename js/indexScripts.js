@@ -9,6 +9,8 @@ const sortedGames = sortGames();
 
 /* Call all of the functions */
 
+setGameBanner();
+setGameBanner();
 setTopGames();
 setGames();
 
@@ -68,6 +70,7 @@ function setGames() {
     section.style.display = 'flex';
     section.style.flexDirection = 'row';
     image.style.transition = 'transform .2s';
+    image.style.cursor = 'pointer';
 
     image.src = sortedGames[i].cover;
     image.alt = sortedGames[i].coveralt;
@@ -144,6 +147,9 @@ function setPlatformLogo(platformString) {
 function setTopGames() {
   let gamePosition = 1;
   let topGames = document.getElementById('topGames');
+
+  /* Loops through the sorted array adding a new score line to the leaderboard for each game */
+
   for(let i = sortedGames.length - 1; i >= 0; i--) {
     let score = document.createElement('span');
     let dot = document.createElement('label')
@@ -154,11 +160,16 @@ function setTopGames() {
     dot.innerHTML = gamePosition + ". ";
     title.className = "topGame";
     title.innerHTML = sortedGames[i].title;
+
+    /* Appends all of the elements to the title container */
+
     titleContainer.appendChild(dot);
     titleContainer.appendChild(title);
     titleContainer.appendChild(score);
 
     title.style.margin = '3px 0';
+
+    /* Changes score background color depending on score */
 
     if(sortedGames[i].score >= 75) {
       score.style.backgroundColor = 'green';
@@ -168,6 +179,8 @@ function setTopGames() {
       score.style.backgroundColor = 'red';
     }
 
+    /* Sets some styling for the title container then appends it to the parent topGames element */
+
     titleContainer.style.marginTop = "5px";
     titleContainer.style.flexShrink = "0";
     topGames.appendChild(titleContainer);
@@ -175,6 +188,30 @@ function setTopGames() {
     gamePosition++;
   }
   return topGames;
+}
+
+/* Creates the image elements for the infinite scrolling banner, it is called twice to make the banner fluid */
+
+function setGameBanner() {
+  const gameBanner = document.getElementById('gameBanner');
+  const imageContainer = document.createElement('section');
+
+  imageContainer.className = "gameBannerContainer";
+
+  /* Loops through the sorted array creating an image element for each game */
+
+  for(let i = 0; i < sortedGames.length; i++) {
+    const image = document.createElement('img');
+      image.src = sortedGames[i].cover;
+      image.alt = sortedGames[i].coveralt;
+      image.className = "gameBannerImage";
+      image.style.cursor = 'pointer';
+      imageContainer.append(image);
+  }
+
+  /* Appends the image container to the gameBanner parent element */
+
+  gameBanner.append(imageContainer)
 }
 
 
@@ -232,4 +269,18 @@ document.querySelectorAll('.topGame').forEach(title => {
   } )
 })
 
+/* Game image listener */
 
+document.querySelectorAll('.gameImage').forEach(image => {
+  image.addEventListener('click', () => {
+    setFocusedGame(image.alt);
+    assignHtmlPage("games");
+  });
+});
+
+document.querySelectorAll('.gameBannerImage').forEach(image => {
+  image.addEventListener('click', () => {
+    setFocusedGame(image.alt);
+    assignHtmlPage("games");
+  });
+});

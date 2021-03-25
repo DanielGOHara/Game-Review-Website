@@ -58,6 +58,7 @@ body {
     font-family: Arial, serif;
 
     background-color: black;
+    border-bottom: thick solid darkgray;
   }
 
   .header #headerTitle {
@@ -403,6 +404,7 @@ body {
     font-weight: bold;
 
     background-color: black;
+    border-top: thick solid darkgray;
   }
 
   /* Game HTML Page ------------------ */
@@ -534,6 +536,7 @@ body {
     font-family: Arial, serif;
 
     background-color: black;
+    border-bottom: thick solid darkgray;
   }
 
   .header #headerTitle {
@@ -733,7 +736,7 @@ body {
 
   }
 
-  .gameImage:hover {
+  .gameImage:hover, .gameBannerImage:hover {
     transform: scale(1.15);
   }
 
@@ -872,6 +875,40 @@ body {
     border-radius: 5px;
   }
 
+  .reviewContainer #reviewSidebar #gameBanner {
+    display: flex;
+    height: 180px;
+    width: 250px;
+    max-width: 1260px;
+    overflow: hidden;
+    position: relative;
+
+    border-bottom: thin solid darkgray;
+  }
+
+  .gameBannerContainer {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    justify-content: space-around;
+  }
+
+  .gameBannerImage {
+    display: block;
+    top: 12px;
+    height: 140px;
+    width: 100px;
+    margin: 20px;
+
+    transition: .2s;
+
+    border-radius: 5px;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
   /* Footer Section ------------------ */
 
   .footer {
@@ -886,6 +923,7 @@ body {
     font-weight: bold;
 
     background-color: black;
+    border-top: thick solid darkgray;
   }
 
   /* Game HTML Page ------------------ */

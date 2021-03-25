@@ -163,7 +163,27 @@ export const data = [{
     "in future patches. However, if you can look past these it is well worth the experience to try out.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8"}];
+  "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8"}, {
+
+  "title": "Death Stranding",
+  "description" : "Death Stranding is an action game developed by Kojima Productions. It is the " +
+    "first game from director Hideo Kojima and Kojima Productions after their split from Konami " +
+    "in 2015. It was released for the PlayStation 4 in November 2019 and later for windows in 2020.",
+  "release" : "8th November 2019",
+  "score" : "98",
+  "cover"  : "css/media/game_covers/deathstranding_cover.png",
+  "coveralt" : "deathstrandingcover",
+  "review" : "Probably one of my if not my most favourite title of 2020, after spending time on playstation " +
+    "it finally came to PC. Truly an immersive experience with outstanding graphics and performance with Norman " +
+    "providing an outstanding performance. Troy Baker also brought an evil mastermind villain who was throughout " +
+    "loved and hated, the idea sounding repetitive did not come across at all repetitive and somehow kept me " +
+    "interested throughout the story. The games design allowing other player buildings to appear in your work " +
+    "truly created an interest gameplay arch with the rain and snow speeding up time pushing to you plan your " +
+    "routes much better, especially when on foot. An absolute must play.",
+  "favourite" : "Yes",
+  "platform" : "PS4, PS5, PC",
+  "trailer" : "https://www.youtube.com/embed/tCI396HyhbQ"
+}];
 
   /* Sort the games based on score */
 

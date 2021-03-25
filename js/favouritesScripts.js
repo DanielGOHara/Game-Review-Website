@@ -54,6 +54,7 @@ function setFavouriteGames() {
       article.style.borderTop = "none";
       article.style.borderBottom = "thin solid lightgray";
       image.style.transition = 'transform .2s';
+      image.style.cursor = 'pointer';
 
       image.src = sortedGames[i].cover;
       image.alt = sortedGames[i].coveralt;
@@ -131,6 +132,15 @@ function setPlatformLogo(platformString) {
 document.querySelectorAll('.gameTitle').forEach(title => {
   title.addEventListener('click', () => {
     setFocusedGame(title.innerHTML);
+    assignHtmlPage("games");
+  });
+});
+
+/* Game image listener */
+
+document.querySelectorAll('.gameImage').forEach(image => {
+  image.addEventListener('click', () => {
+    setFocusedGame(image.alt);
     assignHtmlPage("games");
   });
 });
