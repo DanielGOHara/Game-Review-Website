@@ -57,10 +57,10 @@ export const data = [{
   "cover" : "css/media/game_covers/fallout4_cover.png",
   "coveralt" : "fallout4cover",
   "review" : "A fantastic fallout game which has a truly interesting and in depth story, " +
-    "whilst the game is beginning to show its age visually, it is still a brilliant" +
+    "whilst the game is beginning to show its age visually, it is still a brilliant " +
     "title and a must play. The combination of traveling and building makes for a " +
-    "rewarding experience where you can witness your settlements slowly grow into" +
-    "sprawling towns. The added DLC further improves on the main game with out of this" +
+    "rewarding experience where you can witness your settlements slowly grow into " +
+    "sprawling towns. The added DLC further improves on the main game with out of this " +
     "world stories in far away lands with new weapons, enemies and settlements.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",

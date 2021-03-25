@@ -230,8 +230,8 @@ function load() {
 
 export function setFocusedGame(title) {
   for(let i = 0; i < sortedGames.length; i++) {
-    if(title === sortedGames[i].title) {
-      localStorage.setItem("GameTitle", title);
+    if(title.toUpperCase() === sortedGames[i].title.toUpperCase()) {
+      localStorage.setItem("GameTitle", sortedGames[i].title);
     }
   }
 }

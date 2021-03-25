@@ -27,7 +27,6 @@ function setFavouriteGames() {
       let image = document.createElement('img');
       let number = document.createElement('h3');
       let info = document.createElement('section');
-      let dot = document.createElement('label');
       let title = document.createElement('h3');
       let platform = document.createElement('h6');
       let release = document.createElement('h6');
@@ -40,9 +39,9 @@ function setFavouriteGames() {
 
       article.className = "gameArticle";
       cover.className = "articleCover";
+      image.className = "gameImage";
       number.className = "articleNumber";
       info.className = "articleInfo";
-      dot.className = "articleNumber"
       title.className = "gameTitle";
       platform.className = "gamePlatform";
       release.className = "gameReleaseDate";
@@ -54,11 +53,12 @@ function setFavouriteGames() {
       article.style.display = "flex";
       article.style.borderTop = "none";
       article.style.borderBottom = "thin solid lightgray";
+      image.style.transition = 'transform .2s';
 
       image.src = sortedGames[i].cover;
       image.alt = sortedGames[i].coveralt;
       image.style.borderRadius = '5px';
-      dot.innerHTML = gamePosition + ". ";
+      number.innerHTML = gamePosition + ". ";
       title.innerHTML = sortedGames[i].title;
       platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
       release.innerHTML = "Release: " + sortedGames[i].release + "\n";
@@ -82,7 +82,7 @@ function setFavouriteGames() {
       cover.innerHTML = image.outerHTML;
       info.innerHTML = title.outerHTML + release.outerHTML + description.outerHTML;
       scoreContainer.innerHTML = score.outerHTML + spacer.outerHTML;
-      article.innerHTML = cover.outerHTML + dot.outerHTML + info.outerHTML + scoreContainer.outerHTML;
+      article.innerHTML = cover.outerHTML + number.outerHTML + info.outerHTML + scoreContainer.outerHTML;
       favouriteGames.appendChild(article);
 
       gamePosition++;

@@ -258,6 +258,10 @@ body {
     margin-right: 10px;
   }
 
+  .gameImage:hover {
+    transform: scale(1.15);
+  }
+
   .articleNumber {
     margin: 30px 10px;
   }
@@ -727,6 +731,10 @@ body {
     width: 100px;
     margin-right: 10px;
 
+  }
+
+  .gameImage:hover {
+    transform: scale(1.15);
   }
 
   .articleNumber {

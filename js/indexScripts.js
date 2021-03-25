@@ -48,6 +48,7 @@ function setGames() {
     section.className = "gameDetailsContainer";
     article.id = "game" + expandNumber[index];
     cover.className = "articleCover";
+    image.className = "gameImage";
     number.className = "articleNumber";
     info.className = "articleInfo";
     title.className = "gameTitle";
@@ -66,6 +67,7 @@ function setGames() {
 
     section.style.display = 'flex';
     section.style.flexDirection = 'row';
+    image.style.transition = 'transform .2s';
 
     image.src = sortedGames[i].cover;
     image.alt = sortedGames[i].coveralt;
