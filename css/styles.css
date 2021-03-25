@@ -200,7 +200,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: 0 10px;
-    height: 210px;
+    height: 220px;
     width: 97%;
 
     font-family: Arial, serif;
@@ -235,10 +235,6 @@ body {
     margin: 10px 0;
   }
 
-  .focusedGameReview #gamePlatform {
-    right: 0;
-  }
-
   .reviewTitle {
     padding: 10px 0;
     margin: 0;
@@ -259,7 +255,7 @@ body {
     margin-right: 10px;
   }
 
-  .gameImage:hover {
+  .gameImage:hover, .gameBannerImage:hover {
     transform: scale(1.15);
   }
 
@@ -390,6 +386,40 @@ body {
     border-radius: 5px;
   }
 
+  .reviewContainer #reviewSidebar #gameBanner {
+    display: flex;
+    height: 180px;
+    width: 250px;
+    max-width: 1260px;
+    overflow: hidden;
+    position: relative;
+
+    border-bottom: thin solid darkgray;
+  }
+
+  .gameBannerContainer {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    justify-content: space-around;
+  }
+
+  .gameBannerImage {
+    display: block;
+    top: 12px;
+    height: 140px;
+    width: 100px;
+    margin: 20px;
+
+    transition: .2s;
+
+    border-radius: 5px;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
   /* Footer Section ------------------ */
 
   .footer {
@@ -418,7 +448,7 @@ body {
 
   .gameWrapper {
     padding: 10px;
-    height: 815px;
+    height: 820px;
     width: 650px;
     margin: 50px;
 
@@ -714,10 +744,6 @@ body {
 
   .focusedGameReview #focusedReviewContainer {
     margin: 10px 0;
-  }
-
-  .focusedGameReview #gamePlatform {
-    right: 0;
   }
 
   .articleWrapper {
