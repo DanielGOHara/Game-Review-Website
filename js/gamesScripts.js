@@ -9,6 +9,8 @@ window.onload = load;
 function load() {
   setShowGames();
 
+  /* If statement to check if the page is being loaded for the first time then randomly chooses a game article */
+
   if(focusedGameTitle === null) {
     let rand = Math.floor((Math.random() * sortedGames.length));
     updateFocusedGame(rand)
@@ -20,8 +22,13 @@ function load() {
     }
   }
 
+  /* Function to create the slideshow game articles */
+
   function setShowGames() {
     let gameScroll = document.getElementById('gameScroll');
+
+    /* Creates the forward and backwards arrows */
+
     const prev = document.createElement('a');
     const next = document.createElement('a');
     prev.className = "prev";
@@ -30,12 +37,20 @@ function load() {
     next.innerHTML = "&#10095";
 
     gameScroll.appendChild(prev);
+
+    /* Loops depending on the sorted arrays size */
+
     for (let i = sortedGames.length - 1; i >= 0; i--) {
+
+      /* If the game title matches the focused title it is skipped */
+
       if (focusedGameTitle !== sortedGames[i].title) {
+
+        /* Creates all the elements for one game article */
+
         let article = document.createElement('article');
         let cover = document.createElement('div');
         let image = document.createElement('img');
-        let number = document.createElement('h3');
         let info = document.createElement('section');
         let title = document.createElement('h3');
         let platform = document.createElement('h6');
@@ -45,9 +60,10 @@ function load() {
         let score = document.createElement('label');
         let spacer = document.createElement('span');
 
+        /* Assigns all the classnames and ids */
+
         article.className = "gameArticle fade";
         cover.className = "articleCover";
-        number.className = "articleNumber";
         info.className = "articleInfo";
         title.className = "gameTitle";
         platform.className = "gamePlatform";
@@ -59,13 +75,15 @@ function load() {
 
         image.src = sortedGames[i].cover;
         image.alt = sortedGames[i].coveralt;
+        image.style.borderRadius = '5px';
         title.innerHTML = sortedGames[i].title;
         release.innerHTML = "Release: " + sortedGames[i].release + "\n";
         description.innerHTML = sortedGames[i].description;
         score.innerHTML = sortedGames[i].score;
-
         platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
         title.appendChild(platform);
+
+        /* Changes score background color depending on score */
 
         if (sortedGames[i].score >= 75) {
           score.style.backgroundColor = 'green';
@@ -75,16 +93,19 @@ function load() {
           score.style.backgroundColor = 'red';
         }
 
+        /* Constructs the game article for the slideshow */
+
         cover.innerHTML = image.outerHTML;
         info.innerHTML = title.outerHTML + release.outerHTML + description.outerHTML;
         scoreContainer.innerHTML = score.outerHTML + spacer.outerHTML;
         article.innerHTML = cover.outerHTML + info.outerHTML + scoreContainer.outerHTML;
-        gameScroll.appendChild(article);
-        gameScroll.appendChild(next);
+        gameScroll.append(article, next);
       }
     }
     return gameScroll;
   }
+
+  /* Takes the platform string and inserts the platform logos */
 
   function setPlatformLogo(platformString) {
     let platformContainer = document.createElement('span');
@@ -159,22 +180,25 @@ function load() {
     }
 
     for (let i = 0; i < games.length; i++) {
-      games[i].style.display = "none";
+      games[i].style.display = 'none';
     }
     clearTimeout(timer);
     if (gameIndex > games.length) {
       gameIndex = 1
     }
-    games[gameIndex - 1].style.display = "flex";
+    games[gameIndex - 1].style.display = 'flex';
     timer = setTimeout(() => {
       gameIndex++;
       showGames();
     }, 20000);
   }
 
+  /* Updates the main game article review on screen */
+
   function updateFocusedGame(index) {
     document.getElementById('gameCover').src = sortedGames[index].cover;
     document.getElementById('gameCover').alt = sortedGames[index].coveralt;
+    document.getElementById('gameCover').style.borderRadius = '5px';
     document.getElementById('gameReviewTitle').innerHTML = sortedGames[index].title;
     document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[index].platform).outerHTML;
     document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[index].release;
@@ -183,6 +207,8 @@ function load() {
     document.getElementById('focusedGameReview').innerHTML = sortedGames[index].review;
     document.getElementById('youtubeVid').src = sortedGames[index].trailer;
   }
+
+  /* Adds a listener to each slideshow game articles title and updates the one on screen if clicked */
 
   document.querySelectorAll('.gameTitle').forEach(title => {
     title.addEventListener('click', () => {
@@ -195,8 +221,12 @@ function load() {
     });
   });
 
+  /* Removes pointer events from the focused game reviews title */
+
   document.getElementById('gameReviewTitle').style.pointerEvents = 'none';
 }
+
+/* Function used to set the focused game from outside the file */
 
 export function setFocusedGame(title) {
   for(let i = 0; i < sortedGames.length; i++) {

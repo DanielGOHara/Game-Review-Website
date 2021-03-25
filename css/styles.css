@@ -305,7 +305,7 @@ body {
     max-height: 50px;
     width: 50px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 10px;
   }
@@ -327,12 +327,12 @@ body {
 
   .up {
     transform: rotate(-135deg);
-    -webkit-transform: rotatE(-135deg);
+    -webkit-transform: rotate(-135deg);
   }
 
   .down {
     transform: rotate(45deg);
-    -webkit-transform: rotatE(45deg);
+    -webkit-transform: rotate(45deg);
   }
 
   .articleExpand:hover {
@@ -377,14 +377,10 @@ body {
     flex-direction: column;
   }
 
-  .topGame {
-    margin: 3px 0;
-  }
-
   .topGameScore {
     margin-left: 15px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 5px;
   }
@@ -392,11 +388,15 @@ body {
   /* Footer Section ------------------ */
 
   .footer {
-    display: block;
+    position: relative;
     padding: 40px 10px;
     width: 100%;
     height: 35px;
-    bottom: 0;
+    text-align: center;
+
+    color: white;
+    font-family: Arial, serif;
+    font-weight: bold;
 
     background-color: black;
   }
@@ -726,6 +726,7 @@ body {
     height: 140px;
     width: 100px;
     margin-right: 10px;
+
   }
 
   .articleNumber {
@@ -765,7 +766,7 @@ body {
     display: flex;
     flex-direction: column;
     padding:10px 10px 0 10px;
-    height: 210px;
+    height: 100px;
     width: 75px;
     text-align: center;
 
@@ -776,7 +777,7 @@ body {
     max-height: 50px;
     width: 50px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 10px;
   }
@@ -850,14 +851,15 @@ body {
     flex-direction: column;
   }
 
-  .topGame {
-    margin: 3px 0;
+  .topGame:hover {
+    cursor: pointer;
+    color: darkgray;
   }
 
   .topGameScore {
     margin-left: 15px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 5px;
   }
@@ -869,6 +871,11 @@ body {
     padding: 40px 10px;
     width: 100%;
     height: 35px;
+    text-align: center;
+
+    color: white;
+    font-family: Arial, serif;
+    font-weight: bold;
 
     background-color: black;
   }

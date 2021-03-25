@@ -6,12 +6,22 @@ import { assignHtmlPage } from "./genericScripts.js";
 const sortedGames = sortGames();
 setFavouriteGames()
 
+/* Function to populate favourites page game articles */
+
 function setFavouriteGames() {
   let favouriteGames = document.getElementById('favouriteReviewContent');
   let gamePosition = 1;
 
+  /* Loops through the entire sorted array */
+
   for(let i = sortedGames.length - 1; i >= 0; i--) {
+
+    /* If the game is marked as a favourite it is created */
+
     if(sortedGames[i].favourite === "Yes") {
+
+      /* Creates all the elements for one game article */
+
       let article = document.createElement('article');
       let cover = document.createElement('div');
       let image = document.createElement('img');
@@ -25,6 +35,8 @@ function setFavouriteGames() {
       let scoreContainer = document.createElement('span');
       let score = document.createElement('label');
       let spacer = document.createElement('span');
+
+      /* Assigns all the classnames and ids */
 
       article.className = "gameArticle";
       cover.className = "articleCover";
@@ -45,6 +57,7 @@ function setFavouriteGames() {
 
       image.src = sortedGames[i].cover;
       image.alt = sortedGames[i].coveralt;
+      image.style.borderRadius = '5px';
       dot.innerHTML = gamePosition + ". ";
       title.innerHTML = sortedGames[i].title;
       platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
@@ -54,6 +67,8 @@ function setFavouriteGames() {
 
       title.appendChild(platform);
 
+      /* Changes score background color depending on score */
+
       if (sortedGames[i].score >= 75) {
         score.style.backgroundColor = 'green';
       } else if (75 > sortedGames[i].score && sortedGames[i].score >= 50) {
@@ -61,6 +76,8 @@ function setFavouriteGames() {
       } else {
         score.style.backgroundColor = 'red';
       }
+
+      /* Constructs the game articles */
 
       cover.innerHTML = image.outerHTML;
       info.innerHTML = title.outerHTML + release.outerHTML + description.outerHTML;
@@ -73,6 +90,8 @@ function setFavouriteGames() {
   }
   return favouriteGames;
 }
+
+/* Takes the platform string and inserts the platform logos */
 
 function setPlatformLogo(platformString) {
   let platformContainer = document.createElement('span');
@@ -106,6 +125,8 @@ function setPlatformLogo(platformString) {
   }
   return platformContainer;
 }
+
+/* Game title listeners */
 
 document.querySelectorAll('.gameTitle').forEach(title => {
   title.addEventListener('click', () => {

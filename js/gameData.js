@@ -9,7 +9,7 @@ export const data = [{
     "the game was released worldwide on October 28, " +
     "2016 for Windows, PlayStation 4, and Xbox One.",
   "release" : "28th October 2016",
-  "score" : "95",
+  "score" : "89",
   "cover" : "css/media/game_covers/titanfall_cover.png",
   "coveralt" : "titanfall2cover",
   "review" : "A brilliant shooter which mix's up gameplay with the " +
@@ -32,7 +32,7 @@ export const data = [{
     "by the long-running comic book mythology and adaptations " +
     "in other media.",
   "release" : "7th September 2016",
-  "score" : "92",
+  "score" : "94",
   "cover" : "css/media/game_covers/spiderman_cover.png",
   "coveralt" : "spidermancover",
   "review" : "An amazing spiderman game that allows you to truly connect " +
@@ -53,7 +53,7 @@ export const data = [{
     "fourth main game in the Fallout series and was released worldwide " +
     "on November 10, 2015, for Microsoft Windows, PlayStation 4 and Xbox One.",
   "release" : "10th November 2015",
-  "score" : "91",
+  "score" : "96",
   "cover" : "css/media/game_covers/fallout4_cover.png",
   "coveralt" : "fallout4cover",
   "review" : "A fantastic fallout game which has a truly interesting and in depth story, " +
@@ -131,7 +131,7 @@ export const data = [{
     "same name, it was released for Microsoft Windows, PlayStation 4, and " +
     "Xbox One on January 25, 2019.",
   "release" : "25th January 2019",
-  "score" : "94",
+  "score" : "90",
   "cover" : "css/media/game_covers/residentevil2_cover.png",
   "coveralt" : "residentevil2cover",
   "review" : "A suspenseful masterpiece with outstanding graphics, performance and plot. " +
@@ -151,7 +151,7 @@ export const data = [{
     "Cyberpunk universe. The game has heavy RPG elements, with the player able to decide the " +
     "fate of the city.",
   "release" : "10th December 2020",
-  "score" : "96",
+  "score" : "93",
   "cover" : "css/media/game_covers/cyberpunk2077_cover.png",
   "coveralt" : "cyberpunk2077cover",
   "review" : "A brilliant title with a vast world to explore that has a variety of culture " +
