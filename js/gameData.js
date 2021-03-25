@@ -22,7 +22,8 @@ export const data = [{
     "a game I see myself sinking hours into.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/VqeMjHmL9eg"}, {
+  "trailer" : "https://www.youtube.com/embed/VqeMjHmL9eg",
+  "comingsoon" : "No"}, {
 
   "title" : "Spider-man",
   "description" : "Marvel's Spider-Man is a 2018 action-adventure " +
@@ -45,7 +46,8 @@ export const data = [{
     "you invested in the story and characters.",
   "favourite" : "No",
   "platform" : "PS4, PS5",
-  "trailer" : "https://www.youtube.com/embed/3R2uvJqWeVg"}, {
+  "trailer" : "https://www.youtube.com/embed/3R2uvJqWeVg",
+  "comingsoon" : "No"}, {
 
   "title" : "Fallout 4",
   "description" : "Fallout 4 is an action role-playing game developed by Bethesda " +
@@ -64,7 +66,8 @@ export const data = [{
     "world stories in far away lands with new weapons, enemies and settlements.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/X5aJfebzkrM"}, {
+  "trailer" : "https://www.youtube.com/embed/X5aJfebzkrM",
+  "comingsoon" : "No"}, {
 
   "title" : "Detroit Become Human",
   "description" : "Detroit: Become Human is a 2018 adventure game developed by Quantic " +
@@ -84,7 +87,8 @@ export const data = [{
     "to exploring the world much more.",
   "favourite" : "Yes",
   "platform" : "PS4, PS5, PC",
-  "trailer" : "https://www.youtube.com/embed/8a-EObAhYrg"}, {
+  "trailer" : "https://www.youtube.com/embed/8a-EObAhYrg",
+  "comingsoon" : "No"}, {
 
   "title" : "Call of Duty Cold War",
   "description" : "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video " +
@@ -105,7 +109,8 @@ export const data = [{
     "a pass.",
   "favourite" : "No",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
-  "trailer" : "https://www.youtube.com/embed/aTS9n_m7TW0"}, {
+  "trailer" : "https://www.youtube.com/embed/aTS9n_m7TW0",
+  "comingsoon" : "No"}, {
 
   "title": "Spider-man Miles Morales",
   "description" : "Marvel's Spider-Man: Miles Morales is a 2020 action-adventure " +
@@ -123,7 +128,8 @@ export const data = [{
     "part was the length of the game as I was thirsty for more once finished.",
   "favourite" : "Yes",
   "platform" : "PS4, PS5",
-  "trailer" : "https://www.youtube.com/embed/NTunTURbyUU"}, {
+  "trailer" : "https://www.youtube.com/embed/NTunTURbyUU",
+  "comingsoon" : "No"}, {
 
   "title" : "Resident Evil 2",
   "description" : "Resident Evil 2 is a 2019 survival horror game " +
@@ -143,7 +149,8 @@ export const data = [{
     "in terms of hardware to run exceptionally well.",
   "favourite" : "No",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/u3wS-Q2KBpk"}, {
+  "trailer" : "https://www.youtube.com/embed/u3wS-Q2KBpk",
+  "comingsoon" : "No"}, {
 
   "title" : "Cyberpunk 2077",
   "description" : "Cyberpunk 2077 is a 2020 action role-playing video game developed and " +
@@ -163,7 +170,8 @@ export const data = [{
     "in future patches. However, if you can look past these it is well worth the experience to try out.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8"}, {
+  "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8",
+  "comingsoon" : "No"}, {
 
   "title": "Death Stranding",
   "description" : "Death Stranding is an action game developed by Kojima Productions. It is the " +
@@ -182,7 +190,64 @@ export const data = [{
     "routes much better, especially when on foot. An absolute must play.",
   "favourite" : "Yes",
   "platform" : "PS4, PS5, PC",
-  "trailer" : "https://www.youtube.com/embed/tCI396HyhbQ"
+  "trailer" : "https://www.youtube.com/embed/tCI396HyhbQ",
+  "comingsoon" : "No"}, {
+
+  "title" : "Far Cry 6",
+  "description" : "Far Cry 6 is an upcoming first-person shooter game developed by Ubisoft Toronto and published " +
+    "by Ubisoft. It is the sixth main installment of the Far Cry series for Amazon Luna, Microsoft Windows, " +
+    "PlayStation 4, PlayStation 5, Xbox One and Xbox Series X. The game is set to be released in mid 2021.",
+  "release" : "2021",
+  "score" : "3",
+  "cover" : "css/media/game_covers/farcry6_cover.png",
+  "coveralt": "farcry6cover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
+  "trailer" : "https://www.youtube.com/embed/mbGbLWevpC4",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Resident Evil 8",
+  "description" : "Resident Evil Village is an upcoming survival horror game developed and published by Capcom. " +
+    "It will be the tenth major installment in the Resident Evil series, and the sequel to Resident Evil 7: Biohazard. " +
+    "It also includes an online multiplayer mode, Resident Evil RE:Verse.",
+  "release" : "7th May 2021",
+  "score" : "2",
+  "cover" : "css/media/game_covers/residentevil8_cover.png",
+  "coveralt" : "residentevil8cover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
+  "trailer" : "https://www.youtube.com/embed/26tay8lMZW4",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Horizon Forbidden West",
+  "description" : "Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and " +
+    "published by Sony Interactive Entertainment. It is set to be released in 2021 for the PlayStation 4 and " +
+    "PlayStation 5. It is the sequel to Horizon Zero Dawn.",
+  "release" : "2021",
+  "score" : "1",
+  "cover" : "css/media/game_covers/horizonforbiddenwest_cover.png",
+  "coveralt" : "horizonforbiddenwestcover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, PS5",
+  "trailer" : "https://www.youtube.com/embed/Lq594XmpPBg",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Ratchet & Clank Rift Apart",
+  "description" : "Ratchet & Clank: Rift Apart is an upcoming third-person shooter platform game developed by " +
+    "Insomniac Games and published by Sony Interactive Entertainment for the PlayStation 5. It will serve as a " +
+    "canonical continuation to Ratchet & Clank: Into the Nexus.",
+  "release" : "11th June 2021",
+  "score" : "0",
+  "cover" : "css/media/game_covers/ratchet&clankriftapart_cover.png",
+  "coveralt" : "ratchet&clankriftapartcover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS5",
+  "trailer" : "https://www.youtube.com/embed/ai3o0XtrnM8",
+  "comingsoon" : "Yes"
 }];
 
   /* Sort the games based on score */

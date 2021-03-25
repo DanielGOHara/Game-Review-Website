@@ -9,6 +9,7 @@ const sortedGames = sortGames();
 
 /* Call all of the functions */
 
+setComingSoon();
 setGameBanner();
 setGameBanner();
 setTopGames();
@@ -19,91 +20,97 @@ setGames();
 function setGames() {
   const expandNumber = ["One", "Two", "Three", "Four", "Five"];
   let index = 0;
+  let max = sortedGames.length - 5;
 
   /* Loops 5 times creating only 5 articles for the top 5 games */
 
-  for(let i = sortedGames.length - 1; i >= sortedGames.length - 5; i--) {
+  for(let i = sortedGames.length - 1; i >= max; i--) {
 
-    /* Creates all the elements for one game article */
+    if (sortedGames[i].comingsoon !== "Yes") {
 
-    let reviewContent = document.getElementById('indexReviewContent');
-    let article = document.createElement('article');
-    let section = document.createElement('section');
-    let cover = document.createElement('div');
-    let image = document.createElement('img');
-    let number = document.createElement('h3');
-    let info = document.createElement('section');
-    let title = document.createElement('h3');
-    let platform = document.createElement('h6');
-    let release = document.createElement('h6');
-    let description = document.createElement('span');
-    let scoreContainer = document.createElement('span');
-    let score = document.createElement('section');
-    let expand = document.createElement('span');
-    let arrow = document.createElement('i');
-    let review = document.createElement('span');
-    let reviewTitle = document.createElement('label');
+      /* Creates all the elements for one game article */
 
-    /* Assigns all the classnames and ids */
+      let reviewContent = document.getElementById('indexReviewContent');
+      let article = document.createElement('article');
+      let section = document.createElement('section');
+      let cover = document.createElement('div');
+      let image = document.createElement('img');
+      let number = document.createElement('h3');
+      let info = document.createElement('section');
+      let title = document.createElement('h3');
+      let platform = document.createElement('h6');
+      let release = document.createElement('h6');
+      let description = document.createElement('span');
+      let scoreContainer = document.createElement('span');
+      let score = document.createElement('section');
+      let expand = document.createElement('span');
+      let arrow = document.createElement('i');
+      let review = document.createElement('span');
+      let reviewTitle = document.createElement('label');
 
-    article.className = "articleContainer";
-    section.className = "gameDetailsContainer";
-    article.id = "game" + expandNumber[index];
-    cover.className = "articleCover";
-    image.className = "gameImage";
-    number.className = "articleNumber";
-    info.className = "articleInfo";
-    title.className = "gameTitle";
-    platform.className = "gamePlatform";
-    release.className = "gameReleaseDate";
-    description.className = "gameDescription";
-    scoreContainer.className = "articleScore";
-    score.className = "gameScore";
-    expand.className = "articleExpand";
-    expand.id = "game" + expandNumber[index] + "Expand";
-    arrow.className = "arrow up";
-    arrow.id = "game" + expandNumber[index] + "Arrow";
-    review.className = "gameReview";
-    review.id = "gameReview" + expandNumber[index];
-    reviewTitle.className = "reviewTitle";
+      /* Assigns all the classnames and ids */
 
-    section.style.display = 'flex';
-    section.style.flexDirection = 'row';
-    image.style.transition = 'transform .2s';
-    image.style.cursor = 'pointer';
+      article.className = "articleContainer";
+      section.className = "gameDetailsContainer";
+      article.id = "game" + expandNumber[index];
+      cover.className = "articleCover";
+      image.className = "gameImage";
+      number.className = "articleNumber";
+      info.className = "articleInfo";
+      title.className = "gameTitle";
+      platform.className = "gamePlatform";
+      release.className = "gameReleaseDate";
+      description.className = "gameDescription";
+      scoreContainer.className = "articleScore";
+      score.className = "gameScore";
+      expand.className = "articleExpand";
+      expand.id = "game" + expandNumber[index] + "Expand";
+      arrow.className = "arrow up";
+      arrow.id = "game" + expandNumber[index] + "Arrow";
+      review.className = "gameReview";
+      review.id = "gameReview" + expandNumber[index];
+      reviewTitle.className = "reviewTitle";
 
-    image.src = sortedGames[i].cover;
-    image.alt = sortedGames[i].coveralt;
-    image.style.borderRadius = '5px';
-    number.innerHTML = (index + 1) + ". ";
-    title.innerHTML = sortedGames[i].title;
-    release.innerHTML = "Release: " + sortedGames[i].release + "\n";
-    description.innerHTML = sortedGames[i].description;
-    score.innerHTML = sortedGames[i].score;
-    expand.innerHTML = "Expand " + arrow.outerHTML;
-    review.innerHTML = sortedGames[i].review;
-    reviewTitle.innerHTML = "Review: ";
-    platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
+      section.style.display = 'flex';
+      section.style.flexDirection = 'row';
+      image.style.transition = 'transform .2s';
+      image.style.cursor = 'pointer';
+      image.style.borderRadius = '5px';
 
-    /* Changes score background color depending on score */
+      image.src = sortedGames[i].cover;
+      image.alt = sortedGames[i].coveralt;
+      number.innerHTML = (index + 1) + ". ";
+      title.innerHTML = sortedGames[i].title;
+      release.innerHTML = "Release: " + sortedGames[i].release + "\n";
+      description.innerHTML = sortedGames[i].description;
+      score.innerHTML = sortedGames[i].score;
+      expand.innerHTML = "Expand " + arrow.outerHTML;
+      review.innerHTML = sortedGames[i].review;
+      reviewTitle.innerHTML = "Review: ";
+      platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
 
-    if (sortedGames[i].score >= 75) {
-      score.style.backgroundColor = 'green';
-    } else if (75 > sortedGames[i].score && sortedGames[i].score >= 50) {
-      score.style.backgroundColor = 'yellow'
+      /* Changes score background color depending on score */
+
+      if (sortedGames[i].score >= 75) {
+        score.style.backgroundColor = 'green';
+      } else if (75 > sortedGames[i].score && sortedGames[i].score >= 50) {
+        score.style.backgroundColor = 'yellow'
+      } else {
+        score.style.backgroundColor = 'red';
+      }
+
+      /* Constructs the game article using appends */
+
+      cover.appendChild(image);
+      info.append(title, platform, release, description);
+      scoreContainer.append(score, expand);
+      section.append(cover, number, info, scoreContainer);
+      article.append(section, review);
+      reviewContent.appendChild(article);
+      index++;
     } else {
-      score.style.backgroundColor = 'red';
+      max--;
     }
-
-    /* Constructs the game article using appends */
-
-    cover.appendChild(image);
-    info.append(title, platform, release, description);
-    scoreContainer.append(score, expand);
-    section.append(cover, number, info, scoreContainer);
-    article.append(section, review);
-    reviewContent.appendChild(article);
-    index++;
   }
 }
 
@@ -145,47 +152,50 @@ function setPlatformLogo(platformString) {
 /* Creates the required "span" and "label" tags to create and populate the game leaderboard */
 
 function setTopGames() {
-  let gamePosition = 1;
+  let gamePosition = 1, count = 0;
   let topGames = document.getElementById('topGames');
 
   /* Loops through the sorted array adding a new score line to the leaderboard for each game */
 
   for(let i = sortedGames.length - 1; i >= 0; i--) {
-    let score = document.createElement('span');
-    let dot = document.createElement('label')
-    let title = document.createElement('label');
-    let titleContainer = document.createElement('span');
-    score.className = "topGameScore";
-    score.innerHTML = sortedGames[i].score;
-    dot.innerHTML = gamePosition + ". ";
-    title.className = "topGame";
-    title.innerHTML = sortedGames[i].title;
+    if(sortedGames[i].comingsoon !== "Yes" && count !== 10) {
+      let score = document.createElement('span');
+      let dot = document.createElement('label')
+      let title = document.createElement('label');
+      let titleContainer = document.createElement('span');
+      score.className = "topGameScore";
+      score.innerHTML = sortedGames[i].score;
+      dot.innerHTML = gamePosition + ". ";
+      title.className = "topGame";
+      title.innerHTML = sortedGames[i].title;
 
-    /* Appends all of the elements to the title container */
+      /* Appends all of the elements to the title container */
 
-    titleContainer.appendChild(dot);
-    titleContainer.appendChild(title);
-    titleContainer.appendChild(score);
+      titleContainer.appendChild(dot);
+      titleContainer.appendChild(title);
+      titleContainer.appendChild(score);
 
-    title.style.margin = '3px 0';
+      title.style.margin = '3px 0';
 
-    /* Changes score background color depending on score */
+      /* Changes score background color depending on score */
 
-    if(sortedGames[i].score >= 75) {
-      score.style.backgroundColor = 'green';
-    } else if(75 > sortedGames[i].score && sortedGames[i].score >= 50) {
-      score.style.backgroundColor = 'yellow'
-    } else {
-      score.style.backgroundColor = 'red';
+      if (sortedGames[i].score >= 75) {
+        score.style.backgroundColor = 'green';
+      } else if (75 > sortedGames[i].score && sortedGames[i].score >= 50) {
+        score.style.backgroundColor = 'yellow'
+      } else {
+        score.style.backgroundColor = 'red';
+      }
+
+      /* Sets some styling for the title container then appends it to the parent topGames element */
+
+      titleContainer.style.marginTop = "5px";
+      titleContainer.style.flexShrink = "0";
+      topGames.appendChild(titleContainer);
+
+      gamePosition++;
+      count++;
     }
-
-    /* Sets some styling for the title container then appends it to the parent topGames element */
-
-    titleContainer.style.marginTop = "5px";
-    titleContainer.style.flexShrink = "0";
-    topGames.appendChild(titleContainer);
-
-    gamePosition++;
   }
   return topGames;
 }
@@ -214,6 +224,57 @@ function setGameBanner() {
   gameBanner.append(imageContainer)
 }
 
+function setComingSoon() {
+  const comingSoon = document.getElementById('comingSoon');
+  let count = 0;
+
+  for(let i = 0; i < sortedGames.length; i++) {
+    if(sortedGames[i].comingsoon === "Yes" && count !== 5) {
+      const articleContainer = document.createElement('section');
+      const comingSoonInfo = document.createElement('section')
+      const cover = document.createElement('div');
+      const image = document.createElement('img');
+      const title = document.createElement('h3');
+      const platform = document.createElement('h6');
+      const release = document.createElement('h6');
+
+      articleContainer.className = "comingSoonContainer";
+      comingSoonInfo.className = "comingSoonInfo";
+      cover.className = "articleCover";
+      image.className = "gameImage";
+      title.className = "gameTitle";
+      release.className = "gameReleaseDate";
+
+      articleContainer.style.padding = '0';
+      comingSoonInfo.style.padding = '10px 0';
+      cover.style.padding = '5px';
+      image.style.borderRadius = '5px';
+      image.style.pointerEvents = 'none';
+      title.style.margin = '5px 0';
+      title.style.pointerEvents = 'none';
+      platform.style.margin = '5px 0';
+      release.style.margin = '5px 0';
+
+      image.src = sortedGames[i].cover;
+      image.alt = sortedGames[i].coveralt;
+      title.innerHTML = sortedGames[i].title;
+      platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
+      release.innerHTML = "Release: " + sortedGames[i].release + "\n";
+
+      comingSoonInfo.style.display = 'flex';
+      comingSoonInfo.style.flexDirection = 'column';
+      articleContainer.style.display = 'flex';
+      articleContainer.style.flexDirection = 'row';
+
+      cover.appendChild(image);
+      comingSoonInfo.append(title, platform, release);
+      articleContainer.append(cover, comingSoonInfo);
+      comingSoon.appendChild(articleContainer);
+      count++;
+    }
+  }
+  return comingSoon;
+}
 
 /* Expand Button Listeners */
 
