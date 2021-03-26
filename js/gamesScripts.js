@@ -206,6 +206,16 @@ function load() {
     document.getElementById('gameReviewScore').innerHTML = sortedGames[index].score;
     document.getElementById('focusedGameReview').innerHTML = sortedGames[index].review;
     document.getElementById('youtubeVid').src = sortedGames[index].trailer;
+
+    const score = document.getElementById('gameReviewScore');
+
+    if (sortedGames[index].score >= 75) {
+      score.style.backgroundColor = 'green';
+    } else if (75 > sortedGames[index].score && sortedGames[index].score >= 50) {
+      score.style.backgroundColor = 'yellow'
+    } else {
+      score.style.backgroundColor = 'red';
+    }
   }
 
   /* Adds a listener to each slideshow game articles title and updates the one on screen if clicked */

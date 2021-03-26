@@ -227,7 +227,7 @@ body {
     height: 180px;
     width: 630px;
 
-    font-family: Arial, serif;
+    font-family: Wingdings, serif;
     font-weight: bold;
   }
 
@@ -399,7 +399,7 @@ body {
 
   .gameBannerContainer {
     display: flex;
-    animation: marquee 20s linear infinite;
+    animation: marquee 30s linear infinite;
     justify-content: space-around;
   }
 
@@ -914,7 +914,7 @@ body {
 
   .gameBannerContainer {
     display: flex;
-    animation: marquee 20s linear infinite;
+    animation: marquee 30s linear infinite;
     justify-content: space-around;
   }
 

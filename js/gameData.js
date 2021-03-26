@@ -198,7 +198,7 @@ export const data = [{
     "by Ubisoft. It is the sixth main installment of the Far Cry series for Amazon Luna, Microsoft Windows, " +
     "PlayStation 4, PlayStation 5, Xbox One and Xbox Series X. The game is set to be released in mid 2021.",
   "release" : "2021",
-  "score" : "3",
+  "score" : "TBD",
   "cover" : "css/media/game_covers/farcry6_cover.png",
   "coveralt": "farcry6cover",
   "review" : "TBD",
@@ -212,13 +212,13 @@ export const data = [{
     "It will be the tenth major installment in the Resident Evil series, and the sequel to Resident Evil 7: Biohazard. " +
     "It also includes an online multiplayer mode, Resident Evil RE:Verse.",
   "release" : "7th May 2021",
-  "score" : "2",
+  "score" : "TBD",
   "cover" : "css/media/game_covers/residentevil8_cover.png",
   "coveralt" : "residentevil8cover",
   "review" : "TBD",
   "favourite" : "TBD",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
-  "trailer" : "https://www.youtube.com/embed/26tay8lMZW4",
+  "trailer" : "https://www.youtube.com/embed/btFclZUXpzA",
   "comingsoon" : "Yes"}, {
 
   "title" : "Horizon Forbidden West",
@@ -226,7 +226,7 @@ export const data = [{
     "published by Sony Interactive Entertainment. It is set to be released in 2021 for the PlayStation 4 and " +
     "PlayStation 5. It is the sequel to Horizon Zero Dawn.",
   "release" : "2021",
-  "score" : "1",
+  "score" : "TBD",
   "cover" : "css/media/game_covers/horizonforbiddenwest_cover.png",
   "coveralt" : "horizonforbiddenwestcover",
   "review" : "TBD",
@@ -235,18 +235,32 @@ export const data = [{
   "trailer" : "https://www.youtube.com/embed/Lq594XmpPBg",
   "comingsoon" : "Yes"}, {
 
-  "title" : "Ratchet & Clank Rift Apart",
+  "title" : "Ratchet and Clank Rift Apart",
   "description" : "Ratchet & Clank: Rift Apart is an upcoming third-person shooter platform game developed by " +
     "Insomniac Games and published by Sony Interactive Entertainment for the PlayStation 5. It will serve as a " +
     "canonical continuation to Ratchet & Clank: Into the Nexus.",
   "release" : "11th June 2021",
-  "score" : "0",
+  "score" : "TBD",
   "cover" : "css/media/game_covers/ratchet&clankriftapart_cover.png",
   "coveralt" : "ratchet&clankriftapartcover",
   "review" : "TBD",
   "favourite" : "TBD",
   "platform" : "PS5",
   "trailer" : "https://www.youtube.com/embed/ai3o0XtrnM8",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Biomutant",
+  "description" : "Biomutant is an upcoming action role-playing game developed by Swedish developer Experiment " +
+    "101 and published by THQ Nordic. The game will be released on May 25, 2021 for Microsoft Windows, " +
+    "PlayStation 4, and Xbox One. ",
+  "release" : "25th May 2021",
+  "score" : "TBD",
+  "cover" : "css/media/game_covers/biomutant_cover.png",
+  "coveralt" : "biomutantcover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, Xbox One, PC",
+  "trailer" : "https://www.youtube.com/embed/yXIE68V3ajE",
   "comingsoon" : "Yes"
 }];
 
@@ -260,8 +274,10 @@ export const data = [{
     }
     for(let i = data.length - 1; i >= 0; i--) {
       for(let j = 0; j < data.length; j++) {
-        if(data[j].score === gameArray[i]) {
+        if(data[j].score === gameArray[i] && data[j].comingsoon !== "Yes") {
           sortedArray[i] = data[j];
+        } else if(data[i].comingsoon === "Yes") {
+          sortedArray[i] = data[i];
         }
       }
     }

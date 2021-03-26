@@ -26,7 +26,7 @@ function setGames() {
 
   for(let i = sortedGames.length - 1; i >= max; i--) {
 
-    if (sortedGames[i].comingsoon !== "Yes") {
+    if (sortedGames[i].comingsoon !== "Yes" && sortedGames[i].score !== "TBD") {
 
       /* Creates all the elements for one game article */
 
@@ -158,7 +158,7 @@ function setTopGames() {
   /* Loops through the sorted array adding a new score line to the leaderboard for each game */
 
   for(let i = sortedGames.length - 1; i >= 0; i--) {
-    if(sortedGames[i].comingsoon !== "Yes" && count !== 10) {
+    if(sortedGames[i].comingsoon !== "Yes" && count !== 10 && sortedGames[i].score !== "TBD") {
       let score = document.createElement('span');
       let dot = document.createElement('label')
       let title = document.createElement('label');
@@ -229,7 +229,7 @@ function setComingSoon() {
   let count = 0;
 
   for(let i = 0; i < sortedGames.length; i++) {
-    if(sortedGames[i].comingsoon === "Yes" && count !== 5) {
+    if(sortedGames[i].comingsoon === "Yes" && count !== 4) {
       const articleContainer = document.createElement('section');
       const comingSoonInfo = document.createElement('section')
       const cover = document.createElement('div');
@@ -251,7 +251,6 @@ function setComingSoon() {
       image.style.borderRadius = '5px';
       image.style.pointerEvents = 'none';
       title.style.margin = '5px 0';
-      title.style.pointerEvents = 'none';
       platform.style.margin = '5px 0';
       release.style.margin = '5px 0';
 
