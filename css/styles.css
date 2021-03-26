@@ -58,6 +58,7 @@ body {
     font-family: Arial, serif;
 
     background-color: black;
+    border-bottom: thick solid darkgray;
   }
 
   .header #headerTitle {
@@ -199,7 +200,7 @@ body {
     display: flex;
     flex-direction: row;
     padding: 0 10px;
-    height: 210px;
+    height: 220px;
     width: 97%;
 
     font-family: Arial, serif;
@@ -226,16 +227,12 @@ body {
     height: 180px;
     width: 630px;
 
-    font-family: Arial, serif;
+    font-family: Wingdings, serif;
     font-weight: bold;
   }
 
   .focusedGameReview #focusedReviewContainer {
     margin: 10px 0;
-  }
-
-  .focusedGameReview #gamePlatform {
-    right: 0;
   }
 
   .reviewTitle {
@@ -256,6 +253,10 @@ body {
     height: 140px;
     width: 100px;
     margin-right: 10px;
+  }
+
+  .gameImage:hover, .gameBannerImage:hover {
+    transform: scale(1.15);
   }
 
   .articleNumber {
@@ -305,7 +306,7 @@ body {
     max-height: 50px;
     width: 50px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 10px;
   }
@@ -327,12 +328,12 @@ body {
 
   .up {
     transform: rotate(-135deg);
-    -webkit-transform: rotatE(-135deg);
+    -webkit-transform: rotate(-135deg);
   }
 
   .down {
     transform: rotate(45deg);
-    -webkit-transform: rotatE(45deg);
+    -webkit-transform: rotate(45deg);
   }
 
   .articleExpand:hover {
@@ -377,28 +378,63 @@ body {
     flex-direction: column;
   }
 
-  .topGame {
-    margin: 3px 0;
-  }
-
   .topGameScore {
     margin-left: 15px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 5px;
+  }
+
+  .reviewContainer #reviewSidebar #gameBanner {
+    display: flex;
+    height: 180px;
+    width: 250px;
+    max-width: 1260px;
+    overflow: hidden;
+    position: relative;
+
+    border-bottom: thin solid darkgray;
+  }
+
+  .gameBannerContainer {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    justify-content: space-around;
+  }
+
+  .gameBannerImage {
+    display: block;
+    top: 12px;
+    height: 140px;
+    width: 100px;
+    margin: 20px;
+
+    transition: .2s;
+
+    border-radius: 5px;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
   }
 
   /* Footer Section ------------------ */
 
   .footer {
-    display: block;
+    position: relative;
     padding: 40px 10px;
     width: 100%;
     height: 35px;
-    bottom: 0;
+    text-align: center;
+
+    color: white;
+    font-family: Arial, serif;
+    font-weight: bold;
 
     background-color: black;
+    border-top: thick solid darkgray;
   }
 
   /* Game HTML Page ------------------ */
@@ -412,7 +448,7 @@ body {
 
   .gameWrapper {
     padding: 10px;
-    height: 815px;
+    height: 820px;
     width: 650px;
     margin: 50px;
 
@@ -530,6 +566,7 @@ body {
     font-family: Arial, serif;
 
     background-color: black;
+    border-bottom: thick solid darkgray;
   }
 
   .header #headerTitle {
@@ -709,10 +746,6 @@ body {
     margin: 10px 0;
   }
 
-  .focusedGameReview #gamePlatform {
-    right: 0;
-  }
-
   .articleWrapper {
     display: flex;
     flex-direction: row;
@@ -726,6 +759,11 @@ body {
     height: 140px;
     width: 100px;
     margin-right: 10px;
+
+  }
+
+  .gameImage:hover, .gameBannerImage:hover {
+    transform: scale(1.15);
   }
 
   .articleNumber {
@@ -765,7 +803,7 @@ body {
     display: flex;
     flex-direction: column;
     padding:10px 10px 0 10px;
-    height: 210px;
+    height: 100px;
     width: 75px;
     text-align: center;
 
@@ -776,7 +814,7 @@ body {
     max-height: 50px;
     width: 50px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 10px;
   }
@@ -828,17 +866,17 @@ body {
     border-radius: 5px;
   }
 
-  .topGamesContainer {
+  .topGamesContainer, .comingSoonContainer {
     padding: 10px;
 
     border-bottom: thin solid lightgray;
   }
 
-  .reviewContainer #topGamesTitle {
+  .reviewContainer #topGamesTitle, .comingSoonContainer #comingSoonTitle {
     display:inline-flex;
     padding: 5px;
     height: 25px;
-    width: 95px;
+    width: 110px;
     margin-bottom: 10px;
     text-align: center;
 
@@ -850,16 +888,51 @@ body {
     flex-direction: column;
   }
 
-  .topGame {
-    margin: 3px 0;
+  .topGame:hover {
+    cursor: pointer;
+    color: darkgray;
   }
 
   .topGameScore {
     margin-left: 15px;
 
-    background-color: limegreen;
+    background-color: green;
     border: thin solid black;
     border-radius: 5px;
+  }
+
+  .reviewContainer #reviewSidebar #gameBanner {
+    display: flex;
+    height: 180px;
+    width: 250px;
+    max-width: 1260px;
+    overflow: hidden;
+    position: relative;
+
+    border-bottom: thin solid darkgray;
+  }
+
+  .gameBannerContainer {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    justify-content: space-around;
+  }
+
+  .gameBannerImage {
+    display: block;
+    top: 12px;
+    height: 140px;
+    width: 100px;
+    margin: 20px;
+
+    transition: .2s;
+
+    border-radius: 5px;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
   }
 
   /* Footer Section ------------------ */
@@ -869,8 +942,14 @@ body {
     padding: 40px 10px;
     width: 100%;
     height: 35px;
+    text-align: center;
+
+    color: white;
+    font-family: Arial, serif;
+    font-weight: bold;
 
     background-color: black;
+    border-top: thick solid darkgray;
   }
 
   /* Game HTML Page ------------------ */

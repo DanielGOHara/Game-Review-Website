@@ -9,7 +9,7 @@ export const data = [{
     "the game was released worldwide on October 28, " +
     "2016 for Windows, PlayStation 4, and Xbox One.",
   "release" : "28th October 2016",
-  "score" : "95",
+  "score" : "89",
   "cover" : "css/media/game_covers/titanfall_cover.png",
   "coveralt" : "titanfall2cover",
   "review" : "A brilliant shooter which mix's up gameplay with the " +
@@ -22,7 +22,8 @@ export const data = [{
     "a game I see myself sinking hours into.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/VqeMjHmL9eg"}, {
+  "trailer" : "https://www.youtube.com/embed/VqeMjHmL9eg",
+  "comingsoon" : "No"}, {
 
   "title" : "Spider-man",
   "description" : "Marvel's Spider-Man is a 2018 action-adventure " +
@@ -32,7 +33,7 @@ export const data = [{
     "by the long-running comic book mythology and adaptations " +
     "in other media.",
   "release" : "7th September 2016",
-  "score" : "92",
+  "score" : "94",
   "cover" : "css/media/game_covers/spiderman_cover.png",
   "coveralt" : "spidermancover",
   "review" : "An amazing spiderman game that allows you to truly connect " +
@@ -45,7 +46,8 @@ export const data = [{
     "you invested in the story and characters.",
   "favourite" : "No",
   "platform" : "PS4, PS5",
-  "trailer" : "https://www.youtube.com/embed/3R2uvJqWeVg"}, {
+  "trailer" : "https://www.youtube.com/embed/3R2uvJqWeVg",
+  "comingsoon" : "No"}, {
 
   "title" : "Fallout 4",
   "description" : "Fallout 4 is an action role-playing game developed by Bethesda " +
@@ -53,18 +55,19 @@ export const data = [{
     "fourth main game in the Fallout series and was released worldwide " +
     "on November 10, 2015, for Microsoft Windows, PlayStation 4 and Xbox One.",
   "release" : "10th November 2015",
-  "score" : "91",
+  "score" : "96",
   "cover" : "css/media/game_covers/fallout4_cover.png",
   "coveralt" : "fallout4cover",
   "review" : "A fantastic fallout game which has a truly interesting and in depth story, " +
-    "whilst the game is beginning to show its age visually, it is still a brilliant" +
+    "whilst the game is beginning to show its age visually, it is still a brilliant " +
     "title and a must play. The combination of traveling and building makes for a " +
-    "rewarding experience where you can witness your settlements slowly grow into" +
-    "sprawling towns. The added DLC further improves on the main game with out of this" +
+    "rewarding experience where you can witness your settlements slowly grow into " +
+    "sprawling towns. The added DLC further improves on the main game with out of this " +
     "world stories in far away lands with new weapons, enemies and settlements.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/X5aJfebzkrM"}, {
+  "trailer" : "https://www.youtube.com/embed/X5aJfebzkrM",
+  "comingsoon" : "No"}, {
 
   "title" : "Detroit Become Human",
   "description" : "Detroit: Become Human is a 2018 adventure game developed by Quantic " +
@@ -84,7 +87,8 @@ export const data = [{
     "to exploring the world much more.",
   "favourite" : "Yes",
   "platform" : "PS4, PS5, PC",
-  "trailer" : "https://www.youtube.com/embed/8a-EObAhYrg"}, {
+  "trailer" : "https://www.youtube.com/embed/8a-EObAhYrg",
+  "comingsoon" : "No"}, {
 
   "title" : "Call of Duty Cold War",
   "description" : "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video " +
@@ -105,7 +109,8 @@ export const data = [{
     "a pass.",
   "favourite" : "No",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
-  "trailer" : "https://www.youtube.com/embed/aTS9n_m7TW0"}, {
+  "trailer" : "https://www.youtube.com/embed/aTS9n_m7TW0",
+  "comingsoon" : "No"}, {
 
   "title": "Spider-man Miles Morales",
   "description" : "Marvel's Spider-Man: Miles Morales is a 2020 action-adventure " +
@@ -123,7 +128,8 @@ export const data = [{
     "part was the length of the game as I was thirsty for more once finished.",
   "favourite" : "Yes",
   "platform" : "PS4, PS5",
-  "trailer" : "https://www.youtube.com/embed/NTunTURbyUU"}, {
+  "trailer" : "https://www.youtube.com/embed/NTunTURbyUU",
+  "comingsoon" : "No"}, {
 
   "title" : "Resident Evil 2",
   "description" : "Resident Evil 2 is a 2019 survival horror game " +
@@ -131,7 +137,7 @@ export const data = [{
     "same name, it was released for Microsoft Windows, PlayStation 4, and " +
     "Xbox One on January 25, 2019.",
   "release" : "25th January 2019",
-  "score" : "94",
+  "score" : "90",
   "cover" : "css/media/game_covers/residentevil2_cover.png",
   "coveralt" : "residentevil2cover",
   "review" : "A suspenseful masterpiece with outstanding graphics, performance and plot. " +
@@ -143,7 +149,8 @@ export const data = [{
     "in terms of hardware to run exceptionally well.",
   "favourite" : "No",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/u3wS-Q2KBpk"}, {
+  "trailer" : "https://www.youtube.com/embed/u3wS-Q2KBpk",
+  "comingsoon" : "No"}, {
 
   "title" : "Cyberpunk 2077",
   "description" : "Cyberpunk 2077 is a 2020 action role-playing video game developed and " +
@@ -151,7 +158,7 @@ export const data = [{
     "Cyberpunk universe. The game has heavy RPG elements, with the player able to decide the " +
     "fate of the city.",
   "release" : "10th December 2020",
-  "score" : "96",
+  "score" : "93",
   "cover" : "css/media/game_covers/cyberpunk2077_cover.png",
   "coveralt" : "cyberpunk2077cover",
   "review" : "A brilliant title with a vast world to explore that has a variety of culture " +
@@ -163,7 +170,99 @@ export const data = [{
     "in future patches. However, if you can look past these it is well worth the experience to try out.",
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
-  "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8"}];
+  "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8",
+  "comingsoon" : "No"}, {
+
+  "title": "Death Stranding",
+  "description" : "Death Stranding is an action game developed by Kojima Productions. It is the " +
+    "first game from director Hideo Kojima and Kojima Productions after their split from Konami " +
+    "in 2015. It was released for the PlayStation 4 in November 2019 and later for windows in 2020.",
+  "release" : "8th November 2019",
+  "score" : "98",
+  "cover"  : "css/media/game_covers/deathstranding_cover.png",
+  "coveralt" : "deathstrandingcover",
+  "review" : "Probably one of my if not my most favourite title of 2020, after spending time on playstation " +
+    "it finally came to PC. Truly an immersive experience with outstanding graphics and performance with Norman " +
+    "providing an outstanding performance. Troy Baker also brought an evil mastermind villain who was throughout " +
+    "loved and hated, the idea sounding repetitive did not come across at all repetitive and somehow kept me " +
+    "interested throughout the story. The games design allowing other player buildings to appear in your work " +
+    "truly created an interest gameplay arch with the rain and snow speeding up time pushing to you plan your " +
+    "routes much better, especially when on foot. An absolute must play.",
+  "favourite" : "Yes",
+  "platform" : "PS4, PS5, PC",
+  "trailer" : "https://www.youtube.com/embed/tCI396HyhbQ",
+  "comingsoon" : "No"}, {
+
+  "title" : "Far Cry 6",
+  "description" : "Far Cry 6 is an upcoming first-person shooter game developed by Ubisoft Toronto and published " +
+    "by Ubisoft. It is the sixth main installment of the Far Cry series for Amazon Luna, Microsoft Windows, " +
+    "PlayStation 4, PlayStation 5, Xbox One and Xbox Series X. The game is set to be released in mid 2021.",
+  "release" : "2021",
+  "score" : "TBD",
+  "cover" : "css/media/game_covers/farcry6_cover.png",
+  "coveralt": "farcry6cover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
+  "trailer" : "https://www.youtube.com/embed/mbGbLWevpC4",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Resident Evil 8",
+  "description" : "Resident Evil Village is an upcoming survival horror game developed and published by Capcom. " +
+    "It will be the tenth major installment in the Resident Evil series, and the sequel to Resident Evil 7: Biohazard. " +
+    "It also includes an online multiplayer mode, Resident Evil RE:Verse.",
+  "release" : "7th May 2021",
+  "score" : "TBD",
+  "cover" : "css/media/game_covers/residentevil8_cover.png",
+  "coveralt" : "residentevil8cover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
+  "trailer" : "https://www.youtube.com/embed/btFclZUXpzA",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Horizon Forbidden West",
+  "description" : "Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and " +
+    "published by Sony Interactive Entertainment. It is set to be released in 2021 for the PlayStation 4 and " +
+    "PlayStation 5. It is the sequel to Horizon Zero Dawn.",
+  "release" : "2021",
+  "score" : "TBD",
+  "cover" : "css/media/game_covers/horizonforbiddenwest_cover.png",
+  "coveralt" : "horizonforbiddenwestcover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, PS5",
+  "trailer" : "https://www.youtube.com/embed/Lq594XmpPBg",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Ratchet and Clank Rift Apart",
+  "description" : "Ratchet & Clank: Rift Apart is an upcoming third-person shooter platform game developed by " +
+    "Insomniac Games and published by Sony Interactive Entertainment for the PlayStation 5. It will serve as a " +
+    "canonical continuation to Ratchet & Clank: Into the Nexus.",
+  "release" : "11th June 2021",
+  "score" : "TBD",
+  "cover" : "css/media/game_covers/ratchet&clankriftapart_cover.png",
+  "coveralt" : "ratchet&clankriftapartcover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS5",
+  "trailer" : "https://www.youtube.com/embed/ai3o0XtrnM8",
+  "comingsoon" : "Yes"}, {
+
+  "title" : "Biomutant",
+  "description" : "Biomutant is an upcoming action role-playing game developed by Swedish developer Experiment " +
+    "101 and published by THQ Nordic. The game will be released on May 25, 2021 for Microsoft Windows, " +
+    "PlayStation 4, and Xbox One. ",
+  "release" : "25th May 2021",
+  "score" : "TBD",
+  "cover" : "css/media/game_covers/biomutant_cover.png",
+  "coveralt" : "biomutantcover",
+  "review" : "TBD",
+  "favourite" : "TBD",
+  "platform" : "PS4, Xbox One, PC",
+  "trailer" : "https://www.youtube.com/embed/yXIE68V3ajE",
+  "comingsoon" : "Yes"
+}];
 
   /* Sort the games based on score */
 
@@ -175,8 +274,10 @@ export const data = [{
     }
     for(let i = data.length - 1; i >= 0; i--) {
       for(let j = 0; j < data.length; j++) {
-        if(data[j].score === gameArray[i]) {
+        if(data[j].score === gameArray[i] && data[j].comingsoon !== "Yes") {
           sortedArray[i] = data[j];
+        } else if(data[i].comingsoon === "Yes") {
+          sortedArray[i] = data[i];
         }
       }
     }
