@@ -2,6 +2,9 @@
 /* Adds a listener to each button on each page */
 
 import { setFocusedGame } from "./gamesScripts.js";
+import { sortGames } from "./gameData.js";
+
+const sortedGames = sortGames();
 
 /* Creates listeners for the games button on each page */
 
@@ -33,16 +36,39 @@ document.querySelectorAll('.searchBar').forEach(searchBar => {
   document.querySelectorAll('.searchButton').forEach( searchButton => {
     searchBar.addEventListener('keyup', event => {
       if(event.keyCode === 13) {
-        setFocusedGame(searchBar.value);
-        assignHtmlPage("games");
+        if(checkGame(searchBar.value)) {
+          setFocusedGame(searchBar.value);
+          assignHtmlPage("games");
+        } else {
+          searchBar.style.borderColor = 'red';
+          setTimeout(() => {
+            searchBar.style.borderColor = 'white';
+          }, 2000);
+        }
       }
     });
     searchButton.addEventListener('click', () => {
-      setFocusedGame(searchBar.value);
-      assignHtmlPage("games");
+      if (checkGame(searchBar.value)) {
+        setFocusedGame(searchBar.value);
+        assignHtmlPage("games");
+    } else {
+        searchBar.style.borderColor = 'red';
+        setTimeout(() => {
+          searchBar.style.borderColor = 'white';
+        }, 2000)
+      }
     });
   });
 });
+
+function checkGame(title) {
+  for(let i = 0; i < sortedGames.length; i++) {
+    if(title.toUpperCase() === sortedGames[i].title.toUpperCase()) {
+      return true;
+    }
+  }
+  return false;
+}
 
 /* Redirects to desired page */
 
