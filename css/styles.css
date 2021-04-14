@@ -606,7 +606,7 @@ body {
 
   .searchBar {
     display: block;
-    width: 99%;
+    width: 97%;
     height: 21px;
     padding: 2px 4px;
 
@@ -622,38 +622,28 @@ body {
     outline: none;
   }
 
-  .autocomplete-box {
-    position: relative;
-    width: 99%;
-    padding: 5px;
-
-    z-index: +1;
-
-    font-family: Arial, serif;
-    font-weight: bold;
-    color: black;
-
-    background-color: white;
-    border-left: thin solid black;
-    border-bottom: thin solid black;
-    border-right: thin solid black;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-
   .suggestion {
-    width: 99%;
-    padding: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    cursor: pointer;
-    list-style: none;
+    display: none;
+    width: 97%;
+    min-height: 0;
+    padding: 2px 4px;
+    margin: 0;
+    z-index: +1;
+    position: relative;
 
+    cursor: pointer;
+    background-color: darkgray;
+    border: medium solid white;
+    border-radius: 5px;
   }
+
+  .suggestions {
+    display: block;
+  }
+
 
   .suggestion:hover {
     background-color: darkgray;
-    border-radius: 2px;
   }
 
   .searchButton {
