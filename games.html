@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel = "icon" href = "css/media/dmu.png" />
+    <link rel = "icon" href = "css/media/dmu.png"/>
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>P2435725 </title>
     <link rel = "stylesheet" href = "css/styles.css">
 </head>
 <body>
   <header class = "header">
-    <div>|</div>
     <h2 id = "headerTitle">Daniel's Game Reviews</h2>
     <div>|</div>
-    <input class = "searchBar" placeholder = "Search For Games...">
-    <button class = "searchButton"><img src = css/media/search.png alt = "searchbutton"></button>
+    <section class = "searchBarContainer">
+      <input class = "searchBar" placeholder = "Search For Games...">
+    </section>
+    <button class = "searchButton"><img src = css/media/search.png alt = "searchButtonPng"></button>
     <div>|</div>
     <span class = "homeButton">Home</span>
     <div>|</div>
     <span class = "favouritesButton">Favourites</span>
-    <div>|</div>
   </header>
   <section class = "gameContainer">
     <section class = "gameWrapper">
@@ -37,7 +37,7 @@
             </section>
         </article>
       <section class = "focusedGameReview">
-        <label id = "focusedReviewContainer">Review: <label id = "focusedGameReview"></label></label>
+        <h2 id = "focusedReviewContainer">Review: <label id = "focusedGameReview"></label></h2>
         <span></span>
       </section>
       <iframe id = "youtubeVid"></iframe>
