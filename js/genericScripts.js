@@ -61,6 +61,24 @@ document.querySelectorAll('.searchBar').forEach(searchBar => {
   });
 });
 
+document.querySelectorAll('.searchBar').forEach(searchBar => {
+  const suggestionsList = document.getElementsByClassName('.suggestion');
+  searchBar.addEventListener('change', event => {
+    const filteredGames = sortedGames.filter(item => {
+      return item.title.includes(searchBar.value);
+    });
+    const gameArticles = filteredGames.map(suggestions());
+    gameArticles.forEach(article => {
+      suggestionsList.appendChild(article);
+    })
+  })
+})
+
+function suggestions(array) {
+
+}
+
+
 function checkGame(title) {
   for(let i = 0; i < sortedGames.length; i++) {
     if(title.toUpperCase() === sortedGames[i].title.toUpperCase()) {
