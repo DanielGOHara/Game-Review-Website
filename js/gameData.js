@@ -201,7 +201,7 @@ export const data = [{
   "score" : "TBD",
   "cover" : "css/media/game_covers/farcry6_cover.png",
   "coveralt": "farcry6cover",
-  "review" : "TBD",
+  "review" : "Coming Soon!",
   "favourite" : "TBD",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
   "trailer" : "https://www.youtube.com/embed/mbGbLWevpC4",
@@ -215,10 +215,10 @@ export const data = [{
   "score" : "TBD",
   "cover" : "css/media/game_covers/residentevil8_cover.png",
   "coveralt" : "residentevil8cover",
-  "review" : "TBD",
+  "review" : "Coming Soon!",
   "favourite" : "TBD",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
-  "trailer" : "https://www.youtube.com/embed/btFclZUXpzA",
+  "trailer" : "https://www.youtube.com/embed/Udnu2LBPdRc",
   "comingsoon" : "Yes"}, {
 
   "title" : "Horizon Forbidden West",
@@ -229,7 +229,7 @@ export const data = [{
   "score" : "TBD",
   "cover" : "css/media/game_covers/horizonforbiddenwest_cover.png",
   "coveralt" : "horizonforbiddenwestcover",
-  "review" : "TBD",
+  "review" : "Coming Soon!",
   "favourite" : "TBD",
   "platform" : "PS4, PS5",
   "trailer" : "https://www.youtube.com/embed/Lq594XmpPBg",
@@ -243,7 +243,7 @@ export const data = [{
   "score" : "TBD",
   "cover" : "css/media/game_covers/ratchet&clankriftapart_cover.png",
   "coveralt" : "ratchet&clankriftapartcover",
-  "review" : "TBD",
+  "review" : "Coming Soon!",
   "favourite" : "TBD",
   "platform" : "PS5",
   "trailer" : "https://www.youtube.com/embed/ai3o0XtrnM8",
@@ -257,7 +257,7 @@ export const data = [{
   "score" : "TBD",
   "cover" : "css/media/game_covers/biomutant_cover.png",
   "coveralt" : "biomutantcover",
-  "review" : "TBD",
+  "review" : "Coming Soon!",
   "favourite" : "TBD",
   "platform" : "PS4, Xbox One, PC",
   "trailer" : "https://www.youtube.com/embed/yXIE68V3ajE",
@@ -267,19 +267,5 @@ export const data = [{
   /* Sort the games based on score */
 
   export function sortGames() {
-    let gameArray = [], sortedArray = [];
-    for(let i = 0; i < data.length; i++) {
-      gameArray[i] = data[i].score
-      gameArray = gameArray.sort();
-    }
-    for(let i = data.length - 1; i >= 0; i--) {
-      for(let j = 0; j < data.length; j++) {
-        if(data[j].score === gameArray[i] && data[j].comingsoon !== "Yes") {
-          sortedArray[i] = data[j];
-        } else if(data[i].comingsoon === "Yes") {
-          sortedArray[i] = data[i];
-        }
-      }
-    }
-    return sortedArray;
+    return data.sort((g1, g2) => {return g1.score - g2.score;})
   }

@@ -1,7 +1,10 @@
 
 import { sortGames } from "./gameData.js";
-import { setFocusedGame } from "./gamesScripts.js";
+import { setFocusedGame } from "./reviewScripts.js";
 import { assignHtmlPage } from "./genericScripts.js";
+import { setSuggestedList } from "./genericScripts.js";
+import { setSuggestionList } from "./genericScripts.js";
+import { setPlatformLogo } from "./genericScripts.js";
 
 /* Creates variable for the sorted games array */
 
@@ -9,6 +12,8 @@ const sortedGames = sortGames();
 
 /* Call all of the functions */
 
+setSuggestionList('indexSuggestionList')
+setSuggestedList('indexSearchBar');
 setComingSoon();
 setGameBanner();
 setGameBanner();
@@ -31,28 +36,27 @@ function setGames() {
       /* Creates all the elements for one game article */
 
       let reviewContent = document.getElementById('indexReviewContent');
-      let article = document.createElement('article');
-      let section = document.createElement('section');
+      let gameWrapper = document.createElement('section');
+      let gameContainer = document.createElement('section');
       let cover = document.createElement('div');
       let image = document.createElement('img');
       let number = document.createElement('h3');
-      let info = document.createElement('section');
+      let info = document.createElement('p');
       let title = document.createElement('h3');
       let platform = document.createElement('h6');
       let release = document.createElement('h6');
-      let description = document.createElement('span');
+      let description = document.createElement('p');
       let scoreContainer = document.createElement('span');
-      let score = document.createElement('section');
+      let score = document.createElement('span');
       let expand = document.createElement('span');
       let arrow = document.createElement('i');
-      let review = document.createElement('span');
-      let reviewTitle = document.createElement('label');
+      let review = document.createElement('p');
 
       /* Assigns all the classnames and ids */
 
-      article.className = "articleContainer";
-      section.className = "gameDetailsContainer";
-      article.id = "game" + expandNumber[index];
+      gameWrapper.className = "articleContainer";
+      gameContainer.className = "gameDetailsContainer";
+      gameWrapper.id = "game" + expandNumber[index];
       cover.className = "articleCover";
       image.className = "gameImage";
       number.className = "articleNumber";
@@ -69,10 +73,9 @@ function setGames() {
       arrow.id = "game" + expandNumber[index] + "Arrow";
       review.className = "gameReview";
       review.id = "gameReview" + expandNumber[index];
-      reviewTitle.className = "reviewTitle";
 
-      section.style.display = 'flex';
-      section.style.flexDirection = 'row';
+      gameContainer.style.display = 'flex';
+      gameContainer.style.flexDirection = 'row';
       image.style.transition = 'transform .2s';
       image.style.cursor = 'pointer';
       image.style.borderRadius = '5px';
@@ -86,7 +89,6 @@ function setGames() {
       score.innerHTML = sortedGames[i].score;
       expand.innerHTML = "Expand " + arrow.outerHTML;
       review.innerHTML = sortedGames[i].review;
-      reviewTitle.innerHTML = "Review: ";
       platform.innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
 
       /* Changes score background color depending on score */
@@ -104,49 +106,14 @@ function setGames() {
       cover.appendChild(image);
       info.append(title, platform, release, description);
       scoreContainer.append(score, expand);
-      section.append(cover, number, info, scoreContainer);
-      article.append(section, review);
-      reviewContent.appendChild(article);
+      gameContainer.append(cover, number, info, scoreContainer);
+      gameWrapper.append(gameContainer, review);
+      reviewContent.appendChild(gameWrapper);
       index++;
     } else {
       max--;
     }
   }
-}
-
-/* Takes the platform string and inserts the platform logos */
-
-function setPlatformLogo(platformString) {
-  let platformContainer = document.createElement('span');
-  const platformArray = platformString.split(", ");
-  for(let i = 0; i < platformArray.length; i++) {
-    let platformLogo = document.createElement('span');
-    if(platformArray[i] === "PS4" || platformArray[i] === "PS5") {
-      const logo = document.createElement('img');
-      logo.src = "css/media/platform_logo/ps_logo.png"
-      logo.alt = "ps_logo";
-      logo.className = "platformLogo";
-      platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
-      platformContainer.appendChild(platformLogo);
-    }
-    if(platformArray[i] === "Xbox One" || platformArray[i] === "Xbox Series X") {
-      const logo = document.createElement('img');
-      logo.src = "css/media/platform_logo/xbox_logo.png";
-      logo.alt = "xbox_logo";
-      logo.className = "platformLogo";
-      platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
-      platformContainer.appendChild(platformLogo);
-    }
-    if(platformArray[i] === "PC") {
-      const logo = document.createElement('img');
-      logo.src = "css/media/platform_logo/pc_logo.png";
-      logo.alt = "pc_logo";
-      logo.className = "platformLogo";
-      platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
-      platformContainer.appendChild(platformLogo);
-    }
-  }
-  return platformContainer;
 }
 
 /* Creates the required "span" and "label" tags to create and populate the game leaderboard */
@@ -161,7 +128,7 @@ function setTopGames() {
     if(sortedGames[i].comingsoon !== "Yes" && count !== 10 && sortedGames[i].score !== "TBD") {
       let score = document.createElement('span');
       let dot = document.createElement('label')
-      let title = document.createElement('label');
+      let title = document.createElement('span');
       let titleContainer = document.createElement('span');
       score.className = "topGameScore";
       score.innerHTML = sortedGames[i].score;
@@ -318,7 +285,7 @@ butFive.addEventListener('click', () => {
 document.querySelectorAll('.gameTitle').forEach(title => {
   title.addEventListener('click', () => {
     setFocusedGame(title.innerHTML);
-    assignHtmlPage("games");
+    assignHtmlPage("review");
   });
 });
 
@@ -334,13 +301,13 @@ document.querySelectorAll('.topGame').forEach(title => {
 document.querySelectorAll('.gameImage').forEach(image => {
   image.addEventListener('click', () => {
     setFocusedGame(image.alt);
-    assignHtmlPage("games");
+    assignHtmlPage("review");
   });
 });
 
 document.querySelectorAll('.gameBannerImage').forEach(image => {
   image.addEventListener('click', () => {
     setFocusedGame(image.alt);
-    assignHtmlPage("games");
+    assignHtmlPage("review");
   });
 });

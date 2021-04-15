@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel = "icon" href = "css/media/dmu.png"/>
+    <link rel = "icon" href = "css/media/dmu.png" />
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>P2435725 </title>
     <link rel = "stylesheet" href = "css/styles.css">
@@ -10,22 +10,23 @@
 <body>
   <header class = "header">
     <h2 id = "headerTitle">Daniel's Game Reviews</h2>
-    <div>|</div>
     <section class = "searchBarContainer">
-      <input class = "searchBar" placeholder = "Search For Games...">
-      <ul class = "suggestion suggestions">
-
-      </ul>
+      <input class = "searchBar" id = "reviewSearchBar" placeholder = "Search For Games...">
+      <section class = "suggestionList" id = "reviewSuggestionList"></section>
     </section>
-    <button class = "searchButton"><img src = css/media/search.png alt = "searchButtonPng"></button>
-    <div>|</div>
-    <span class = "homeButton">Home</span>
-    <div>|</div>
-    <span class = "favouritesButton">Favourites</span>
+    <button class = "searchButton"><img src = css/media/search.png alt = "searchbutton"></button>
+    <section class = "buttonsContainer">
+      <h2 id = "currentPage">Review Page</h2>
+      <section class = "selectButtonsContainer">
+        <span class = "homeButton">Home</span>
+        <div>|</div>
+        <span class = "favouritesButton">Favourites</span>
+      </section>
+    </section>
   </header>
-  <section class = "gameContainer">
+  <main class = "gameContainer">
     <section class = "gameWrapper">
-        <article class = "articleReviewContainer">
+        <section class = "articleReviewContainer">
             <div class = "articleCover">
                 <img id = "gameCover" src = "css/media/game_covers/titanfall_cover.png" alt = "titanfall2cover">
             </div>
@@ -35,23 +36,23 @@
               <h6 class = "gameReleaseDate" id = "gameReviewRelease"></h6>
               <span class = "gameDescription" id = "gameReviewDescription"></span>
             </section>
-            <section class = "articleScore">
-              <label class = "gameScore" id = "gameReviewScore">95</label>
-            </section>
-        </article>
+            <span class = "articleScore">
+              <span class = "gameScore" id = "gameReviewScore">95</span>
+            </span>
+        </section>
       <section class = "focusedGameReview">
-        <span id = "focusedReviewContainer">Review: <label id = "focusedGameReview"></label></span>
+        <p id = "focusedGameReview"></p>
         <span></span>
       </section>
       <iframe id = "youtubeVid"></iframe>
     </section>
     <section id = "gameScroll"></section>
-  </section>
+  </main>
   <footer class = "footer">
     <span>Front-End Web Development CTEC3905 Coursework</span><br>
     <span>Daniel O'Hara P2435725</span>
   </footer>
   <script type = "module" src = "js/genericScripts.js"></script>
-  <script type = "module" src = "js/gamesScripts.js"></script>
+  <script type = "module" src = "js/reviewScripts.js"></script>
 </body>
 </html>

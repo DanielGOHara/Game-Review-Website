@@ -1,12 +1,20 @@
 
 import { sortGames } from "./gameData.js";
+import { setSuggestedList } from "./genericScripts.js";
+import { setSuggestionList } from "./genericScripts.js";
+import { setPlatformLogo } from "./genericScripts.js";
+
+/* Create variables */
 
 const sortedGames = sortGames();
 let focusedGameTitle = localStorage.getItem("GameTitle");
 
-window.onload = load;
+window.onload = () => {
 
-function load() {
+  /* Call all of the functions */
+
+  setSuggestionList('reviewSuggestionList');
+  setSuggestedList('reviewSearchBar');
   setShowGames();
 
   /* If statement to check if the page is being loaded for the first time then randomly chooses a game article */
@@ -48,21 +56,21 @@ function load() {
 
         /* Creates all the elements for one game article */
 
-        let article = document.createElement('article');
+        let section = document.createElement('section');
         let cover = document.createElement('div');
         let image = document.createElement('img');
         let info = document.createElement('section');
         let title = document.createElement('h3');
         let platform = document.createElement('h6');
         let release = document.createElement('h6');
-        let description = document.createElement('span');
+        let description = document.createElement('p');
         let scoreContainer = document.createElement('span');
-        let score = document.createElement('label');
-        let spacer = document.createElement('span');
+        let score = document.createElement('span');
+        let spacer = document.createElement('div');
 
         /* Assigns all the classnames and ids */
 
-        article.className = "gameArticle fade";
+        section.className = "gameArticle fade";
         cover.className = "articleCover";
         info.className = "articleInfo";
         title.className = "gameTitle";
@@ -72,6 +80,8 @@ function load() {
         scoreContainer.className = "articleScore";
         score.className = "gameScore";
         spacer.className = "articleSpacer";
+
+        description.style.margin = "0";
 
         image.src = sortedGames[i].cover;
         image.alt = sortedGames[i].coveralt;
@@ -98,46 +108,11 @@ function load() {
         cover.innerHTML = image.outerHTML;
         info.innerHTML = title.outerHTML + release.outerHTML + description.outerHTML;
         scoreContainer.innerHTML = score.outerHTML + spacer.outerHTML;
-        article.innerHTML = cover.outerHTML + info.outerHTML + scoreContainer.outerHTML;
-        gameScroll.append(article, next);
+        section.innerHTML = cover.outerHTML + info.outerHTML + scoreContainer.outerHTML;
+        gameScroll.append(section, next);
       }
     }
     return gameScroll;
-  }
-
-  /* Takes the platform string and inserts the platform logos */
-
-  function setPlatformLogo(platformString) {
-    let platformContainer = document.createElement('span');
-    const platformArray = platformString.split(", ");
-    for(let i = 0; i < platformArray.length; i++) {
-      let platformLogo = document.createElement('span');
-      if(platformArray[i] === "PS4" || platformArray[i] === "PS5") {
-        const logo = document.createElement('img');
-        logo.src = "css/media/platform_logo/ps_logo.png"
-        logo.alt = "ps_logo";
-        logo.className = "platformLogo";
-        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
-        platformContainer.appendChild(platformLogo);
-      }
-      if(platformArray[i] === "Xbox One" || platformArray[i] === "Xbox Series X") {
-        const logo = document.createElement('img');
-        logo.src = "css/media/platform_logo/xbox_logo.png";
-        logo.alt = "xbox_logo";
-        logo.className = "platformLogo";
-        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
-        platformContainer.appendChild(platformLogo);
-      }
-      if(platformArray[i] === "PC") {
-        const logo = document.createElement('img');
-        logo.src = "css/media/platform_logo/pc_logo.png";
-        logo.alt = "pc_logo";
-        logo.className = "platformLogo";
-        platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
-        platformContainer.appendChild(platformLogo);
-      }
-    }
-    return platformContainer;
   }
 
   /* Creates a random number and a 20 second timer */
