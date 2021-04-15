@@ -158,7 +158,7 @@ export const data = [{
     "Cyberpunk universe. The game has heavy RPG elements, with the player able to decide the " +
     "fate of the city.",
   "release" : "10th December 2020",
-  "score" : "93",
+  "score" : "99",
   "cover" : "css/media/game_covers/cyberpunk2077_cover.png",
   "coveralt" : "cyberpunk2077cover",
   "review" : "A brilliant title with a vast world to explore that has a variety of culture " +
