@@ -1,12 +1,19 @@
 
 import { sortGames } from "./gameData.js";
+import { setSuggestedList } from "./genericScripts.js";
+import { setSuggestionList } from "./genericScripts.js";
+
+/* Create variables */
 
 const sortedGames = sortGames();
 let focusedGameTitle = localStorage.getItem("GameTitle");
 
-window.onload = load;
+window.onload = () => {
 
-function load() {
+  /* Call all of the functions */
+
+  setSuggestionList('gamesSuggestionList');
+  setSuggestedList('gamesSearchBar');
   setShowGames();
 
   /* If statement to check if the page is being loaded for the first time then randomly chooses a game article */

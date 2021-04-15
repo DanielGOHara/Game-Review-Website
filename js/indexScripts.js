@@ -2,6 +2,8 @@
 import { sortGames } from "./gameData.js";
 import { setFocusedGame } from "./gamesScripts.js";
 import { assignHtmlPage } from "./genericScripts.js";
+import { setSuggestedList } from "./genericScripts.js";
+import { setSuggestionList } from "./genericScripts.js";
 
 /* Creates variable for the sorted games array */
 
@@ -9,6 +11,8 @@ const sortedGames = sortGames();
 
 /* Call all of the functions */
 
+setSuggestionList('indexSuggestionList')
+setSuggestedList('indexSearchBar');
 setComingSoon();
 setGameBanner();
 setGameBanner();

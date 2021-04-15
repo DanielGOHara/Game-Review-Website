@@ -109,13 +109,22 @@ body {
   }
 
   .suggestion {
-    width: 99%;
-    padding: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    cursor: pointer;
-    list-style: none;
+    display: none;
+    width: 97%;
+    min-height: 0;
+    padding: 2px 4px;
+    margin: 0;
+    z-index: +1;
+    position: relative;
 
+    cursor: pointer;
+    background-color: darkgray;
+    border: medium solid white;
+    border-radius: 5px;
+  }
+
+  .suggestRevealed {
+    display: block;
   }
 
   .suggestion:hover {
@@ -616,21 +625,13 @@ body {
     min-width: 125px;
     margin: 0 10px;
 
-    border-radius: 5px;
-  }
-
-  .searchBarContainer {
-    height: 32px;
-    width: 40%;
-    min-width: 125px;
-    margin: 0 10px;
-
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 
   .searchBar {
     display: block;
-    width: 99%;
+    width: 97%;
     height: 21px;
     padding: 2px 4px;
 
@@ -639,45 +640,42 @@ body {
     color: black;
 
     border: medium solid white;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 
   .searchBar:focus {
     outline: none;
   }
 
-  .autocomplete-box {
-    position: relative;
-    width: 99%;
-    padding: 5px;
-
+  .suggestionList {
+    display: block;
+    width: 97%;
+    padding: 2px 4px;
+    margin: 0;
     z-index: +1;
-
-    font-family: Arial, serif;
-    font-weight: bold;
-    color: black;
+    position: relative;
 
     background-color: white;
-    border-left: thin solid black;
-    border-bottom: thin solid black;
-    border-right: thin solid black;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border: medium solid white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 
   .suggestion {
-    width: 99%;
-    padding: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    cursor: pointer;
-    list-style: none;
+    display: block;
+    width: 97%;
+    height: 20px;
+    padding: 2px 2px;
+    margin: 0;
 
+    cursor: pointer;
+    background-color: white;
+    border: medium solid white;
   }
 
   .suggestion:hover {
-    background-color: darkgray;
-    border-radius: 2px;
+    background-color: lightgray;
   }
 
   .searchButton {
