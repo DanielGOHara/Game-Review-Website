@@ -267,19 +267,5 @@ export const data = [{
   /* Sort the games based on score */
 
   export function sortGames() {
-    let gameArray = [], sortedArray = [];
-    for(let i = 0; i < data.length; i++) {
-      gameArray[i] = data[i].score
-      gameArray = gameArray.sort();
-    }
-    for(let i = data.length - 1; i >= 0; i--) {
-      for(let j = 0; j < data.length; j++) {
-        if(data[j].score === gameArray[i] && data[j].comingsoon !== "Yes") {
-          sortedArray[i] = data[j];
-        } else if(data[i].comingsoon === "Yes") {
-          sortedArray[i] = data[i];
-        }
-      }
-    }
-    return sortedArray;
+    return data.sort((g1, g2) => {return g1.score - g2.score;})
   }

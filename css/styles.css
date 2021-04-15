@@ -25,26 +25,7 @@ body {
 
 /* TABLET STYLES */
 
-@media screen and (min-width: 500px) and (max-width: 999px) {
-
-  /* applies to screens wider than 999px */
-
-  html {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-
-  }
-
-  body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-  }
+@media screen and (min-width: 500px) and (max-width: 999px){
 
   /* Header Section ------------------ */
 
@@ -53,7 +34,6 @@ body {
     width: 100%;
     height: 80px;
     display: inline-flex;
-    text-align: center;
     justify-content: center;
 
     font-family: Arial, serif;
@@ -67,6 +47,8 @@ body {
     height: 100px;
     width: 100px;
     margin: 0 10px;
+    text-align: center;
+
     color: white;
   }
 
@@ -87,12 +69,13 @@ body {
     min-width: 125px;
     margin: 25px 10px;
 
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 
   .searchBar {
     display: block;
-    width: 99%;
+    width: 97%;
     height: 21px;
     padding: 2px 4px;
 
@@ -101,35 +84,42 @@ body {
     color: black;
 
     border: medium solid white;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 
-  .searchBar {
+  .searchBar:focus {
     outline: none;
   }
 
-  .suggestion {
-    display: none;
+  .suggestionList {
+    display: block;
     width: 97%;
-    min-height: 0;
     padding: 2px 4px;
     margin: 0;
     z-index: +1;
     position: relative;
 
-    cursor: pointer;
-    background-color: darkgray;
+    background-color: white;
     border: medium solid white;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 
-  .suggestRevealed {
+  .suggestion {
     display: block;
+    width: 97%;
+    height: 20px;
+    padding: 2px 2px;
+    margin: 0;
+
+    cursor: pointer;
+    background-color: white;
+    border: medium solid white;
   }
 
   .suggestion:hover {
-    background-color: darkgray;
-    border-radius: 2px;
+    background-color: lightgray;
   }
 
   .searchButton {
@@ -429,7 +419,7 @@ body {
 
   .gameBannerContainer {
     display: flex;
-    animation: marquee 30s linear infinite;
+    animation: marquee 45s linear infinite;
     justify-content: space-around;
   }
 
@@ -461,7 +451,6 @@ body {
 
     color: white;
     font-family: Arial, serif;
-    font-weight: bold;
 
     background-color: black;
     border-top: thick solid darkgray;
@@ -507,7 +496,6 @@ body {
     display: none;
 
     font-family: Arial, serif;
-    font-weight: bold;
 
     border-top: thin solid lightgray;
     border-bottom: thin solid lightgray;
@@ -529,7 +517,6 @@ body {
     cursor: pointer;
     user-select: none;
 
-    font-weight: bold;
     font-size: 18px;
 
     border-radius: 2px;
@@ -566,31 +553,12 @@ body {
 
 @media screen and (min-width: 1000px) {
 
-  /* applies to screens wider than 999px */
-
-  html {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-
-  }
-
-  body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-  }
-
   /* Header Section ------------------ */
 
   .header {
-    padding: 40px 10px;
+    padding: 20px 10px;
     width: 100%;
-    height: 35px;
+    height: 55px;
     display: inline-flex;
     justify-content: center;
 
@@ -603,7 +571,7 @@ body {
   .header #headerTitle {
     position: relative;
     height: 30px;
-    margin: 0 5px;
+    margin: 10px 5px;
     color: white;
     flex-shrink: 0;
   }
@@ -623,7 +591,7 @@ body {
     height: 32px;
     width: 40%;
     min-width: 125px;
-    margin: 0 10px;
+    margin: 10px 10px;
 
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -636,7 +604,6 @@ body {
     padding: 2px 4px;
 
     font-family: Arial, serif;
-    font-weight: bold;
     color: black;
 
     border: medium solid white;
@@ -685,7 +652,7 @@ body {
     width: 31px;
     min-height: 29px;
     min-width: 29px;
-    margin: 0 10px;
+    margin: 10px 10px;
 
     border: medium solid white;
     border-radius: 5px;
@@ -695,6 +662,24 @@ body {
     outline: none;
   }
 
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  .selectButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .buttonsContainer #currentPage {
+    margin: 0;
+    color: white;
+  }
+
   .homeButton:hover {
     color: white;
     cursor: pointer;
@@ -702,7 +687,7 @@ body {
     transition: all 0.3s linear 0s;
   }
 
-  .gamesButton:hover {
+  .reviewButton:hover {
     color: white;
     cursor: pointer;
     border-bottom: 1px solid white;
@@ -756,7 +741,6 @@ body {
     width: 97%;
 
     font-family: Arial, serif;
-    font-weight: bold;
 
     border-bottom: thin solid lightgray;
   }
@@ -775,20 +759,18 @@ body {
     width: 97%;
 
     font-family: Arial, serif;
-    font-weight: bold;
 
     border-bottom: thin solid lightgray;
   }
 
   .gameReview {
-    padding: 10px;
-    height: 97%;
-    width: 97%;
     display: none;
+    padding: 10px;
+    height: 100%;
+    width: 97%;
   }
 
   .hidden {
-    padding: 25px 0 5px;
     display: block;
   }
 
@@ -796,15 +778,15 @@ body {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    height: 180px;
+    max-height: 180px;
     width: 630px;
+    margin: 0;
 
     font-family: Arial, serif;
-    font-weight: bold;
   }
 
   .focusedGameReview #focusedReviewContainer {
-    margin: 10px 0;
+    margin: 0;
   }
 
   .articleWrapper {
@@ -836,6 +818,7 @@ body {
     flex-direction: column;
     height: 150px;
     width: 420px;
+    margin: 0;
   }
 
   .gameTitle {
@@ -874,6 +857,8 @@ body {
     padding: 10px 10px;
     max-height: 50px;
     width: 50px;
+
+    font-weight: bold;
 
     background-color: green;
     border: thin solid black;
@@ -915,12 +900,11 @@ body {
   .reviewContainer #reviewSidebar {
     position: relative;
     padding: 10px;
-    min-height: 1050px;
+    height: 1140px;
     width: 250px;
     margin: 10px;
 
     font-family: Arial, serif;
-    font-weight: bold;
 
     background-color: white;
     border: thin solid lightgray;
@@ -938,7 +922,7 @@ body {
     padding: 5px;
     height: 25px;
     width: 110px;
-    margin-bottom: 10px;
+    margin: 0;
     text-align: center;
 
     border-bottom: thin solid lightgray;
@@ -956,6 +940,8 @@ body {
 
   .topGameScore {
     margin-left: 15px;
+
+    font-weight: bold;
 
     background-color: green;
     border: thin solid black;
@@ -975,7 +961,7 @@ body {
 
   .gameBannerContainer {
     display: flex;
-    animation: marquee 30s linear infinite;
+    animation: marquee 45s linear infinite;
     justify-content: space-around;
   }
 
@@ -1007,7 +993,6 @@ body {
 
     color: white;
     font-family: Arial, serif;
-    font-weight: bold;
 
     background-color: black;
     border-top: thick solid darkgray;
@@ -1024,11 +1009,12 @@ body {
 
   .gameWrapper {
     padding: 10px;
-    height: 815px;
+    max-height: 815px;
     width: 650px;
     margin: 50px;
 
     border: thin solid lightgray;
+    border-radius: 5px;
   }
 
   .gameContainer #youtubeVid {
@@ -1047,13 +1033,13 @@ body {
     justify-content: center;
 
     border: thin solid lightgray;
+    border-radius: 5px;
   }
 
   .gameArticle {
     display: none;
 
     font-family: Arial, serif;
-    font-weight: bold;
 
     border-top: thin solid lightgray;
     border-bottom: thin solid lightgray;

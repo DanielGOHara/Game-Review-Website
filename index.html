@@ -10,35 +10,34 @@
 <body>
   <header class = "header">
     <h2 id = "headerTitle">Daniel's Game Reviews</h2>
-    <div>|</div>
     <section class = "searchBarContainer">
       <input class = "searchBar" id = "indexSearchBar" placeholder = "Search For Games...">
       <section class = "suggestionList" id = "indexSuggestionList"></section>
     </section>
     <button class = "searchButton"><img src = css/media/search.png></button>
-    <div>|</div>
-    <span class = "gamesButton">Games</span>
-    <div>|</div>
-    <span class = "favouritesButton">Favourites</span>
+    <section class = "buttonsContainer">
+      <h2 id = "currentPage">Index Page</h2>
+      <section class = "selectButtonsContainer">
+        <span class = "reviewButton">Review</span>
+        <div>|</div>
+        <span class = "favouritesButton">Favourites</span>
+      </section>
+    </section>
   </header>
-    <section class = "reviewContainer">
+    <main class = "reviewContainer">
       <section class = "reviewContent" id = "indexReviewContent"></section>
       <section id = "reviewSidebar">
         <section class = "topGamesContainer">
-          <section id = "topGamesTitle">
-            <span>Leaderboard:</span>
-          </section>
+          <h4 id = "topGamesTitle">Leaderboard: </h4>
           <section id = "topGames"></section>
         </section>
-        <span id = "gameBanner"></span>
+        <section id = "gameBanner"></section>
         <section class = "comingSoonContainer">
-          <section id = "comingSoonTitle">
-            <span>Coming Soon: </span>
-          </section>
+          <h4 id = "comingSoonTitle">Coming Soon:</h4>
           <section id = "comingSoon"></section>
         </section>
       </section>
-    </section>
+    </main>
   <footer class = "footer">
     <span>Front-End Web Development CTEC3905 Coursework</span><br>
     <span>Daniel O'Hara P2435725</span>

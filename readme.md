@@ -4,7 +4,7 @@ A game review site with a variety of features allowing the user to view basic ga
 
 HTML File(s) - `index.html`, `games.html` & `favourites.html`.<br/>
 CSS File(s) - `styles.css`.<br/>
-Javascript File(s) - `genericScripts.js`, `indexScripts.js`, `gamesScripts.js`, `favouritesScripts.js` & `gameData.js`.<br/>
+Javascript File(s) - `genericScripts.js`, `indexScripts.js`, `reviewScripts.js`, `favouritesScripts.js` & `gameData.js`.<br/>
 
 `index.html` - Home page containing information on a variety of games with the top 5 being sorted in order of score and a side bar leaderboard for all games and their scores. <br/>
 `games.html` - More in depth review page including a trailer for the focused game and a game scroll bar at the bottom which cycles through all games in the `gameData.js` file.<br/>
@@ -13,9 +13,9 @@ Javascript File(s) - `genericScripts.js`, `indexScripts.js`, `gamesScripts.js`, 
 `styles.css` - Styling for all pages.<br/>
 
 `genericScripts.js` - Javascript used mainly for header elements like the search bar and button as well as the page links. This file is used across all html files.<br/>
-`indexScripts.js` - File used specifically for the `index.html` page but does import a function from `gamesScripts.js`.<br/>
-`gamesScripts.js` - File used specifically for the `games.html` page but does export a function that allows the user to set the specified game on screen.<br/>
-`favouritesScripts.js` - File used specifically for the `favourites.html` page but does import a function from `gamesScripts.js`.<br/>
+`indexScripts.js` - File used specifically for the `index.html` page but does import a function from `reviewScripts.js`.<br/>
+`reviewScripts.js` - File used specifically for the `games.html` page but does export a function that allows the user to set the specified game on screen.<br/>
+`favouritesScripts.js` - File used specifically for the `favourites.html` page but does import a function from `reviewScripts.js`.<br/>
 `gameData.js` - Used to store all of the game data in JSON format into a single variable with one function used to sort it and return a sorted list.<br/>
 
 References:<br/>

@@ -1,11 +1,13 @@
 
 /* Adds a listener to each button on each page */
 
-import { setFocusedGame } from "./gamesScripts.js";
+import { setFocusedGame } from "./reviewScripts.js";
 import { sortGames } from "./gameData.js";
 
 const sortedGames = sortGames();
 let suggestions = [], suggestionListId = "";
+
+/* Populates the suggestions array with all of the game titles */
 
 for(let i = 0; i < sortedGames.length; i++) {
   suggestions[i] = sortedGames[i].title;
@@ -13,9 +15,9 @@ for(let i = 0; i < sortedGames.length; i++) {
 
 /* Creates listeners for the games button on each page */
 
-document.querySelectorAll('.gamesButton').forEach(gameButton => {
+document.querySelectorAll('.reviewButton').forEach(gameButton => {
   gameButton.addEventListener('click', () => {
-    assignHtmlPage("games");
+    assignHtmlPage("review");
   });
 });
 
@@ -44,7 +46,7 @@ document.querySelectorAll('.searchBar').forEach(searchBar => {
       if(event.keyCode === 13) {
         if(checkGame(searchBar.value)) {
           setFocusedGame(searchBar.value);
-          assignHtmlPage("games");
+          assignHtmlPage("review");
         } else {
           searchBar.style.borderColor = 'red';
           setTimeout(() => {
@@ -56,7 +58,7 @@ document.querySelectorAll('.searchBar').forEach(searchBar => {
     searchButton.addEventListener('click', () => {
       if (checkGame(searchBar.value)) {
         setFocusedGame(searchBar.value);
-        assignHtmlPage("games");
+        assignHtmlPage("review");
     } else {
         searchBar.style.borderColor = 'red';
         setTimeout(() => {
@@ -88,7 +90,6 @@ function suggestedList(searchBarId) {
     section = document.createElement("section");
     section.setAttribute("id", this.id + "autocomplete-list");
     section.setAttribute("class", "autocomplete-items");
-    section.style.borderTop = "thin solid darkgray";
 
     /* Append the section element to the suggestionList container's */
 
@@ -119,7 +120,7 @@ function suggestedList(searchBarId) {
 
         game.addEventListener("click", function() {
           setFocusedGame(this.getElementsByTagName("input")[0].value);
-          assignHtmlPage("games");
+          assignHtmlPage("review");
           closeAllLists();
         });
         section.appendChild(game);
@@ -166,9 +167,44 @@ export function setSuggestionList(listId) {
 export function assignHtmlPage(page) {
   if (page === "home") {
     window.location.href = 'index.html'
-  } else if (page === "games") {
-    window.location.href = 'games.html'
+  } else if (page === "review") {
+    window.location.href = 'review.html'
   } else if (page === "favourite") {
     window.location.href = 'favourites.html'
   }
+}
+
+/* Takes the platform string and inserts the platform logos */
+
+export function setPlatformLogo(platformString) {
+  let platformContainer = document.createElement('span');
+  const platformArray = platformString.split(", ");
+  for(let i = 0; i < platformArray.length; i++) {
+    let platformLogo = document.createElement('span');
+    if(platformArray[i] === "PS4" || platformArray[i] === "PS5") {
+      const logo = document.createElement('img');
+      logo.src = "css/media/platform_logo/ps_logo.png"
+      logo.alt = "ps_logo";
+      logo.className = "platformLogo";
+      platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+      platformContainer.appendChild(platformLogo);
+    }
+    if(platformArray[i] === "Xbox One" || platformArray[i] === "Xbox Series X") {
+      const logo = document.createElement('img');
+      logo.src = "css/media/platform_logo/xbox_logo.png";
+      logo.alt = "xbox_logo";
+      logo.className = "platformLogo";
+      platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+      platformContainer.appendChild(platformLogo);
+    }
+    if(platformArray[i] === "PC") {
+      const logo = document.createElement('img');
+      logo.src = "css/media/platform_logo/pc_logo.png";
+      logo.alt = "pc_logo";
+      logo.className = "platformLogo";
+      platformLogo.innerHTML = platformArray[i] + logo.outerHTML;
+      platformContainer.appendChild(platformLogo);
+    }
+  }
+  return platformContainer;
 }
