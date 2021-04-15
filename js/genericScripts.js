@@ -133,7 +133,7 @@ function suggestedList(searchBarId) {
     let suggestionList = document.getElementsByClassName("autocomplete-items");
     for (let i = 0; i < suggestionList.length; i++) {
       if (element !== suggestionList[i] && element !== searchBar) {
-        suggestionList[i].parentNode.removeChild(x[i]);
+        suggestionList[i].parentNode.removeChild(suggestionList[i]);
       }
     }
   }
