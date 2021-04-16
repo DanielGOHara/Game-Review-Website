@@ -76,6 +76,7 @@ function setGames() {
 
       gameContainer.style.display = 'flex';
       gameContainer.style.flexDirection = 'row';
+      gameContainer.style.marginTop = "8px";
       image.style.transition = 'transform .2s';
       image.style.cursor = 'pointer';
       image.style.borderRadius = '5px';
@@ -127,7 +128,7 @@ function setTopGames() {
   for(let i = sortedGames.length - 1; i >= 0; i--) {
     if(sortedGames[i].comingsoon !== "Yes" && count !== 10 && sortedGames[i].score !== "TBD") {
       let score = document.createElement('span');
-      let dot = document.createElement('label')
+      let dot = document.createElement('strong')
       let title = document.createElement('span');
       let titleContainer = document.createElement('span');
       score.className = "topGameScore";
@@ -197,7 +198,7 @@ function setComingSoon() {
 
   for(let i = 0; i < sortedGames.length; i++) {
     if(sortedGames[i].comingsoon === "Yes" && count !== 4) {
-      const articleContainer = document.createElement('section');
+      const comingSoonContainer = document.createElement('section');
       const comingSoonInfo = document.createElement('section')
       const cover = document.createElement('div');
       const image = document.createElement('img');
@@ -205,16 +206,16 @@ function setComingSoon() {
       const platform = document.createElement('h6');
       const release = document.createElement('h6');
 
-      articleContainer.className = "comingSoonContainer";
+      comingSoonContainer.className = "comingSoonContainer";
       comingSoonInfo.className = "comingSoonInfo";
       cover.className = "articleCover";
       image.className = "gameImage";
       title.className = "gameTitle";
       release.className = "gameReleaseDate";
 
-      articleContainer.style.padding = '0';
-      comingSoonInfo.style.padding = '10px 0';
-      cover.style.padding = '5px';
+      comingSoonContainer.style.height = "140px";
+      comingSoonContainer.style.padding = '10px 0';
+      cover.style.padding = '0 10px';
       image.style.borderRadius = '5px';
       image.style.pointerEvents = 'none';
       title.style.margin = '5px 0';
@@ -229,13 +230,13 @@ function setComingSoon() {
 
       comingSoonInfo.style.display = 'flex';
       comingSoonInfo.style.flexDirection = 'column';
-      articleContainer.style.display = 'flex';
-      articleContainer.style.flexDirection = 'row';
+      comingSoonContainer.style.display = 'flex';
+      comingSoonContainer.style.flexDirection = 'row';
 
       cover.appendChild(image);
       comingSoonInfo.append(title, platform, release);
-      articleContainer.append(cover, comingSoonInfo);
-      comingSoon.appendChild(articleContainer);
+      comingSoonContainer.append(cover, comingSoonInfo);
+      comingSoon.appendChild(comingSoonContainer);
       count++;
     }
   }
@@ -292,7 +293,7 @@ document.querySelectorAll('.gameTitle').forEach(title => {
 document.querySelectorAll('.topGame').forEach(title => {
   title.addEventListener('click', () => {
     setFocusedGame(title.innerHTML);
-    assignHtmlPage("games");
+    assignHtmlPage("review");
   } )
 })
 

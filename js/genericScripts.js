@@ -1,8 +1,8 @@
 
-/* Adds a listener to each button on each page */
-
 import { setFocusedGame } from "./reviewScripts.js";
 import { sortGames } from "./gameData.js";
+
+/* Creates variables */
 
 const sortedGames = sortGames();
 let suggestions = [], suggestionListId = "";
@@ -39,7 +39,6 @@ document.querySelectorAll('.favouritesButton').forEach(favouritesButton => {
 
 /* Creates listeners for the search bar and button on each page */
 
-
 document.querySelectorAll('.searchBar').forEach(searchBar => {
   document.querySelectorAll('.searchButton').forEach( searchButton => {
     searchBar.addEventListener('keyup', event => {
@@ -68,6 +67,8 @@ document.querySelectorAll('.searchBar').forEach(searchBar => {
     });
   });
 });
+
+/* Function to create, update and remove the suggestion list below the search bar */
 
 function suggestedList(searchBarId) {
 
@@ -106,6 +107,7 @@ function suggestedList(searchBarId) {
         game = document.createElement("li");
         game.className = "suggestion";
         game.style.borderRadius = "5px";
+        game.style.maxHeight = "100px";
 
         /* Makes the matching letters in the suggested game bold */
 
@@ -139,11 +141,14 @@ function suggestedList(searchBarId) {
     }
   }
 
-  /*execute a function when someone clicks in the document:*/
+  /* Creates a listener for when the user clicks anywhere on the webpage */
+
   document.addEventListener("click", function (event) {
     closeAllLists(event.target);
   });
 }
+
+/* Function to check if the inputted value in the search bar matches a known game title */
 
 function checkGame(title) {
   for(let i = 0; i < sortedGames.length; i++) {
@@ -154,9 +159,13 @@ function checkGame(title) {
   return false;
 }
 
+/* Function used to set the search bar Id depending on what page is accessed */
+
 export function setSuggestedList(searchBarId) {
   suggestedList(searchBarId);
 }
+
+/* Function used to set the suggestion list Id depending on what page is accessed */
 
 export function setSuggestionList(listId) {
   suggestionListId = listId;

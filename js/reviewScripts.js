@@ -4,7 +4,7 @@ import { setSuggestedList } from "./genericScripts.js";
 import { setSuggestionList } from "./genericScripts.js";
 import { setPlatformLogo } from "./genericScripts.js";
 
-/* Create variables */
+/* Creates variables */
 
 const sortedGames = sortGames();
 let focusedGameTitle = localStorage.getItem("GameTitle");
@@ -81,8 +81,8 @@ window.onload = () => {
         score.className = "gameScore";
         spacer.className = "articleSpacer";
 
+        section.style.minHeight = "160px !important";
         description.style.margin = "0";
-
         image.src = sortedGames[i].cover;
         image.alt = sortedGames[i].coveralt;
         image.style.borderRadius = '5px';

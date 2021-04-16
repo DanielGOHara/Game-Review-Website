@@ -43,7 +43,6 @@ function setFavouriteGames() {
       let description = document.createElement('p');
       let scoreContainer = document.createElement('span');
       let score = document.createElement('span');
-      let spacer = document.createElement('span');
 
       /* Assigns all the classnames and ids */
 
@@ -58,11 +57,11 @@ function setFavouriteGames() {
       description.className = "gameDescription";
       scoreContainer.className = "articleScore";
       score.className = "gameScore";
-      spacer.className = "articleSpacer";
 
+      section.style.marginTop = "10px";
       section.style.display = "flex";
       section.style.borderTop = "none";
-      section.style.borderBottom = "thin solid lightgray";
+      section.style.borderBottom = "thin solid darkgray";
       image.style.transition = 'transform .2s';
       image.style.cursor = 'pointer';
       description.style.margin = "0";
@@ -93,13 +92,14 @@ function setFavouriteGames() {
 
       cover.innerHTML = image.outerHTML;
       info.innerHTML = title.outerHTML + release.outerHTML + description.outerHTML;
-      scoreContainer.innerHTML = score.outerHTML + spacer.outerHTML;
+      scoreContainer.innerHTML = score.outerHTML;
       section.innerHTML = cover.outerHTML + number.outerHTML + info.outerHTML + scoreContainer.outerHTML;
       favouriteGames.appendChild(section);
 
       gamePosition++;
     }
   }
+  favouriteGames.style.display = "flex";
   return favouriteGames;
 }
 
