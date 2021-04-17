@@ -17,6 +17,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 0;
 
   background: white;
 }
@@ -345,7 +346,7 @@ body {
 .reviewContainer #reviewSidebar {
   position: relative;
   padding: 0 10px 10px;
-  max-height: 1150px;
+  height: 1160px;
   width: 270px;
   margin: 10px auto;
 
@@ -358,13 +359,11 @@ body {
 
 .topGamesContainer {
   display: block;
-  padding-bottom: 10px;
+  min-height: 150px;
   width: 200px;
-
-  border-bottom: thin solid darkgray;
 }
 
-.reviewContainer #topGamesTitle, .comingSoonContainer #comingSoonTitle  {
+.reviewContainer #topGamesTitle, .comingSoonWrapper #comingSoonTitle  {
   display:inline-flex;
   padding: 5px;
   height: 20px;
@@ -375,7 +374,6 @@ body {
 
 .reviewContainer #topGames {
   display: flex;
-  width: 180px;
   flex-direction: column;
 }
 
@@ -399,9 +397,11 @@ body {
   height: 180px;
   min-width: 220px;
   max-width: 1260px;
+  margin-top: 10px;
   overflow: hidden;
   position: relative;
 
+  border-top: thin solid darkgray;
   border-bottom: thin solid darkgray;
 }
 
@@ -554,14 +554,41 @@ body {
   }
 
   .topGamesContainer {
+    display: inline-block !important;
+    height: 460px !important;
+    width: 220px !important;
     margin: 0 !important;
+    float: top !important;
+  }
+
+  .reviewContainer #reviewSidebar #gameBanner {
+    display: flex;
   }
 
   .reviewContainer #reviewSidebar {
+    display: flex !important;
     flex-direction: row !important;
-    width: 675px !important;
-    margin: 10px auto;
+    padding: 10px !important;
+    height: 680px !important;
+    width: 460px !important;
   }
+
+  .comingSoonWrapper {
+    display: inline-block !important;
+    width: 250px !important;
+    margin-left: 10px;
+
+    border-left: thin solid darkgray !important;
+  }
+
+  .comingSoonWrapper #comingSoonTitle {
+    margin-left: 3px !important;
+  }
+
+  .comingSoonContainer {
+    margin-left: 10px !important;
+  }
+
 }
 
 /* DESKTOP STYLES */
@@ -607,15 +634,27 @@ body {
 
   .reviewContainer #reviewSidebar {
     flex-direction: column !important;
+    height: 1140px !important;
     width: 220px !important;
     margin: 0 10px !important;
   }
 
-  .reviewContainer #topGames {
-    width: 220px;
-  }
-
   .reviewContainer #reviewSidebar #gameBanner {
     display: flex;
+  }
+
+  .comingSoonWrapper {
+    width: auto !important;
+    margin-left: auto !important;
+
+    border-left: none !important;
+  }
+
+  .comingSoonWrapper #comingSoonTitle {
+    margin-left: auto !important;
+  }
+
+  .comingSoonContainer {
+    width: auto !important;
   }
 }

@@ -215,7 +215,7 @@ function setComingSoon() {
 
       comingSoonContainer.style.height = "140px";
       comingSoonContainer.style.padding = '10px 0';
-      cover.style.padding = '0 10px';
+      cover.style.padding = '0 10px 0 0';
       image.style.borderRadius = '5px';
       image.style.pointerEvents = 'none';
       title.style.margin = '5px 0';
