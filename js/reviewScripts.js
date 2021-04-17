@@ -75,13 +75,13 @@ window.onload = () => {
         /* Assigns all the classnames and ids */
 
         section.className = "gameArticle fade";
-        cover.className = "articleCover";
-        info.className = "articleInfo";
+        cover.className = "gameCoverWrapper";
+        info.className = "gameInfo";
         title.className = "gameTitle";
         platform.className = "gamePlatform";
         release.className = "gameReleaseDate";
         description.className = "gameDescription";
-        scoreContainer.className = "articleScore";
+        scoreContainer.className = "gameScoreWrapper";
         score.className = "gameScore";
 
         section.style.minHeight = "160px !important";
@@ -171,16 +171,16 @@ window.onload = () => {
     document.getElementById('gameCover').src = sortedGames[i].cover;
     document.getElementById('gameCover').alt = sortedGames[i].coveralt;
     document.getElementById('gameCover').style.borderRadius = '5px';
-    document.getElementById('gameReviewTitle').innerHTML = sortedGames[i].title;
-    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
-    document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[i].release;
-    document.getElementById('gameReviewDescription').innerHTML = sortedGames[i].description;
-    document.getElementById('gameReviewScore').innerHTML = sortedGames[i].score;
+    document.getElementById('focusedGameTitle').innerHTML = sortedGames[i].title;
+    document.getElementById('focusedGamePlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
+    document.getElementById('focusedGameReleaseDate').innerHTML = "Release: " + sortedGames[i].release;
+    document.getElementById('focusedGameDescription').innerHTML = sortedGames[i].description;
+    document.getElementById('focusedGameScore').innerHTML = sortedGames[i].score;
     document.getElementById('focusedGameReview').innerHTML = sortedGames[i].review;
     document.getElementById('youtubeVid').src = sortedGames[i].trailer;
     document.getElementById('focusedReviewContainer').style.backgroundImage = "url('" + sortedGames[i].background + "')";
 
-    const score = document.getElementById('gameReviewScore');
+    const score = document.getElementById('focusedGameScore');
 
     score.style.backgroundColor = setScoreColour(sortedGames[i].score);
   }
@@ -200,7 +200,7 @@ window.onload = () => {
 
   /* Removes pointer events from the focused game reviews title */
 
-  document.getElementById('gameReviewTitle').style.pointerEvents = 'none';
+  document.getElementById('focusedGameTitle').style.pointerEvents = 'none';
 }
 
 /* Function used to set the focused game from outside the file */

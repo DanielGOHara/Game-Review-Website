@@ -55,20 +55,20 @@ function setGames() {
 
       /* Assigns all the classnames and ids */
 
-      gameWrapper.className = "articleContainer";
+      gameWrapper.className = "gameContainerWrapper";
       gameContainer.className = "gameDetailsContainer";
       gameWrapper.id = "game" + expandNumber[index];
-      cover.className = "articleCover";
+      cover.className = "gameCoverWrapper";
       image.className = "gameImage";
-      number.className = "articleNumber";
-      info.className = "articleInfo";
+      number.className = "gameNumber";
+      info.className = "gameInfo";
       title.className = "gameTitle";
       platform.className = "gamePlatform";
       release.className = "gameReleaseDate";
       description.className = "gameDescription";
-      scoreContainer.className = "articleScore";
+      scoreContainer.className = "gameScoreWrapper";
       score.className = "gameScore";
-      expand.className = "articleExpand";
+      expand.className = "gameExpand";
       expand.id = "game" + expandNumber[index] + "Expand";
       arrow.className = "arrow up";
       arrow.id = "game" + expandNumber[index] + "Arrow";
@@ -116,7 +116,7 @@ function setGames() {
 
 function setTopGames() {
   let gamePosition = 1, count = 0;
-  let topGames = document.getElementById('topGames');
+  let topGames = document.getElementById('topGamesContainer');
 
   /* Loops through the sorted array adding a new score line to the leaderboard for each game */
 
@@ -197,7 +197,7 @@ function setComingSoon() {
 
       comingSoonContainer.className = "comingSoonContainer";
       comingSoonInfo.className = "comingSoonInfo";
-      cover.className = "articleCover";
+      cover.className = "gameCoverWrapper";
       image.className = "gameImage";
       title.className = "gameTitle";
       release.className = "gameReleaseDate";

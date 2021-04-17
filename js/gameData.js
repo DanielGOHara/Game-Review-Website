@@ -228,7 +228,7 @@ export const data = [{
   "review" : "Coming Soon!",
   "favourite" : "TBD",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
-  "trailer" : "https://www.youtube.com/embed/Udnu2LBPdRc",
+  "trailer" : "https://www.youtube.com/embed/BDlUtPTQEOk",
   "comingsoon" : "Yes",
   "background" : "css/media/background_covers/residentevil8_background.png"}, {
 

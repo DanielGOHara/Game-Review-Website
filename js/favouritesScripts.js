@@ -33,7 +33,7 @@ function setFavouriteGames() {
 
       /* Creates all the elements for one game article */
 
-      let section = document.createElement('section');
+      let gameWrapper = document.createElement('section');
       let cover = document.createElement('div');
       let image = document.createElement('img');
       let number = document.createElement('h3');
@@ -47,22 +47,22 @@ function setFavouriteGames() {
 
       /* Assigns all the classnames and ids */
 
-      section.className = "gameArticle";
-      cover.className = "articleCover";
+      gameWrapper.className = "gameContainerWrapper";
+      cover.className = "gameCoverWrapper";
       image.className = "gameImage";
-      number.className = "articleNumber";
-      info.className = "articleInfo";
+      number.className = "gameNumber";
+      info.className = "gameInfo";
       title.className = "gameTitle";
       platform.className = "gamePlatform";
       release.className = "gameReleaseDate";
       description.className = "gameDescription";
-      scoreContainer.className = "articleScore";
+      scoreContainer.className = "gameScoreWrapper";
       score.className = "gameScore";
 
-      section.style.marginTop = "10px";
-      section.style.display = "flex";
-      section.style.borderTop = "none";
-      section.style.borderBottom = "thin solid darkgray";
+      gameWrapper.style.marginTop = "10px";
+      gameWrapper.style.display = "flex";
+      gameWrapper.style.borderTop = "none";
+      gameWrapper.style.borderBottom = "thin solid black";
       image.style.transition = 'transform .2s';
       image.style.cursor = 'pointer';
 
@@ -87,8 +87,8 @@ function setFavouriteGames() {
       cover.innerHTML = image.outerHTML;
       info.innerHTML = title.outerHTML + release.outerHTML + description.outerHTML;
       scoreContainer.innerHTML = score.outerHTML;
-      section.innerHTML = cover.outerHTML + number.outerHTML + info.outerHTML + scoreContainer.outerHTML;
-      favouriteGames.appendChild(section);
+      gameWrapper.innerHTML = cover.outerHTML + number.outerHTML + info.outerHTML + scoreContainer.outerHTML;
+      favouriteGames.appendChild(gameWrapper);
 
       gamePosition++;
     }

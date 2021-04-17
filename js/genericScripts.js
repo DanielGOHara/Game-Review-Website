@@ -106,8 +106,6 @@ function suggestedList(searchBarId) {
 
         game = document.createElement("li");
         game.className = "suggestion";
-        game.style.borderRadius = "5px";
-        game.style.maxHeight = "100px";
 
         /* Makes the matching letters in the suggested game bold */
 

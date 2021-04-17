@@ -92,7 +92,7 @@ body {
   width: 97%;
   padding: 2px 4px;
   margin: 0;
-  z-index: +1;
+  z-index: +2;
   position: relative;
 
   background-color: white;
@@ -104,13 +104,14 @@ body {
 .suggestion {
   display: block;
   width: 97%;
-  height: 20px;
+  min-height: 20px;
   padding: 2px 2px;
   margin: 0;
 
   cursor: pointer;
   background-color: white;
   border: medium solid white;
+  border-radius: 5px;
 }
 
 .suggestion:hover {
@@ -127,6 +128,7 @@ body {
   min-height: 29px;
   min-width: 29px;
   margin: 25px 10px 5px;
+  flex-shrink: 0;
 
   border: medium solid white;
   border-radius: 5px;
@@ -198,32 +200,31 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  max-width: 700px;
   margin: 0 auto;
 
   background-color: white;
-  border: thin solid darkgray;
+  border: thin solid black;
   border-radius: 5px;
 }
 
 /* Game Content ------------------ */
 
-.articleContainer {
+.gameContainerWrapper {
   min-height: 150px;
   max-width: 636px;
 
   font-family: Arial, serif;
 
-  border-bottom: thin solid darkgray;
+  border-bottom: thin solid black;
 }
 
 .expanded {
   min-height: 215px;
 
-  border-bottom: thin solid darkgray;
+  border-bottom: thin solid black;
 }
 
-.articleReviewContainer {
+.focusedGameReviewContainer {
   display: flex;
   flex-direction: row;
   padding: 0 10px;
@@ -231,7 +232,7 @@ body {
 
   font-family: Arial, serif;
 
-  border-bottom: thin solid darkgray;
+  border-bottom: thin solid black;
 }
 
 .gameReview {
@@ -256,7 +257,7 @@ body {
   margin: 0;
 }
 
-.articleCover {
+.gameCoverWrapper {
   padding: 10px 5px;
   height: 140px;
   width: 100px;
@@ -266,11 +267,11 @@ body {
   transform: scale(1.10);
 }
 
-.articleNumber {
+.gameNumber {
   margin: 10px 3px 10px 5px;
 }
 
-.articleInfo {
+.gameInfo {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -296,7 +297,7 @@ body {
   color: dimgray;
 }
 
-.articleScore {
+.gameScoreWrapper {
   display: flex;
   flex-direction: column;
   padding: 10px 10px 10px 0;
@@ -317,7 +318,7 @@ body {
   border-radius: 10px;
 }
 
-.articleExpand {
+.gameExpand {
   width: 75px;
   bottom: 10px;
   position: absolute;
@@ -356,11 +357,11 @@ body {
   font-family: Arial, serif;
 
   background-color: white;
-  border: thin solid darkgray;
+  border: thin solid black;
   border-radius: 5px;
 }
 
-.topGamesContainer {
+.topGamesWrapper {
   display: block;
 }
 
@@ -373,7 +374,7 @@ body {
   text-align: center;
 }
 
-.reviewContainer #topGames {
+.reviewContainer #topGamesContainer {
   display: flex;
   flex-direction: column;
 }
@@ -402,8 +403,8 @@ body {
   overflow: hidden;
   position: relative;
 
-  border-top: thin solid darkgray;
-  border-bottom: thin solid darkgray;
+  border-top: thin solid black;
+  border-bottom: thin solid black;
   border-radius: 5px;
 }
 
@@ -444,7 +445,7 @@ body {
   margin: 50px;
 
   background-color: white;
-  border: thin solid darkgray;
+  border: thin solid black;
   border-radius: 5px;
 }
 
@@ -477,6 +478,7 @@ body {
   justify-content: center;
 
   background-color: white;
+  border: thin solid black;
   border-radius: 5px;
 }
 
@@ -485,7 +487,6 @@ body {
   min-height: 150px;
 
   font-family: Arial, serif;
-
 }
 
 .prev, .next {
@@ -557,7 +558,7 @@ body {
     width: 100px !important;
   }
 
-  .topGamesContainer {
+  .topGamesWrapper {
     display: inline-block !important;
     height: auto !important;
     max-width: 190px !important;
@@ -654,7 +655,7 @@ body {
     margin: 0 10px !important;
   }
 
-  .topGamesContainer {
+  .topGamesWrapper {
     max-width: 220px !important;
     margin-top: 0 !important;
   }
