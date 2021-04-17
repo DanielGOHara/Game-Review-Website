@@ -451,6 +451,7 @@ body {
 
 .gameWrapper {
   padding: 10px;
+  max-width: 900px;
   margin: 50px;
 
   border: thin solid darkgray;
@@ -477,8 +478,7 @@ body {
   display: flex;
   flex-direction: row;
   padding: 10px;
-  height: 180px;
-  min-width: 685px;
+  max-width: 685px;
   margin: 50px 22%;
   align-items: center;
   justify-content: center;
@@ -508,8 +508,6 @@ body {
   padding: 10px;
   height:25px;
   width: auto;
-  margin-top: 115px;
-  margin-bottom: 125px;
   cursor: pointer;
   user-select: none;
 
@@ -526,7 +524,6 @@ body {
 }
 
 .fade {
-  height: 160px;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;

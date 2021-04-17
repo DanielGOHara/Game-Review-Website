@@ -66,7 +66,6 @@ window.onload = () => {
         let description = document.createElement('p');
         let scoreContainer = document.createElement('span');
         let score = document.createElement('span');
-        let spacer = document.createElement('div');
 
         /* Assigns all the classnames and ids */
 
@@ -79,7 +78,6 @@ window.onload = () => {
         description.className = "gameDescription";
         scoreContainer.className = "articleScore";
         score.className = "gameScore";
-        spacer.className = "articleSpacer";
 
         section.style.minHeight = "160px !important";
         description.style.margin = "0";
@@ -107,7 +105,7 @@ window.onload = () => {
 
         cover.innerHTML = image.outerHTML;
         info.innerHTML = title.outerHTML + release.outerHTML + description.outerHTML;
-        scoreContainer.innerHTML = score.outerHTML + spacer.outerHTML;
+        scoreContainer.innerHTML = score.outerHTML;
         section.innerHTML = cover.outerHTML + info.outerHTML + scoreContainer.outerHTML;
         gameScroll.append(section, next);
       }
