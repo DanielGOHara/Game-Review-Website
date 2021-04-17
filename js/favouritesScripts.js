@@ -64,7 +64,6 @@ function setFavouriteGames() {
       section.style.borderBottom = "thin solid darkgray";
       image.style.transition = 'transform .2s';
       image.style.cursor = 'pointer';
-      description.style.margin = "0";
 
       image.src = sortedGames[i].cover;
       image.alt = sortedGames[i].coveralt;

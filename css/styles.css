@@ -222,7 +222,6 @@ body {
   flex-direction: row;
   padding: 0 10px;
   min-height: 150px;
-  width: 97%;
 
   font-family: Arial, serif;
 
@@ -242,8 +241,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  max-height: 180px;
-  width: 630px;
 
   font-family: Arial, serif;
 }
@@ -347,7 +344,6 @@ body {
   position: relative;
   padding: 0 10px 10px;
   height: 1160px;
-  width: 270px;
   margin: 10px auto;
 
   font-family: Arial, serif;
@@ -360,7 +356,6 @@ body {
 .topGamesContainer {
   display: block;
   min-height: 150px;
-  width: 200px;
 }
 
 .reviewContainer #topGamesTitle, .comingSoonWrapper #comingSoonTitle  {
@@ -395,7 +390,7 @@ body {
 .reviewContainer #reviewSidebar #gameBanner {
   display: none;
   height: 180px;
-  min-width: 220px;
+  min-width: 180px;
   max-width: 1260px;
   margin-top: 10px;
   overflow: hidden;
@@ -403,6 +398,7 @@ body {
 
   border-top: thin solid darkgray;
   border-bottom: thin solid darkgray;
+  border-radius: 5px;
 }
 
 .gameBannerContainer {
@@ -451,22 +447,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .gameWrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
   margin: 50px;
 
   border: thin solid darkgray;
   border-radius: 5px;
 }
 
-.gameContainer #youtubeVid {
-  height: 400px;
-  width: 650px;
+.youtubeVidContainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.youtubeVidContainer #youtubeVid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .gameContainer #gameScroll {
@@ -555,14 +559,13 @@ body {
 
   .topGamesContainer {
     display: inline-block !important;
-    height: 460px !important;
-    width: 220px !important;
+    height: 500px !important;
+    max-width: 190px !important;
     margin: 0 !important;
-    float: top !important;
   }
 
   .reviewContainer #reviewSidebar #gameBanner {
-    display: flex;
+    display: flex !important;
   }
 
   .reviewContainer #reviewSidebar {
@@ -570,15 +573,23 @@ body {
     flex-direction: row !important;
     padding: 10px !important;
     height: 680px !important;
-    width: 460px !important;
+    max-width: 500px !important;
+  }
+
+  .comingSoonContainer {
+    min-width: 210px !important;
   }
 
   .comingSoonWrapper {
     display: inline-block !important;
-    width: 250px !important;
+    min-width: 210px !important;
     margin-left: 10px;
 
     border-left: thin solid darkgray !important;
+  }
+
+  .comingSoonWrapper #comingSoon {
+    min-width: 210px;
   }
 
   .comingSoonWrapper #comingSoonTitle {
@@ -634,13 +645,18 @@ body {
 
   .reviewContainer #reviewSidebar {
     flex-direction: column !important;
-    height: 1140px !important;
+    height: 1170px !important;
     width: 220px !important;
     margin: 0 10px !important;
   }
 
+  .topGamesContainer {
+    height: auto !important;
+    max-width: 220px !important;
+  }
+
   .reviewContainer #reviewSidebar #gameBanner {
-    display: flex;
+    min-width: 220px !important;
   }
 
   .comingSoonWrapper {
