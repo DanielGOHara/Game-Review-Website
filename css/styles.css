@@ -18,6 +18,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  min-width: 430px;
 
   background: white;
 }
@@ -26,19 +27,18 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 20px 10px;
-  height: 350px;
+  min-width: 430px;
   justify-content: center;
 
   font-family: Arial, serif;
 
   background-color: black;
-  border-bottom: thick solid darkgray;
 }
 
 .header #headerTitle {
   position: relative;
-  height: 80px;
   width: 275px;
   margin: 0 10px;
   flex-shrink: 0;
@@ -58,11 +58,12 @@ body {
 }
 
 .searchBarContainer {
+  display: inline-block;
   float: left;
   height: 32px;
   width: 40%;
   min-width: 125px;
-  margin: 25px 10px;
+  margin: 25px 10px 5px;
 
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -117,6 +118,7 @@ body {
 }
 
 .searchButton {
+  display: inline-block;
   float: right;
   position: relative;
   padding: 1px;
@@ -124,7 +126,7 @@ body {
   width: 31px;
   min-height: 29px;
   min-width: 29px;
-  margin: 25px 10px;
+  margin: 25px 10px 5px;
 
   border: medium solid white;
   border-radius: 5px;
@@ -134,10 +136,10 @@ body {
   outline: none;
 }
 
-.buttonsContainer {
+.headerButtonsContainer {
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
+  margin: 15px 0 0;
   text-align: center;
 }
 
@@ -147,7 +149,7 @@ body {
   justify-content: center;
 }
 
-.buttonsContainer #currentPage {
+.headerButtonsContainer #currentPage {
   flex-shrink: 0;
   min-width: 190px;
   margin: 0;
@@ -183,8 +185,12 @@ body {
   flex-direction: column;
   padding: 20px 20px 20px 20px;
   margin: 0;
+  z-index: +1;
   justify-content: center;
 
+  background-image: url('../css/media/background_covers/default_background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: white;
 }
 
@@ -230,6 +236,7 @@ body {
 
 .gameReview {
   display: none;
+  align-items: center;
 }
 
 .hidden {
@@ -256,7 +263,7 @@ body {
 }
 
 .gameImage:hover, .gameBannerImage:hover {
-  transform: scale(1.15);
+  transform: scale(1.10);
 }
 
 .articleNumber {
@@ -266,7 +273,7 @@ body {
 .articleInfo {
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
+  padding: 10px;
   min-height: 150px;
   min-width: 135px;
   margin: 0;
@@ -343,7 +350,7 @@ body {
 .reviewContainer #reviewSidebar {
   position: relative;
   padding: 0 10px 10px;
-  height: 1160px;
+  width: 250px;
   margin: 10px auto;
 
   font-family: Arial, serif;
@@ -355,7 +362,6 @@ body {
 
 .topGamesContainer {
   display: block;
-  min-height: 150px;
 }
 
 .reviewContainer #topGamesTitle, .comingSoonWrapper #comingSoonTitle  {
@@ -388,7 +394,7 @@ body {
 }
 
 .reviewContainer #reviewSidebar #gameBanner {
-  display: none;
+  display: flex;
   height: 180px;
   min-width: 180px;
   max-width: 1260px;
@@ -424,24 +430,7 @@ body {
   100% { transform: translateX(-100%); }
 }
 
-/* Footer Section ------------------ */
-
-.footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 40px 10px;
-  height: 35px;
-  text-align: center;
-
-  color: white;
-  font-family: Arial, serif;
-
-  background-color: black;
-  border-top: thick solid darkgray;
-}
-
-/* Game HTML Page ------------------ */
+/* Review HTML Page ------------------ */
 
 .gameContainer {
   display: flex;
@@ -454,6 +443,7 @@ body {
   max-width: 900px;
   margin: 50px;
 
+  background-color: white;
   border: thin solid darkgray;
   border-radius: 5px;
 }
@@ -468,22 +458,25 @@ body {
 
 .youtubeVidContainer #youtubeVid {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 98%;
+  width: 98%;
   top: 0;
   left: 0;
+
+  border: thick solid black;
+  border-radius: 15px;
 }
 
-.gameContainer #gameScroll {
-  display: flex;
+.reviewContainer #gameScroll {
+  display: none;
   flex-direction: row;
-  padding: 10px;
+  padding: 25px 10px;
   max-width: 685px;
-  margin: 50px 22%;
+  margin: 30px 0;
   align-items: center;
   justify-content: center;
 
-  border: thin solid darkgray;
+  background-color: white;
   border-radius: 5px;
 }
 
@@ -493,15 +486,6 @@ body {
 
   font-family: Arial, serif;
 
-  border-top: thin solid darkgray;
-  border-bottom: thin solid darkgray;
-}
-
-.articleSpacer {
-  padding: 10px;
-  height: 50px;
-  width: 50px;
-  margin-top: 100px;
 }
 
 .prev, .next {
@@ -540,6 +524,24 @@ body {
   to { opacity: 1 }
 }
 
+/* Footer Section ------------------ */
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+  height: 35px;
+  width: 100%;
+  min-width: 430px;
+  text-align: center;
+
+  color: white;
+  font-family: Arial, serif;
+
+  background-color: black;
+}
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
@@ -547,6 +549,7 @@ body {
   /* Header Section ------------------ */
   .header {
     flex-direction: row !important;
+    flex-wrap: nowrap !important;
     height: 80px !important;
   }
 
@@ -556,9 +559,9 @@ body {
 
   .topGamesContainer {
     display: inline-block !important;
-    height: 500px !important;
+    height: auto !important;
     max-width: 190px !important;
-    margin: 0 !important;
+    margin: 10px 0 0 !important;
   }
 
   .reviewContainer #reviewSidebar #gameBanner {
@@ -568,8 +571,8 @@ body {
   .reviewContainer #reviewSidebar {
     display: flex !important;
     flex-direction: row !important;
-    padding: 10px !important;
-    height: 680px !important;
+    padding: 0 10px 10px !important;
+    width: auto !important;
     max-width: 500px !important;
   }
 
@@ -580,6 +583,7 @@ body {
   .comingSoonWrapper {
     display: inline-block !important;
     min-width: 210px !important;
+    margin-top: 10px;
     margin-left: 10px;
 
     border-left: thin solid darkgray !important;
@@ -597,6 +601,13 @@ body {
     margin-left: 10px !important;
   }
 
+  .reviewContainer {
+    height: auto !important;
+  }
+
+  .reviewContainer #gameScroll {
+    display: flex;
+  }
 }
 
 /* DESKTOP STYLES */
@@ -606,8 +617,8 @@ body {
   /* Header Section ------------------ */
 
   .header {
-    padding: 20px 10px !important;
-    height: 55px !important;
+    padding: 30px 10px !important;
+    height: 65px !important;
   }
 
   .header #headerTitle {
@@ -620,16 +631,12 @@ body {
     margin-top: 2px !important;
   }
 
-  .searchBarContainer {
+  .searchBarContainer, .searchButton {
     margin: 10px 10px !important;
   }
 
-  .buttonsContainer {
+  .headerButtonsContainer {
     margin: 0 10px !important;
-  }
-
-  .searchButton {
-    margin: 10px 10px !important;
   }
 
   .reviewContainer {
@@ -642,14 +649,14 @@ body {
 
   .reviewContainer #reviewSidebar {
     flex-direction: column !important;
-    height: 1170px !important;
+    height: 1150px;
     width: 220px !important;
     margin: 0 10px !important;
   }
 
   .topGamesContainer {
-    height: auto !important;
     max-width: 220px !important;
+    margin-top: 0 !important;
   }
 
   .reviewContainer #reviewSidebar #gameBanner {
@@ -658,7 +665,7 @@ body {
 
   .comingSoonWrapper {
     width: auto !important;
-    margin-left: auto !important;
+    margin: auto 0 0 auto !important;
 
     border-left: none !important;
   }

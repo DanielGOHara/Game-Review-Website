@@ -217,3 +217,15 @@ export function setPlatformLogo(platformString) {
   }
   return platformContainer;
 }
+
+export function setScoreColour(score) {
+  let colour;
+  if (score >= 75) {
+    colour = 'green';
+  } else if (75 > score && score >= 50) {
+    colour = 'yellow'
+  } else {
+    colour = 'red';
+  }
+  return colour;
+}

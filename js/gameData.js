@@ -23,7 +23,8 @@ export const data = [{
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
   "trailer" : "https://www.youtube.com/embed/VqeMjHmL9eg",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/titanfall2_background.png"}, {
 
   "title" : "Spider-man",
   "description" : "Marvel's Spider-Man is a 2018 action-adventure " +
@@ -47,7 +48,8 @@ export const data = [{
   "favourite" : "No",
   "platform" : "PS4, PS5",
   "trailer" : "https://www.youtube.com/embed/3R2uvJqWeVg",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/spiderman_background.png"}, {
 
   "title" : "Fallout 4",
   "description" : "Fallout 4 is an action role-playing game developed by Bethesda " +
@@ -67,7 +69,8 @@ export const data = [{
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
   "trailer" : "https://www.youtube.com/embed/X5aJfebzkrM",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/fallout4_background.png"}, {
 
   "title" : "Detroit Become Human",
   "description" : "Detroit: Become Human is a 2018 adventure game developed by Quantic " +
@@ -88,7 +91,8 @@ export const data = [{
   "favourite" : "Yes",
   "platform" : "PS4, PS5, PC",
   "trailer" : "https://www.youtube.com/embed/8a-EObAhYrg",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/detroitbecomehuman_background.png"}, {
 
   "title" : "Call of Duty Cold War",
   "description" : "Call of Duty: Black Ops Cold War is a 2020 first-person shooter video " +
@@ -110,7 +114,8 @@ export const data = [{
   "favourite" : "No",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
   "trailer" : "https://www.youtube.com/embed/aTS9n_m7TW0",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/callofdutycoldwar_background.png"}, {
 
   "title": "Spider-man Miles Morales",
   "description" : "Marvel's Spider-Man: Miles Morales is a 2020 action-adventure " +
@@ -129,7 +134,8 @@ export const data = [{
   "favourite" : "Yes",
   "platform" : "PS4, PS5",
   "trailer" : "https://www.youtube.com/embed/NTunTURbyUU",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/spidermanmilesmorales_background.png"}, {
 
   "title" : "Resident Evil 2",
   "description" : "Resident Evil 2 is a 2019 survival horror game " +
@@ -150,7 +156,8 @@ export const data = [{
   "favourite" : "No",
   "platform" : "PS4, Xbox One, PC",
   "trailer" : "https://www.youtube.com/embed/u3wS-Q2KBpk",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/residentevil2_background.png"}, {
 
   "title" : "Cyberpunk 2077",
   "description" : "Cyberpunk 2077 is a 2020 action role-playing video game developed and " +
@@ -171,7 +178,8 @@ export const data = [{
   "favourite" : "Yes",
   "platform" : "PS4, Xbox One, PC",
   "trailer" : "https://www.youtube.com/embed/8X2kIfS6fb8",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/cyberpunk2077_background.png"}, {
 
   "title": "Death Stranding",
   "description" : "Death Stranding is an action game developed by Kojima Productions. It is the " +
@@ -191,7 +199,8 @@ export const data = [{
   "favourite" : "Yes",
   "platform" : "PS4, PS5, PC",
   "trailer" : "https://www.youtube.com/embed/tCI396HyhbQ",
-  "comingsoon" : "No"}, {
+  "comingsoon" : "No",
+  "background" : "css/media/background_covers/deathstranding_background.png"}, {
 
   "title" : "Far Cry 6",
   "description" : "Far Cry 6 is an upcoming first-person shooter game developed by Ubisoft Toronto and published " +
@@ -205,7 +214,8 @@ export const data = [{
   "favourite" : "TBD",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
   "trailer" : "https://www.youtube.com/embed/mbGbLWevpC4",
-  "comingsoon" : "Yes"}, {
+  "comingsoon" : "Yes",
+  "background" : "css/media/background_covers/farcry6_background.png"}, {
 
   "title" : "Resident Evil 8",
   "description" : "Resident Evil Village is an upcoming survival horror game developed and published by Capcom. " +
@@ -219,7 +229,8 @@ export const data = [{
   "favourite" : "TBD",
   "platform" : "PS4, PS5, Xbox One, Xbox Series X, PC",
   "trailer" : "https://www.youtube.com/embed/Udnu2LBPdRc",
-  "comingsoon" : "Yes"}, {
+  "comingsoon" : "Yes",
+  "background" : "css/media/background_covers/residentevil8_background.png"}, {
 
   "title" : "Horizon Forbidden West",
   "description" : "Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and " +
@@ -233,7 +244,8 @@ export const data = [{
   "favourite" : "TBD",
   "platform" : "PS4, PS5",
   "trailer" : "https://www.youtube.com/embed/Lq594XmpPBg",
-  "comingsoon" : "Yes"}, {
+  "comingsoon" : "Yes",
+  "background" : "css/media/background_covers/horizonforbiddenwest_background.png"}, {
 
   "title" : "Ratchet and Clank Rift Apart",
   "description" : "Ratchet & Clank: Rift Apart is an upcoming third-person shooter platform game developed by " +
@@ -247,7 +259,8 @@ export const data = [{
   "favourite" : "TBD",
   "platform" : "PS5",
   "trailer" : "https://www.youtube.com/embed/ai3o0XtrnM8",
-  "comingsoon" : "Yes"}, {
+  "comingsoon" : "Yes",
+  "background" : "css/media/background_covers/ratchet&clankriftapart_background.png"}, {
 
   "title" : "Biomutant",
   "description" : "Biomutant is an upcoming action role-playing game developed by Swedish developer Experiment " +
@@ -261,7 +274,8 @@ export const data = [{
   "favourite" : "TBD",
   "platform" : "PS4, Xbox One, PC",
   "trailer" : "https://www.youtube.com/embed/yXIE68V3ajE",
-  "comingsoon" : "Yes"
+  "comingsoon" : "Yes",
+  "background" : "css/media/background_covers/biomutant_background.png"
 }];
 
   /* Sort the games based on score */

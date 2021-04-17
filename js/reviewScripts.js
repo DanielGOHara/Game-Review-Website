@@ -3,6 +3,7 @@ import { sortGames } from "./gameData.js";
 import { setSuggestedList } from "./genericScripts.js";
 import { setSuggestionList } from "./genericScripts.js";
 import { setPlatformLogo } from "./genericScripts.js";
+import { setScoreColour } from "./genericScripts.js";
 
 /* Creates variables */
 
@@ -10,6 +11,10 @@ const sortedGames = sortGames();
 let focusedGameTitle = localStorage.getItem("GameTitle");
 
 window.onload = () => {
+
+  let reviewContainer = document.getElementById('focusedReviewContainer');
+  reviewContainer.style.setProperty('flex-direction', 'column', 'important');
+  reviewContainer.style.setProperty('align-items', 'center');
 
   /* Call all of the functions */
 
@@ -93,13 +98,7 @@ window.onload = () => {
 
         /* Changes score background color depending on score */
 
-        if (sortedGames[i].score >= 75) {
-          score.style.backgroundColor = 'green';
-        } else if (75 > sortedGames[i].score && sortedGames[i].score >= 50) {
-          score.style.backgroundColor = 'yellow'
-        } else {
-          score.style.backgroundColor = 'red';
-        }
+        score.style.backgroundColor = setScoreColour(sortedGames[i].score);
 
         /* Constructs the game article for the slideshow */
 
@@ -168,27 +167,22 @@ window.onload = () => {
 
   /* Updates the main game article review on screen */
 
-  function updateFocusedGame(index) {
-    document.getElementById('gameCover').src = sortedGames[index].cover;
-    document.getElementById('gameCover').alt = sortedGames[index].coveralt;
+  function updateFocusedGame(i) {
+    document.getElementById('gameCover').src = sortedGames[i].cover;
+    document.getElementById('gameCover').alt = sortedGames[i].coveralt;
     document.getElementById('gameCover').style.borderRadius = '5px';
-    document.getElementById('gameReviewTitle').innerHTML = sortedGames[index].title;
-    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[index].platform).outerHTML;
-    document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[index].release;
-    document.getElementById('gameReviewDescription').innerHTML = sortedGames[index].description;
-    document.getElementById('gameReviewScore').innerHTML = sortedGames[index].score;
-    document.getElementById('focusedGameReview').innerHTML = sortedGames[index].review;
-    document.getElementById('youtubeVid').src = sortedGames[index].trailer;
+    document.getElementById('gameReviewTitle').innerHTML = sortedGames[i].title;
+    document.getElementById('focusedPlatform').innerHTML = setPlatformLogo(sortedGames[i].platform).outerHTML;
+    document.getElementById('gameReviewRelease').innerHTML = "Release: " + sortedGames[i].release;
+    document.getElementById('gameReviewDescription').innerHTML = sortedGames[i].description;
+    document.getElementById('gameReviewScore').innerHTML = sortedGames[i].score;
+    document.getElementById('focusedGameReview').innerHTML = sortedGames[i].review;
+    document.getElementById('youtubeVid').src = sortedGames[i].trailer;
+    document.getElementById('focusedReviewContainer').style.backgroundImage = "url('" + sortedGames[i].background + "')";
 
     const score = document.getElementById('gameReviewScore');
 
-    if (sortedGames[index].score >= 75) {
-      score.style.backgroundColor = 'green';
-    } else if (75 > sortedGames[index].score && sortedGames[index].score >= 50) {
-      score.style.backgroundColor = 'yellow'
-    } else {
-      score.style.backgroundColor = 'red';
-    }
+    score.style.backgroundColor = setScoreColour(sortedGames[i].score);
   }
 
   /* Adds a listener to each slideshow game articles title and updates the one on screen if clicked */

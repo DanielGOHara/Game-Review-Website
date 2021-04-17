@@ -5,6 +5,7 @@ import { assignHtmlPage } from "./genericScripts.js";
 import { setSuggestedList } from "./genericScripts.js";
 import { setSuggestionList } from "./genericScripts.js";
 import { setPlatformLogo } from "./genericScripts.js";
+import { setScoreColour } from "./genericScripts.js";
 
 /* Creates variable for the sorted games array */
 
@@ -79,13 +80,7 @@ function setFavouriteGames() {
 
       /* Changes score background color depending on score */
 
-      if (sortedGames[i].score >= 75) {
-        score.style.backgroundColor = 'green';
-      } else if (75 > sortedGames[i].score && sortedGames[i].score >= 50) {
-        score.style.backgroundColor = 'yellow'
-      } else {
-        score.style.backgroundColor = 'red';
-      }
+      score.style.backgroundColor = setScoreColour(sortedGames[i].score);
 
       /* Constructs the game articles */
 
