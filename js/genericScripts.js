@@ -169,7 +169,7 @@ export function setSuggestionList(listId) {
   suggestionListId = listId;
 }
 
-/* Redirects to desired page */
+/* Function to redirects you to desired page */
 
 export function assignHtmlPage(page) {
   if (page === "home") {
@@ -181,7 +181,7 @@ export function assignHtmlPage(page) {
   }
 }
 
-/* Takes the platform string and inserts the platform logos */
+/* Function that takes the platform string and inserts the platform logos */
 
 export function setPlatformLogo(platformString) {
   let platformContainer = document.createElement('span');
@@ -215,6 +215,8 @@ export function setPlatformLogo(platformString) {
   }
   return platformContainer;
 }
+
+/* Function that sets the desired colour based on the score */
 
 export function setScoreColour(score) {
   let colour;

@@ -20,6 +20,8 @@ body {
   padding: 0;
   min-width: 430px;
 
+  font-family: Arial, serif;
+
   background: white;
 }
 
@@ -31,8 +33,6 @@ body {
   padding: 20px 10px;
   min-width: 430px;
   justify-content: center;
-
-  font-family: Arial, serif;
 
   background-color: black;
 }
@@ -75,7 +75,6 @@ body {
   height: 21px;
   padding: 2px 4px;
 
-  font-family: Arial, serif;
   color: black;
 
   border: medium solid white;
@@ -92,7 +91,7 @@ body {
   width: 97%;
   padding: 2px 4px;
   margin: 0;
-  z-index: +2;
+  z-index: +1;
   position: relative;
 
   background-color: white;
@@ -182,12 +181,9 @@ body {
 /* Main Body Section ------------------ */
 
 .reviewContainer {
-  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 20px 20px;
-  margin: 0;
-  z-index: +1;
+  padding: 20px;
   justify-content: center;
 
   background-image: url('../css/media/background_covers/default_background.png');
@@ -207,13 +203,11 @@ body {
   border-radius: 5px;
 }
 
-/* Game Content ------------------ */
+/* Game / Favourite Content ------------------ */
 
 .gameContainerWrapper {
   min-height: 150px;
   max-width: 636px;
-
-  font-family: Arial, serif;
 
   border-bottom: thin solid black;
 }
@@ -229,8 +223,6 @@ body {
   flex-direction: row;
   padding: 0 10px;
   min-height: 150px;
-
-  font-family: Arial, serif;
 
   border-bottom: thin solid black;
 }
@@ -249,8 +241,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px;
-
-  font-family: Arial, serif;
 }
 
 .focusedGameReview #focusedReviewContainer {
@@ -349,12 +339,9 @@ body {
 }
 
 .reviewContainer #reviewSidebar {
-  position: relative;
   padding: 0 10px 10px;
   width: 250px;
   margin: 10px auto;
-
-  font-family: Arial, serif;
 
   background-color: white;
   border: thin solid black;
@@ -446,7 +433,7 @@ body {
 
   background-color: white;
   border: thin solid black;
-  border-radius: 5px;
+  border-radius: 5px 5px 15px 15px;
 }
 
 .youtubeVidContainer {
@@ -455,6 +442,8 @@ body {
   padding-top: 30px;
   height: 0;
   overflow: hidden;
+
+  border-radius: 15px;
 }
 
 .youtubeVidContainer #youtubeVid {
@@ -468,10 +457,11 @@ body {
   border-radius: 15px;
 }
 
-.reviewContainer #gameScroll {
+.reviewContainer #gameScrollContainer {
   display: none;
   flex-direction: row;
   padding: 25px 10px;
+  min-height: 190px;
   max-width: 685px;
   margin: 30px 0;
   align-items: center;
@@ -482,11 +472,9 @@ body {
   border-radius: 5px;
 }
 
-.gameArticle {
+.gameScroll {
   display: none;
   min-height: 150px;
-
-  font-family: Arial, serif;
 }
 
 .prev, .next {
@@ -606,7 +594,7 @@ body {
     height: auto !important;
   }
 
-  .reviewContainer #gameScroll {
+  .reviewContainer #gameScrollContainer {
     display: flex;
   }
 }

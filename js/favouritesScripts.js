@@ -17,7 +17,7 @@ setSuggestionList('favouritesSuggestionList');
 setSuggestedList('favouritesSearchBar');
 setFavouriteGames()
 
-/* Function to populate favourites page game articles */
+/* Function to populate the favourites games page */
 
 function setFavouriteGames() {
   let favouriteGames = document.getElementById('favouriteReviewContent');

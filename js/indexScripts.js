@@ -7,9 +7,11 @@ import { setSuggestionList } from "./genericScripts.js";
 import { setPlatformLogo } from "./genericScripts.js";
 import { setScoreColour } from "./genericScripts.js";
 
-/* Creates variable for the sorted games array */
+/* Creates variables */
 
 const sortedGames = sortGames();
+const totalGames = 6;
+const expandNumber = ["One", "Two", "Three", "Four", "Five", "Six"];
 
 /* Call all of the functions */
 
@@ -21,14 +23,13 @@ setGameBanner();
 setTopGames();
 setGames();
 
-/* Functions to populate the index page */
+/* Functions to populate the home page games*/
 
 function setGames() {
-  const expandNumber = ["One", "Two", "Three", "Four", "Five"];
   let index = 0;
-  let max = sortedGames.length - 5;
+  let max = sortedGames.length - totalGames;
 
-  /* Loops 5 times creating only 5 articles for the top 5 games */
+  /* Loops 6 times creating only 6 gameContainers for the top 6 games */
 
   for(let i = sortedGames.length - 1; i >= max; i--) {
 
@@ -112,7 +113,7 @@ function setGames() {
   }
 }
 
-/* Creates the required "span" and "label" tags to create and populate the game leaderboard */
+/* Function to create the top game section of the side bar */
 
 function setTopGames() {
   let gamePosition = 1, count = 0;
@@ -157,7 +158,7 @@ function setTopGames() {
   return topGames;
 }
 
-/* Creates the image elements for the infinite scrolling banner, it is called twice to make the banner fluid */
+/* Function to create the infinite game banner */
 
 function setGameBanner() {
   const gameBanner = document.getElementById('gameBanner');
@@ -180,6 +181,8 @@ function setGameBanner() {
 
   gameBanner.append(imageContainer)
 }
+
+/* Function to create the coming soon section of the side bar */
 
 function setComingSoon() {
   const comingSoon = document.getElementById('comingSoon');
@@ -232,43 +235,18 @@ function setComingSoon() {
   return comingSoon;
 }
 
-/* Expand Button Listeners */
+/* Expand button listeners */
 
-const butOne = document.getElementById('gameOneExpand');
-const butTwo = document.getElementById('gameTwoExpand');
-const butThree = document.getElementById('gameThreeExpand');
-const butFour = document.getElementById('gameFourExpand');
-const butFive = document.getElementById('gameFiveExpand');
+for(let i = 0; i < totalGames; i++) {
+  const button = document.getElementById('game' + expandNumber[i] + 'Expand');
 
-butOne.addEventListener('click', () => {
-  document.getElementById('gameOne').classList.toggle("expanded");
-  document.getElementById('gameReviewOne').classList.toggle('hidden');
-  document.getElementById('gameOneArrow').classList.toggle('down');
-});
+  button.addEventListener('click', () => {
+    document.getElementById('game' + expandNumber[i]).classList.toggle('expanded');
+    document.getElementById('gameReview' + expandNumber[i]).classList.toggle('hidden');
+    document.getElementById('game' + expandNumber[i] + 'Arrow').classList.toggle('down')
 
-butTwo.addEventListener('click', () => {
-  document.getElementById('gameTwo').classList.toggle('expanded');
-  document.getElementById('gameReviewTwo').classList.toggle('hidden');
-  document.getElementById('gameTwoArrow').classList.toggle('down');
-});
-
-butThree.addEventListener('click', () => {
-  document.getElementById('gameThree').classList.toggle('expanded');
-  document.getElementById('gameReviewThree').classList.toggle('hidden');
-  document.getElementById('gameThreeArrow').classList.toggle('down');
-});
-
-butFour.addEventListener('click', () => {
-  document.getElementById('gameFour').classList.toggle('expanded');
-  document.getElementById('gameReviewFour').classList.toggle('hidden');
-  document.getElementById('gameFourArrow').classList.toggle('down');
-});
-
-butFive.addEventListener('click', () => {
-  document.getElementById('gameFive').classList.toggle('expanded');
-  document.getElementById('gameReviewFive').classList.toggle('hidden');
-  document.getElementById('gameFiveArrow').classList.toggle('down');
-});
+  })
+}
 
 /* Game title listeners */
 
