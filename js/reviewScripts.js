@@ -38,7 +38,7 @@ window.onload = () => {
   /* Function to create the slideshow game articles */
 
   function setShowGames() {
-    let gameScroll = document.getElementById('gameScroll');
+    let gameScroll = document.getElementById('gameScrollContainer');
 
     /* Creates the forward and backwards arrows */
 
@@ -74,7 +74,7 @@ window.onload = () => {
 
         /* Assigns all the classnames and ids */
 
-        section.className = "gameArticle fade";
+        section.className = "gameScroll fade";
         cover.className = "gameCoverWrapper";
         info.className = "gameInfo";
         title.className = "gameTitle";
@@ -118,7 +118,7 @@ window.onload = () => {
   let timer = setTimeout(showGames, 20000);
   showGames();
 
-  /* Assigns the side arrows to prev and next */
+  /* Assigns the side arrows class names */
 
   const prev = document.getElementsByClassName("prev");
   const next = document.getElementsByClassName("next");
@@ -139,10 +139,10 @@ window.onload = () => {
     showGames(gameIndex += n);
   }
 
-  /* Main function for controlling and updating the currently displayed game */
+  /* Function for controlling and updating the currently displayed game */
 
   function showGames(n) {
-    const games = document.getElementsByClassName("gameArticle");
+    const games = document.getElementsByClassName("gameScroll");
 
     if (n > games.length) {
       gameIndex = 1
@@ -165,7 +165,7 @@ window.onload = () => {
     }, 20000);
   }
 
-  /* Updates the main game article review on screen */
+  /* Function to update the main game review on screen */
 
   function updateFocusedGame(i) {
     document.getElementById('gameCover').src = sortedGames[i].cover;
