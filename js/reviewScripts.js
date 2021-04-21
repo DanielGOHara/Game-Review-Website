@@ -202,17 +202,3 @@ window.onload = () => {
 
   document.getElementById('focusedGameTitle').style.pointerEvents = 'none';
 }
-
-/* Function used to set the focused game from outside the file */
-
-export function setFocusedGame(title) {
-  for(let i = 0; i < sortedGames.length; i++) {
-    if(title.toUpperCase() === sortedGames[i].title.toUpperCase()) {
-      localStorage.setItem("GameTitle", sortedGames[i].title);
-    } else {
-      if(title.toUpperCase() === sortedGames[i].coveralt.toUpperCase()) {
-        localStorage.setItem("GameTitle", sortedGames[i].title);
-      }
-    }
-  }
-}

@@ -1,5 +1,4 @@
 
-import { setFocusedGame } from "./reviewScripts.js";
 import { sortGames } from "./gameData.js";
 
 /* Creates variables */
@@ -228,4 +227,18 @@ export function setScoreColour(score) {
     colour = 'red';
   }
   return colour;
+}
+
+/* Function used to set the focused game on the review page */
+
+export function setFocusedGame(title) {
+  for(let i = 0; i < sortedGames.length; i++) {
+    if(title.toUpperCase() === sortedGames[i].title.toUpperCase()) {
+      localStorage.setItem("GameTitle", sortedGames[i].title);
+    } else {
+      if(title.toUpperCase() === sortedGames[i].coveralt.toUpperCase()) {
+        localStorage.setItem("GameTitle", sortedGames[i].title);
+      }
+    }
+  }
 }

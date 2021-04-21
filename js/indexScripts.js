@@ -1,6 +1,6 @@
 
 import { sortGames } from "./gameData.js";
-import { setFocusedGame } from "./reviewScripts.js";
+import { setFocusedGame } from "./genericScripts.js";
 import { assignHtmlPage } from "./genericScripts.js";
 import { setSuggestedList } from "./genericScripts.js";
 import { setSuggestionList } from "./genericScripts.js";
