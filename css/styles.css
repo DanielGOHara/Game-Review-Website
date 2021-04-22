@@ -93,6 +93,7 @@ body {
   margin: 0;
   z-index: +1;
   position: relative;
+  color: black !important;
 
   background-color: white;
   border: medium solid white;
@@ -138,7 +139,7 @@ body {
 .headerButtonsContainer {
   display: flex;
   flex-direction: column;
-  margin: 15px 0 0;
+  height: 50px;
   text-align: center;
 }
 
@@ -420,7 +421,7 @@ body {
 .gameWrapper {
   padding: 10px;
   max-width: 900px;
-  margin: 50px;
+  margin: 0 50px;
 
   background-color: white;
   border: thin solid black;
@@ -536,6 +537,14 @@ body {
     width: 100px !important;
   }
 
+  .searchBarContainer, .searchButton {
+    margin: 25px 10px !important;
+  }
+
+  .headerButtonsContainer {
+    margin-top: 15px !important;
+  }
+
   .topGamesWrapper {
     display: inline-block !important;
     height: auto !important;
@@ -597,12 +606,12 @@ body {
 
   .header {
     padding: 30px 10px !important;
-    height: 65px !important;
+    height: 55px !important;
   }
 
   .header #headerTitle {
     height: 30px !important;
-    width: 300px !important;
+    width: 270px !important;
     margin: 10px 5px !important;
   }
 
@@ -611,7 +620,7 @@ body {
   }
 
   .searchBarContainer, .searchButton {
-    margin: 10px 10px !important;
+    margin: 10px !important;
   }
 
   .headerButtonsContainer {
