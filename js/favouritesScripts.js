@@ -2,8 +2,6 @@
 import { sortGames } from "./gameData.js";
 import { setFocusedGame } from "./genericScripts.js";
 import { assignHtmlPage } from "./genericScripts.js";
-import { setSuggestedList } from "./genericScripts.js";
-import { setSuggestionList } from "./genericScripts.js";
 import { setPlatformLogo } from "./genericScripts.js";
 import { setScoreColour } from "./genericScripts.js";
 
@@ -11,10 +9,11 @@ import { setScoreColour } from "./genericScripts.js";
 
 const sortedGames = sortGames();
 
+document.getElementById('favouritesButton').style.pointerEvents = "none";
+document.getElementById('favouritesButton').style.color = "dimgray";
+
 /* Call all of the functions */
 
-setSuggestionList('favouritesSuggestionList');
-setSuggestedList('favouritesSearchBar');
 setFavouriteGames()
 
 /* Function to populate the favourites games page */

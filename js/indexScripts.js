@@ -2,8 +2,6 @@
 import { sortGames } from "./gameData.js";
 import { setFocusedGame } from "./genericScripts.js";
 import { assignHtmlPage } from "./genericScripts.js";
-import { setSuggestedList } from "./genericScripts.js";
-import { setSuggestionList } from "./genericScripts.js";
 import { setPlatformLogo } from "./genericScripts.js";
 import { setScoreColour } from "./genericScripts.js";
 
@@ -13,10 +11,11 @@ const sortedGames = sortGames();
 const totalGames = 6;
 const expandNumber = ["One", "Two", "Three", "Four", "Five", "Six"];
 
+document.getElementById('homeButton').style.pointerEvents = "none";
+document.getElementById('homeButton').style.color = "dimgray";
+
 /* Call all of the functions */
 
-setSuggestionList('indexSuggestionList')
-setSuggestedList('indexSearchBar');
 setComingSoon();
 setGameBanner();
 setGameBanner();

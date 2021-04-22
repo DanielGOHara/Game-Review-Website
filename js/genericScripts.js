@@ -4,7 +4,10 @@ import { sortGames } from "./gameData.js";
 /* Creates variables */
 
 const sortedGames = sortGames();
-let suggestions = [], suggestionListId = "";
+let suggestions = [];
+let homeButton = document.getElementById('homeButton');
+let reviewButton = document.getElementById('reviewButton');
+let favouritesButton = document.getElementById('favouritesButton');
 
 /* Populates the suggestions array with all of the game titles */
 
@@ -12,29 +15,28 @@ for(let i = 0; i < sortedGames.length; i++) {
   suggestions[i] = sortedGames[i].title;
 }
 
-/* Creates listeners for the games button on each page */
+/* Calls suggestedList function */
 
-document.querySelectorAll('.reviewButton').forEach(gameButton => {
-  gameButton.addEventListener('click', () => {
-    assignHtmlPage("review");
-  });
+suggestedList();
+
+/* Creates listener for the home button on each page */
+
+homeButton.addEventListener('click', () => {
+  assignHtmlPage("home");
 });
 
-/* Creates listeners for the home button on each page */
+/* Creates listener for the games button on each page */
 
-document.querySelectorAll('.homeButton').forEach(homeButton => {
-  homeButton.addEventListener('click', () => {
-    assignHtmlPage("home");
-  });
+reviewButton.addEventListener('click', () => {
+  assignHtmlPage("review")
 });
 
-/* Creates listeners for the favourites button on each page */
+/* Creates listener for the favourites button on each page */
 
-document.querySelectorAll('.favouritesButton').forEach(favouritesButton => {
-  favouritesButton.addEventListener('click', () => {
-    assignHtmlPage("favourite");
-  });
+favouritesButton.addEventListener('click', () => {
+  assignHtmlPage("favourite");
 });
+
 
 /* Creates listeners for the search bar and button on each page */
 
@@ -69,11 +71,11 @@ document.querySelectorAll('.searchBar').forEach(searchBar => {
 
 /* Function to create, update and remove the suggestion list below the search bar */
 
-function suggestedList(searchBarId) {
+function suggestedList() {
 
   let currentFocus;
-  let suggestionList = document.getElementById(suggestionListId);
-  let searchBar = document.getElementById(searchBarId);
+  let suggestionList = document.getElementById('suggestionList');
+  let searchBar = document.getElementById('searchBar');
 
   /* Creates a listener for the search bar to listen for input */
 
@@ -104,7 +106,7 @@ function suggestedList(searchBarId) {
         /* Create a li element for each suggested game */
 
         game = document.createElement("li");
-        game.className = "suggestion";
+        game.id = "suggestion";
 
         /* Makes the matching letters in the suggested game bold */
 
@@ -154,18 +156,6 @@ function checkGame(title) {
     }
   }
   return false;
-}
-
-/* Function used to set the search bar Id depending on what page is accessed */
-
-export function setSuggestedList(searchBarId) {
-  suggestedList(searchBarId);
-}
-
-/* Function used to set the suggestion list Id depending on what page is accessed */
-
-export function setSuggestionList(listId) {
-  suggestionListId = listId;
 }
 
 /* Function to redirects you to desired page */

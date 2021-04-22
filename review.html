@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <link rel = "icon" href = "css/media/dmu.png" />
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>P2435725 </title>
-    <link rel = "stylesheet" href = "css/styles.css">
-</head>
-<body>
-  <header class = "header">
-    <h2 id = "headerTitle">Daniel's Game Reviews</h2>
-    <section class = "searchBarContainer">
-      <input class = "searchBar" id = "reviewSearchBar" placeholder = "Search For Games...">
-      <section class = "suggestionList" id = "reviewSuggestionList"></section>
-    </section>
-    <button class = "searchButton"><img src = css/media/search.png alt = "searchbutton"></button>
-    <section class = "headerButtonsContainer">
-      <h2 id = "currentPage">Review Page</h2>
-      <section class = "selectButtonsContainer">
-        <span class = "homeButton">Home</span>
-        <div>|</div>
-        <span class = "favouritesButton">Favourites</span>
-      </section>
-    </section>
-  </header>
-  <main class = "reviewContainer" id = "focusedReviewContainer">
-    <section class = "gameWrapper">
-        <section class = "focusedGameReviewContainer">
-            <div class = "gameCoverWrapper">
-                <img id = "gameCover" src = "css/media/game_covers/titanfall_cover.png" alt = "titanfall2cover">
-            </div>
-            <section class = "gameInfo">
-              <h3 class = "gameTitle" id = "focusedGameTitle"></h3>
-              <h6 class = "gamePlatform" id = "focusedGamePlatform"></h6>
-              <h6 class = "gameReleaseDate" id = "focusedGameReleaseDate"></h6>
-              <span class = "gameDescription" id = "focusedGameDescription"></span>
-            </section>
-            <span class = "gameScoreWrapper">
-              <span class = "gameScore" id = "focusedGameScore">95</span>
-            </span>
-        </section>
-      <section class = "focusedGameReview">
-        <p id = "focusedGameReview"></p>
-        <span></span>
-      </section>
-      <section class = "youtubeVidContainer">
-        <iframe id = "youtubeVid"></iframe>
-      </section>
-    </section>
-    <section id = "gameScrollContainer"></section>
-  </main>
-  <footer class = "footer">
-    <span>Front-End Web Development CTEC3905 Coursework</span><br>
-    <span>Daniel O'Hara P2435725</span>
-  </footer>
-  <script type = "module" src = "js/genericScripts.js"></script>
-  <script type = "module" src = "js/reviewScripts.js"></script>
-</body>
+    <link rel="icon" href="css/media/dmu.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2435725</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <h2 id="headerTitle">Daniel's Game Reviews</h2>
+      <div class="searchBarContainer">
+        <input  id="searchBar" placeholder="Search For Games...">
+        <div id="suggestionList"></div>
+      </div>
+      <button class="searchButton"><img src=css/media/search.png alt="searchButton"></button>
+      <div class="headerButtonsContainer">
+        <h2 id="currentPage">Review Page</h2>
+        <nav class="selectButtonsContainer">
+          <a id="homeButton">Home</a>
+          <div>|</div>
+          <a id="reviewButton">Review</a>
+          <div>|</div>
+          <a id="favouritesButton">Favourites</a>
+        </nav>
+      </div>
+    </header>
+    <main class="reviewContainer" id="focusedReviewContainer">
+      <div class="gameWrapper">
+          <div class="focusedGameReviewContainer">
+              <div class="gameCoverWrapper">
+                  <img id="gameCover" src="css/media/game_covers/titanfall_cover.png" alt="titanfall2cover">
+              </div>
+              <div class="gameInfo">
+                <h3 class="gameTitle" id="focusedGameTitle">.</h3>
+                <h6 class="gamePlatform" id="focusedGamePlatform">.</h6>
+                <h6 class="gameReleaseDate" id="focusedGameReleaseDate">.</h6>
+                <span class="gameDescription" id="focusedGameDescription"></span>
+              </div>
+              <span class="gameScoreWrapper">
+                <span class="gameScore" id="focusedGameScore">95</span>
+              </span>
+          </div>
+        <div class="focusedGameReview">
+          <p id="focusedGameReview"></p>
+          <span></span>
+        </div>
+        <div class="youtubeVidContainer">
+          <iframe id="youtubeVid"></iframe>
+        </div>
+      </div>
+      <div id="gameScrollContainer"></div>
+    </main>
+    <footer class="footer">
+      <span>Front-End Web Development CTEC3905 Coursework</span><br>
+      <span>Daniel O'Hara P2435725</span>
+    </footer>
+    <script type="module" src="js/genericScripts.js"></script>
+    <script type="module" src="js/reviewScripts.js"></script>
+  </body>
 </html>

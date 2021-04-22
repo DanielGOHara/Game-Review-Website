@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <link rel = "icon" href = "css/media/dmu.png" />
-    <meta name=  "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>P2435725 </title>
-    <link rel = "stylesheet" href = "css/styles.css">
-</head>
-<body>
-  <header class = "header">
-    <h2 id = "headerTitle">Daniel's Game Reviews</h2>
-    <section class = "searchBarContainer">
-      <input class = "searchBar" id = "favouritesSearchBar" placeholder = "Search For Games...">
-      <section class = "suggestionList" id = "favouritesSuggestionList"></section>
-    </section>
-    <button class = "searchButton"><img src = css/media/search.png></button>
-    <section class = "headerButtonsContainer">
-      <h2 id = "currentPage">Favourites Page</h2>
-      <section class = "selectButtonsContainer">
-        <span class = "homeButton">Home</span>
-        <div>|</div>
-        <span class = "reviewButton">Review</span>
-      </section>
-    </section>
-  </header>
-  <main class = "reviewContainer">
-    <section class = "reviewContent" id = "favouriteReviewContent"></section>
-  </main>
-  <footer class = "footer">
-    <span>Front-End Web Development CTEC3905 Coursework</span><br>
-    <span>Daniel O'Hara P2435725</span>
-  </footer>
-  <script type = "module" src = "js/genericScripts.js"></script>
-  <Script type = "module" src = "js/favouritesScripts.js"></Script>
-</body>
+    <link rel="icon" href="css/media/dmu.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2435725</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <h2 id="headerTitle">Daniel's Game Reviews</h2>
+      <div class="searchBarContainer">
+        <input  id="searchBar" placeholder="Search For Games...">
+        <div id="suggestionList"></div>
+      </div>
+      <button class="searchButton"><img src=css/media/search.png alt="searchButton"></button>
+      <div class="headerButtonsContainer">
+        <h2 id="currentPage">Favourites Page</h2>
+        <nav class="selectButtonsContainer">
+          <a id="homeButton">Home</a>
+          <div>|</div>
+          <a id="reviewButton">Review</a>
+          <div>|</div>
+          <a id="favouritesButton">Favourites</a>
+        </nav>
+      </div>
+    </header>
+    <main class="reviewContainer">
+      <div class="reviewContent" id="favouriteReviewContent"></div>
+    </main>
+    <footer class="footer">
+      <span>Front-End Web Development CTEC3905 Coursework</span><br>
+      <span>Daniel O'Hara P2435725</span>
+    </footer>
+    <script type="module" src="js/genericScripts.js"></script>
+    <Script type="module" src="js/favouritesScripts.js"></Script>
+  </body>
 </html>

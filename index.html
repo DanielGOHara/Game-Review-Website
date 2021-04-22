@@ -1,48 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <link rel = "icon" href="css/media/dmu.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>P2435725 </title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header class = "header">
-    <h2 id = "headerTitle">Daniel's Game Reviews</h2>
-    <section class = "searchBarContainer">
-      <input class = "searchBar" id = "indexSearchBar" placeholder = "Search For Games...">
-      <section class = "suggestionList" id = "indexSuggestionList"></section>
-    </section>
-    <button class = "searchButton"><img src = css/media/search.png></button>
-    <section class = "headerButtonsContainer">
-      <h2 id = "currentPage">Home Page</h2>
-      <section class = "selectButtonsContainer">
-        <span class = "reviewButton">Review</span>
-        <div>|</div>
-        <span class = "favouritesButton">Favourites</span>
-      </section>
-    </section>
-  </header>
-    <main class = "reviewContainer">
-      <section class = "reviewContent" id = "indexReviewContent"></section>
-      <section id = "reviewSidebar">
-        <section class = "topGamesWrapper">
-          <h4 id = "topGamesTitle">Leaderboard:</h4>
-          <section id = "topGamesContainer"></section>
-          <section id = "gameBanner"></section>
-        </section>
-        <section class = "comingSoonWrapper">
-          <h4 id = "comingSoonTitle">Coming Soon:</h4>
-          <section id = "comingSoon"></section>
-        </section>
-      </section>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="css/media/dmu.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2435725</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <h2 id="headerTitle">Daniel's Game Reviews</h2>
+      <div class="searchBarContainer">
+        <input  id="searchBar" placeholder="Search For Games...">
+        <div id="suggestionList"></div>
+      </div>
+      <button class="searchButton"><img src=css/media/search.png alt="searchButton"></button>
+      <div class="headerButtonsContainer">
+        <h2 id="currentPage">Home Page</h2>
+        <nav class="selectButtonsContainer">
+          <a id="homeButton">Home</a>
+          <div>|</div>
+          <a id="reviewButton">Review</a>
+          <div>|</div>
+          <a id="favouritesButton">Favourites</a>
+        </nav>
+      </div>
+    </header>
+    <main class="reviewContainer">
+      <div class="reviewContent" id="indexReviewContent"></div>
+      <div id="reviewSidebar">
+        <div class="topGamesWrapper">
+          <h4 id="topGamesTitle">Leaderboard:</h4>
+          <div id="topGamesContainer"></div>
+          <div id="gameBanner"></div>
+        </div>
+        <div class="comingSoonWrapper">
+          <h4 id="comingSoonTitle">Coming Soon:</h4>
+          <div id="comingSoon"></div>
+        </div>
+      </div>
     </main>
-  <footer class = "footer">
-    <span>Front-End Web Development CTEC3905 Coursework</span><br>
-    <span>Daniel O'Hara P2435725</span>
-  </footer>
-  <script type = "module" src = "js/genericScripts.js"></script>
-  <script type = "module" src = "js/indexScripts.js"></script>
-</body>
+    <footer class="footer">
+      <span>Front-End Web Development CTEC3905 Coursework</span><br>
+      <span>Daniel O'Hara P2435725</span>
+    </footer>
+    <script type="module" src="js/genericScripts.js"></script>
+    <script type="module" src="js/indexScripts.js"></script>
+  </body>
 </html>

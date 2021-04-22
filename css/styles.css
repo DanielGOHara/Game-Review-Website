@@ -69,7 +69,7 @@ body {
   border-top-left-radius: 5px;
 }
 
-.searchBar {
+.searchBarContainer #searchBar {
   display: block;
   width: 97%;
   height: 21px;
@@ -82,11 +82,11 @@ body {
   border-top-left-radius: 5px;
 }
 
-.searchBar:focus {
+.searchBarContainer #searchBar:focus {
   outline: none;
 }
 
-.suggestionList {
+.searchBarContainer #suggestionList {
   display: block;
   width: 97%;
   padding: 2px 4px;
@@ -100,7 +100,7 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-.suggestion {
+.searchBarContainer #suggestion {
   display: block;
   width: 97%;
   min-height: 20px;
@@ -113,7 +113,7 @@ body {
   border-radius: 5px;
 }
 
-.suggestion:hover {
+.searchBarContainer #suggestion:hover {
   background-color: darkgray;
 }
 
@@ -124,9 +124,7 @@ body {
   padding: 1px;
   height: 31px;
   width: 31px;
-  min-height: 29px;
-  min-width: 29px;
-  margin: 25px 10px 5px;
+  margin: 6px 15px;
   flex-shrink: 0;
 
   border: medium solid white;
@@ -157,21 +155,14 @@ body {
   color: white;
 }
 
-.homeButton:hover {
-  color: white;
-  cursor: pointer;
-  border-bottom: 1px solid white;
-  transition: all 0.3s linear 0s;
+.selectButtonsContainer > a {
+  height: 20px;
+  margin-top: 5px;
+  color: darkgray;
 }
 
-.reviewButton:hover {
-  color: white;
-  cursor: pointer;
-  border-bottom: 1px solid white;
-  transition: all 0.3s linear 0s;
-}
-
-.favouritesButton:hover {
+.selectButtonsContainer #homeButton:hover, .selectButtonsContainer #reviewButton:hover,
+.selectButtonsContainer #favouritesButton:hover {
   color: white;
   cursor: pointer;
   border-bottom: 1px solid white;

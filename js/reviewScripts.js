@@ -1,7 +1,5 @@
 
 import { sortGames } from "./gameData.js";
-import { setSuggestedList } from "./genericScripts.js";
-import { setSuggestionList } from "./genericScripts.js";
 import { setPlatformLogo } from "./genericScripts.js";
 import { setScoreColour } from "./genericScripts.js";
 
@@ -9,6 +7,9 @@ import { setScoreColour } from "./genericScripts.js";
 
 const sortedGames = sortGames();
 let focusedGameTitle = localStorage.getItem("GameTitle");
+
+document.getElementById('reviewButton').style.pointerEvents = "none";
+document.getElementById('reviewButton').style.color = "dimgray";
 
 window.onload = () => {
 
@@ -18,8 +19,6 @@ window.onload = () => {
 
   /* Call all of the functions */
 
-  setSuggestionList('reviewSuggestionList');
-  setSuggestedList('reviewSearchBar');
   setShowGames();
 
   /* If statement to check if the page is being loaded for the first time then randomly chooses a game article */
