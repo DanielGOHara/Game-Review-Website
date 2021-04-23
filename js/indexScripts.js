@@ -77,6 +77,7 @@ function setGames() {
       gameContainer.style.display = 'flex';
       gameContainer.style.flexDirection = 'row';
       gameContainer.style.marginTop = "8px";
+      cover.style.padding = "10px 5px";
       image.style.transition = 'transform .2s';
       image.style.cursor = 'pointer';
       image.style.borderRadius = '5px';
