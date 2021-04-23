@@ -1,9 +1,6 @@
 
 import { sortGames } from "./gameData.js";
-import { setFocusedGame } from "./genericScripts.js";
-import { assignHtmlPage } from "./genericScripts.js";
-import { setPlatformLogo } from "./genericScripts.js";
-import { setScoreColour } from "./genericScripts.js";
+import { assignHtmlPage, setFocusedGame, setPlatformLogo, setScoreColour } from "./genericScripts.js";
 
 /* Creates variable for the sorted games array */
 
@@ -101,7 +98,7 @@ function setFavouriteGames() {
   return favouriteGames;
 }
 
-/* Game title listeners */
+/* Creates listeners for the game titles and images */
 
 document.querySelectorAll('.gameTitle').forEach(title => {
   title.addEventListener('click', () => {
@@ -109,8 +106,6 @@ document.querySelectorAll('.gameTitle').forEach(title => {
     assignHtmlPage("review");
   });
 });
-
-/* Game image listener */
 
 document.querySelectorAll('.gameImage').forEach(image => {
   image.addEventListener('click', () => {

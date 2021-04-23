@@ -1,7 +1,6 @@
 
 import { sortGames } from "./gameData.js";
-import { setPlatformLogo } from "./genericScripts.js";
-import { setScoreColour } from "./genericScripts.js";
+import { setPlatformLogo, setScoreColour } from "./genericScripts.js";
 
 /* Creates variables */
 
@@ -188,7 +187,7 @@ function updateFocusedGame(i) {
   score.style.backgroundColor = setScoreColour(sortedGames[i].score);
 }
 
-/* Adds a listener to each slideshow game articles title and updates the one on screen if clicked */
+/* Creates listeners for all of the game scroll bars game titles */
 
 document.querySelectorAll('.gameTitle').forEach(title => {
   title.addEventListener('click', () => {

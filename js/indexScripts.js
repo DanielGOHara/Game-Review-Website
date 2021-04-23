@@ -1,9 +1,6 @@
 
 import { sortGames } from "./gameData.js";
-import { setFocusedGame } from "./genericScripts.js";
-import { assignHtmlPage } from "./genericScripts.js";
-import { setPlatformLogo } from "./genericScripts.js";
-import { setScoreColour } from "./genericScripts.js";
+import { assignHtmlPage, setFocusedGame, setPlatformLogo, setScoreColour } from "./genericScripts.js";
 
 /* Creates variables */
 
@@ -249,10 +246,24 @@ for(let i = 0; i < totalGames; i++) {
     document.getElementById('gameReview' + expandNumber[i]).classList.toggle('hidden');
     document.getElementById('game' + expandNumber[i] + 'Arrow').classList.toggle('down')
 
-  })
+  });
 }
 
-/* Game title listeners */
+/* Creates listeners for the game titles, images, bannerImage and top games */
+
+document.querySelectorAll('.topGame').forEach(title => {
+  title.addEventListener('click', () => {
+    setFocusedGame(title.innerHTML);
+    assignHtmlPage("review");
+  });
+});
+
+document.querySelectorAll('.gameBannerImage').forEach(image => {
+  image.addEventListener('click', () => {
+    setFocusedGame(image.alt);
+    assignHtmlPage("review");
+  });
+});
 
 document.querySelectorAll('.gameTitle').forEach(title => {
   title.addEventListener('click', () => {
@@ -261,23 +272,7 @@ document.querySelectorAll('.gameTitle').forEach(title => {
   });
 });
 
-document.querySelectorAll('.topGame').forEach(title => {
-  title.addEventListener('click', () => {
-    setFocusedGame(title.innerHTML);
-    assignHtmlPage("review");
-  } )
-})
-
-/* Game image listener */
-
 document.querySelectorAll('.gameImage').forEach(image => {
-  image.addEventListener('click', () => {
-    setFocusedGame(image.alt);
-    assignHtmlPage("review");
-  });
-});
-
-document.querySelectorAll('.gameBannerImage').forEach(image => {
   image.addEventListener('click', () => {
     setFocusedGame(image.alt);
     assignHtmlPage("review");

@@ -6,10 +6,6 @@ import { sortGames } from "./gameData.js";
 const sortedGames = sortGames();
 let suggestions = [];
 
-let gameTitle = document.getElementById('gameTitle');
-let searchBar = document.getElementById('searchBar');
-let searchButton = document.getElementById('searchButton');
-
 /* Populates the suggestions array with all of the game titles */
 
 for(let i = 0; i < sortedGames.length; i++) {
@@ -39,6 +35,9 @@ document.getElementById('favouritesButton').addEventListener('click', () => {
 });
 
 /* Creates listeners for the search bar and search button */
+
+let searchBar = document.getElementById('searchBar');
+let searchButton = document.getElementById('searchButton');
 
 searchBar.addEventListener('keyup', event => {
   if(event.key === "Enter") {
