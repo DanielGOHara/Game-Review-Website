@@ -83,6 +83,9 @@ function setGames() {
       image.style.transition = 'transform .2s';
       image.style.cursor = 'pointer';
       image.style.borderRadius = '5px';
+      number.style.margin = "10px 3px 10px 5px";
+      title.style.margin = "0";
+      title.style.cursor = "pointer";
 
       image.src = sortedGames[i].cover;
       image.alt = sortedGames[i].coveralt;

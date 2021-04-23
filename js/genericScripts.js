@@ -5,9 +5,10 @@ import { sortGames } from "./gameData.js";
 
 const sortedGames = sortGames();
 let suggestions = [];
-let homeButton = document.getElementById('homeButton');
-let reviewButton = document.getElementById('reviewButton');
-let favouritesButton = document.getElementById('favouritesButton');
+
+let gameTitle = document.getElementById('gameTitle');
+let searchBar = document.getElementById('searchBar');
+let searchButton = document.getElementById('searchButton');
 
 /* Populates the suggestions array with all of the game titles */
 
@@ -21,53 +22,50 @@ suggestedList();
 
 /* Creates listener for the home button on each page */
 
-homeButton.addEventListener('click', () => {
+document.getElementById('homeButton').addEventListener('click', () => {
   assignHtmlPage("home");
 });
 
 /* Creates listener for the games button on each page */
 
-reviewButton.addEventListener('click', () => {
+document.getElementById('reviewButton').addEventListener('click', () => {
   assignHtmlPage("review")
 });
 
 /* Creates listener for the favourites button on each page */
 
-favouritesButton.addEventListener('click', () => {
+document.getElementById('favouritesButton').addEventListener('click', () => {
   assignHtmlPage("favourite");
 });
 
+/* Creates listeners for the search bar and search button */
 
-/* Creates listeners for the search bar and button on each page */
-
-document.querySelectorAll('.searchBar').forEach(searchBar => {
-  document.querySelectorAll('.searchButton').forEach( searchButton => {
-    searchBar.addEventListener('keyup', event => {
-      if(event.keyCode === 13) {
-        if(checkGame(searchBar.value)) {
-          setFocusedGame(searchBar.value);
-          assignHtmlPage("review");
-        } else {
-          searchBar.style.borderColor = 'red';
-          setTimeout(() => {
-            searchBar.style.borderColor = 'white';
-          }, 2000);
-        }
-      }
-    });
-    searchButton.addEventListener('click', () => {
-      if (checkGame(searchBar.value)) {
-        setFocusedGame(searchBar.value);
-        assignHtmlPage("review");
+searchBar.addEventListener('keyup', event => {
+  if(event.key === "Enter") {
+    if(checkGame(searchBar.value)) {
+      setFocusedGame(searchBar.value);
+      assignHtmlPage("review");
     } else {
-        searchBar.style.borderColor = 'red';
-        setTimeout(() => {
-          searchBar.style.borderColor = 'white';
-        }, 2000)
-      }
-    });
-  });
+      incorrectSearchBar();
+    }
+  }
 });
+
+searchButton.addEventListener('click', () => {
+  if (checkGame(searchBar.value)) {
+    setFocusedGame(searchBar.value);
+    assignHtmlPage("review");
+  } else {
+    incorrectSearchBar();
+  }
+});
+
+function incorrectSearchBar() {
+  searchBar.style.borderColor = 'red';
+  setTimeout(() => {
+    searchBar.style.borderColor = 'white';
+  }, 2000)
+}
 
 /* Function to create, update and remove the suggestion list below the search bar */
 
@@ -115,7 +113,7 @@ function suggestedList() {
 
         /* Insert a input field that will hold the current games array value */
 
-        game.innerHTML += "<input type = 'hidden' value = '" + suggestions[index] + "'>";
+        game.innerHTML += "<input type='hidden' value='" + suggestions[index] + "'>";
 
         /* Creates a listener for each game in the suggestion list */
 
