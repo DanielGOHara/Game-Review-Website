@@ -8,6 +8,8 @@ import { setScoreColour } from "./genericScripts.js";
 const sortedGames = sortGames();
 let focusedGameTitle = localStorage.getItem("GameTitle");
 
+/* Disables review page button */
+
 document.getElementById('reviewButton').style.pointerEvents = "none";
 document.getElementById('reviewButton').style.color = "dimgray";
 

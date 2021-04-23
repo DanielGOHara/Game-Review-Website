@@ -11,6 +11,8 @@ const sortedGames = sortGames();
 const totalGames = 6;
 const expandNumber = ["One", "Two", "Three", "Four", "Five", "Six"];
 
+/* Disables home page button */
+
 document.getElementById('homeButton').style.pointerEvents = "none";
 document.getElementById('homeButton').style.color = "dimgray";
 

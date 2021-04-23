@@ -9,6 +9,8 @@ import { setScoreColour } from "./genericScripts.js";
 
 const sortedGames = sortGames();
 
+/* Disables favourites page button */
+
 document.getElementById('favouritesButton').style.pointerEvents = "none";
 document.getElementById('favouritesButton').style.color = "dimgray";
 
