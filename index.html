@@ -12,10 +12,10 @@
       <h2 id="headerTitle">Daniel's Game Reviews</h2>
       <div class="searchBarContainer">
         <input  id="searchBar" placeholder="Search For Games...">
-        <div id="suggestionList"></div>
+        <ul id="suggestionList"></ul>
       </div>
       <button id="searchButton"><img src=css/media/search.png alt="searchButton"></button>
-      <div class="headerButtonsContainer">
+      <section class="headerButtonsContainer">
         <h2 id="currentPage">Home Page</h2>
         <nav class="selectButtonsContainer">
           <a id="homeButton">Home</a>
@@ -24,20 +24,22 @@
           <div>|</div>
           <a id="favouritesButton">Favourites</a>
         </nav>
-      </div>
+      </section>
     </header>
     <main class="reviewContainer">
-      <main class="reviewContent" id="indexReviewContent"></main>
+      <section class="reviewContent" id="indexReviewContent">
+        <h3 id = "top6GamesTitle">Top 6 Game Scores:</h3>
+      </section>
       <div id="reviewSidebar">
-        <div class="topGamesWrapper">
+        <section class="topGamesWrapper">
           <h4 id="topGamesTitle">Leaderboard:</h4>
           <div id="topGamesContainer"></div>
           <div id="gameBanner"></div>
-        </div>
-        <div class="comingSoonWrapper">
+        </section>
+        <section class="comingSoonWrapper">
           <h4 id="comingSoonTitle">Coming Soon:</h4>
           <div id="comingSoon"></div>
-        </div>
+        </section>
       </div>
     </main>
     <footer class="footer">

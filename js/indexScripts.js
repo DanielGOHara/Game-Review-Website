@@ -41,7 +41,7 @@ function setGames() {
       let cover = document.createElement('div');
       let image = document.createElement('img');
       let number = document.createElement('h3');
-      let info = document.createElement('p');
+      let info = document.createElement('section');
       let title = document.createElement('h3');
       let platform = document.createElement('h6');
       let release = document.createElement('h6');

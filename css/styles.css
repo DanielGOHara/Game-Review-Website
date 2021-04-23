@@ -99,7 +99,7 @@ body {
   color: black !important;
 
   background-color: white;
-  border: medium solid white;
+  border: medium solid snow;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -113,7 +113,7 @@ body {
 
   cursor: pointer;
   background-color: white;
-  border: medium solid white;
+  border: medium solid snow;
   border-radius: 5px;
 }
 
@@ -199,6 +199,10 @@ body {
 }
 
 /* ------------------ HOME AND FAVOURITES PAGE ELEMENTS ------------------ */
+
+.reviewContent #top6GamesTitle {
+  text-align: center;
+}
 
 .gameContainerWrapper {
   min-height: 150px;
@@ -313,12 +317,10 @@ body {
 
 .up {
   transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
 }
 
 .down {
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
 }
 
 .articleExpand:hover {
@@ -489,15 +491,8 @@ body {
 }
 
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from { opacity: .4 }
-  to { opacity: 1 }
 }
 
 @keyframes fade {
@@ -647,6 +642,7 @@ body {
 
   .reviewContainer #reviewSidebar {
     flex-direction: column !important;
+    padding: 10px !important;
     height: 1150px;
     width: 220px !important;
     margin: 0 10px !important;
