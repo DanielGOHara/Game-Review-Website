@@ -19,6 +19,7 @@ Javascript File(s) - `genericScripts.js`, `indexScripts.js`, `reviewScripts.js`,
 `gameData.js` - Used to store all of the game data in JSON format into a single variable with one function used to sort it and return a sorted list.<br/>
 
 References:<br/>
+Suggestion List - https://www.w3schools.com/howto/howto_js_autocomplete.asp<br/>
 Imports & Modules - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import<br/>
 JSON Data Handling - https://www.geeksforgeeks.org/json-data-types/#:~:text=JSON%20(JavaScript%20Object%20Notation)%20is,easy%20to%20understand%20and%20generate<br/>
 QuerySelectorAll - https://www.geeksforgeeks.org/html-dom-queryselectorall-method/#:~:text=The%20querySelectorAll()%20method%20in,The%20index%20starts%20at%200<br/>
