@@ -206,6 +206,7 @@ function setComingSoon() {
       image.className = "gameImage";
       title.className = "gameTitle";
       release.className = "gameReleaseDate";
+      title.style.cursor = "pointer";
 
       comingSoonContainer.style.height = "140px";
       comingSoonContainer.style.padding = '10px 0';
