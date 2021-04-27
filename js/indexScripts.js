@@ -36,7 +36,7 @@ function setGames() {
       /* Creates all the elements for one game article */
 
       let reviewContent = document.getElementById('indexReviewContent');
-      let gameWrapper = document.createElement('section');
+      let gameWrapper = document.createElement('article');
       let gameContainer = document.createElement('section');
       let cover = document.createElement('div');
       let image = document.createElement('img');
@@ -192,7 +192,7 @@ function setComingSoon() {
 
   for(let i = 0; i < sortedGames.length; i++) {
     if(sortedGames[i].comingsoon === "Yes" && count !== 4) {
-      const comingSoonContainer = document.createElement('section');
+      const comingSoonContainer = document.createElement('article');
       const comingSoonInfo = document.createElement('section')
       const cover = document.createElement('div');
       const image = document.createElement('img');
