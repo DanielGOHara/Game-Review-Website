@@ -61,12 +61,14 @@ searchButton.addEventListener('click', () => {
 });
 
 function incorrectSearchBar() {
-  searchBar.style.borderColor = 'red';
-  suggestionList.style.borderColor = 'red';
-  setTimeout(() => {
-    searchBar.style.borderColor = 'white';
-    suggestionList.style.borderColor = 'white';
-  }, 2000)
+  if(searchBar.style.borderColor !== 'red' && suggestionList.style.borderColor !== 'red') {
+    searchBar.style.borderColor = 'red';
+    suggestionList.style.borderColor = 'red';
+    setTimeout(() => {
+      searchBar.style.borderColor = 'white';
+      suggestionList.style.borderColor = 'white';
+    }, 2000);
+  }
 }
 
 /* Function to create, update and remove the suggestion list below the search bar */
