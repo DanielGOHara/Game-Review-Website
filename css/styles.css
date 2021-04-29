@@ -43,7 +43,7 @@ body {
 .header #headerTitle {
   position: relative;
   width: 275px;
-  margin: 0 10px;
+  margin: 0 10px 10px;
   flex-shrink: 0;
   text-align: center;
 
@@ -65,7 +65,7 @@ body {
   float: left;
   height: 32px;
   width: 40%;
-  min-width: 125px;
+  min-width: 195px;
   margin: 25px 10px 5px;
 
   border-top-right-radius: 5px;
@@ -146,7 +146,7 @@ body {
 .headerButtonsContainer {
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
+  margin: 10px 0;
   height: 50px;
   text-align: center;
 }
@@ -541,6 +541,10 @@ body {
 
   .header #headerTitle {
     width: 100px !important;
+  }
+
+  .searchBarContainer {
+    min-width: 80px !important;
   }
 
   .searchBarContainer, .header #searchButton {
