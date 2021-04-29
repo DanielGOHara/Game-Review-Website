@@ -36,18 +36,18 @@ function setGames() {
       /* Creates all the elements for one game article */
 
       let reviewContent = document.getElementById('indexReviewContent');
-      let gameWrapper = document.createElement('article');
-      let gameContainer = document.createElement('section');
-      let cover = document.createElement('div');
+      let gameWrapper = document.createElement('section');
+      let gameContainer = document.createElement('article');
+      let cover = document.createElement('figure');
       let image = document.createElement('img');
       let number = document.createElement('h3');
-      let info = document.createElement('section');
+      let info = document.createElement('article');
       let title = document.createElement('h3');
       let platform = document.createElement('h6');
       let release = document.createElement('h6');
       let description = document.createElement('p');
-      let scoreContainer = document.createElement('span');
-      let score = document.createElement('span');
+      let scoreContainer = document.createElement('article');
+      let score = document.createElement('h4');
       let expand = document.createElement('span');
       let arrow = document.createElement('i');
       let review = document.createElement('p');

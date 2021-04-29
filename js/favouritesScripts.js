@@ -32,16 +32,16 @@ function setFavouriteGames() {
       /* Creates all the elements for one game article */
 
       let gameWrapper = document.createElement('section');
-      let cover = document.createElement('div');
+      let cover = document.createElement('figure');
       let image = document.createElement('img');
       let number = document.createElement('h3');
-      let info = document.createElement('section');
+      let info = document.createElement('article');
       let title = document.createElement('h3');
       let platform = document.createElement('h6');
       let release = document.createElement('h6');
       let description = document.createElement('p');
-      let scoreContainer = document.createElement('span');
-      let score = document.createElement('span');
+      let scoreContainer = document.createElement('article');
+      let score = document.createElement('h4');
 
       /* Assigns all the classnames and ids */
 

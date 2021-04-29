@@ -15,7 +15,7 @@
         <ul id="suggestionList"></ul>
       </div>
       <button id="searchButton"><img src=css/media/search.png alt="searchButton"></button>
-      <section class="headerButtonsContainer">
+      <article class="headerButtonsContainer">
         <h2 id="currentPage">Review Page</h2>
         <nav class="selectButtonsContainer">
           <a id="homeButton">Home</a>
@@ -24,31 +24,32 @@
           <div>|</div>
           <a id="favouritesButton">Favourites</a>
         </nav>
-      </section>
+      </article>
     </header>
     <main class="reviewContainer" id="focusedReviewContainer">
       <section class="gameWrapper">
-        <div class="focusedGameReviewContainer">
-          <div class="gameCoverWrapper">
+        <h3 id="gameReviewTitle">Game:</h3>
+        <article class="focusedGameReviewContainer">
+          <figure class="gameCoverWrapper">
             <img id="gameCover" src="css/media/game_covers/titanfall_cover.png" alt="titanfall2cover">
-          </div>
-          <div class="gameInfo">
+          </figure>
+          <article class="gameInfo">
             <h3 class="gameTitle" id="focusedGameTitle">.</h3>
             <h6 class="gamePlatform" id="focusedGamePlatform">.</h6>
             <h6 class="gameReleaseDate" id="focusedGameReleaseDate">.</h6>
-            <span class="gameDescription" id="focusedGameDescription"></span>
-          </div>
-          <span class="gameScoreWrapper">
-            <span class="gameScore" id="focusedGameScore">95</span>
-          </span>
-          </div>
-        <div class="focusedGameReview">
+            <p class="gameDescription" id="focusedGameDescription"></p>
+          </article>
+          <article class="gameScoreWrapper">
+            <h4 class="gameScore" id="focusedGameScore">95</h4>
+          </article>
+        </article>
+        <article class="focusedGameReview">
+          <h3 id="reviewTitle">Review:</h3>
           <p id="focusedGameReview"></p>
-          <span></span>
-        </div>
-        <div class="youtubeVidContainer">
+        </article>
+        <figure class="youtubeVidContainer">
           <iframe id="youtubeVid"></iframe>
-        </div>
+        </figure>
       </section>
       <aside id="gameScrollContainer"></aside>
     </main>

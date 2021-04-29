@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 20px 10px;
+  padding: 20px 10px 5px;
   min-width: 430px;
   justify-content: center;
 
@@ -78,9 +78,11 @@ body {
   height: 21px;
   padding: 2px 4px;
 
-  color: black;
+  color: white;
 
-  border: medium solid white;
+  background-color: black;
+  border: thin solid white;
+  border-bottom: none;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -96,10 +98,11 @@ body {
   margin: 0;
   z-index: +1;
   position: relative;
-  color: black !important;
+  color: white !important;
 
-  background-color: white;
-  border: medium solid snow;
+  background-color: black;
+  border: thin solid white;
+  border-top: none;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -111,9 +114,10 @@ body {
   padding: 2px 2px;
   margin: 0;
 
+  color: white;
+
   cursor: pointer;
-  background-color: white;
-  border: medium solid snow;
+  background-color: black;
   border-radius: 5px;
 }
 
@@ -142,6 +146,7 @@ body {
 .headerButtonsContainer {
   display: flex;
   flex-direction: column;
+  margin: 15px 0;
   height: 50px;
   text-align: center;
 }
@@ -200,7 +205,8 @@ body {
 
 /* ------------------ HOME AND FAVOURITES PAGE ELEMENTS ------------------ */
 
-.reviewContent #top6GamesTitle {
+.reviewContent #top6GamesTitle, .gameWrapper #gameReviewTitle, .gameWrapper #reviewTitle {
+  margin: 5px 0;
   text-align: center;
 }
 
@@ -209,19 +215,11 @@ body {
   max-width: 636px;
 
   border-bottom: thin solid black;
+  border-radius: 5px;
 }
 
 .expanded {
   min-height: 215px;
-
-  border-bottom: thin solid black;
-}
-
-.focusedGameReviewContainer {
-  display: flex;
-  flex-direction: row;
-  padding: 0 10px;
-  min-height: 150px;
 
   border-bottom: thin solid black;
 }
@@ -242,14 +240,11 @@ body {
   padding: 10px;
 }
 
-.focusedGameReview #focusedReviewContainer {
-  margin: 0;
-}
-
 .gameCoverWrapper {
   padding: 30px 5px;
   height: 140px;
   width: 100px;
+  margin: 0;
 }
 
 .gameImage:hover, .gameBannerImage:hover {
@@ -290,6 +285,7 @@ body {
   padding: 10px 10px;
   height: 20px;
   width: 50px;
+  margin: 0;
 
   font-weight: bold;
 
@@ -430,6 +426,20 @@ body {
   border-radius: 5px 5px 15px 15px;
 }
 
+.focusedGameReviewContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  min-height: 150px;
+
+  border-bottom: thin solid black;
+  border-radius: 5px;
+}
+
+.focusedGameReview #focusedReviewContainer {
+  margin: 0;
+}
+
 .youtubeVidContainer {
   position: relative;
   padding-bottom: 56.25%;
@@ -525,6 +535,7 @@ body {
   .header {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
+    padding: 20px 10px !important;
     height: 80px !important;
   }
 

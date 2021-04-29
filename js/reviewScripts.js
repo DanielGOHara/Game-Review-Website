@@ -61,9 +61,9 @@ function setShowGames() {
       /* Creates all the elements for one game article */
 
       let section = document.createElement('section');
-      let cover = document.createElement('div');
+      let cover = document.createElement('figure');
       let image = document.createElement('img');
-      let info = document.createElement('section');
+      let info = document.createElement('article');
       let title = document.createElement('h3');
       let platform = document.createElement('h6');
       let release = document.createElement('h6');
