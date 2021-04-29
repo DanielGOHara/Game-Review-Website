@@ -37,6 +37,7 @@ document.getElementById('favouritesButton').addEventListener('click', () => {
 /* Creates listeners for the search bar and search button */
 
 let searchBar = document.getElementById('searchBar');
+let suggestionList = document.getElementById('suggestionList');
 let searchButton = document.getElementById('searchButton');
 
 searchBar.addEventListener('keyup', event => {
@@ -61,8 +62,10 @@ searchButton.addEventListener('click', () => {
 
 function incorrectSearchBar() {
   searchBar.style.borderColor = 'red';
+  suggestionList.style.borderColor = 'red';
   setTimeout(() => {
     searchBar.style.borderColor = 'white';
+    suggestionList.style.borderColor = 'white';
   }, 2000)
 }
 
