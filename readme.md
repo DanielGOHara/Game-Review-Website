@@ -1,5 +1,7 @@
 # CTEC3905 Assignment - Daniel's Game Reviews<br/>
 
+Front-End Web Development Project TBD | TBD 
+
 A game review site with a variety of features allowing the user to view basic game descriptions as well as explore my personal reviews of the game with a score for each. The site also has seperate pages for personal favourites and a page designated for in depth reviews of a specific game with an included trailer, this page also has a game slideshow at the bottom. 
 
 HTML File(s) - `index.html`, `review.html` & `favourites.html`.<br/>
